@@ -1,9 +1,15 @@
 namespace LoginTest;
 
-public partial class Test : ContentPage
+public partial class MainPage : ContentPage
 {
-	public Test()
-	{
-		InitializeComponent();
-	}
+    public MainPage()
+    {
+        InitializeComponent();
+    }
+
+    public void LoginClicked(object sender, EventArgs e)
+    {
+        Navigation.PushModalAsync(new NewPage1());
+    }
+}
 }
