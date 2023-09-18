@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="LoginTest.MainPage">
+
+    <ScrollView
+        BackgroundColor="LightBlue">
+        <VerticalStackLayout
+            Spacing="15"
+            Padding="30,0"
+            VerticalOptions="Start">
+
+            <Image
+                Source="rentbuddylogo.png"
+                SemanticProperties.Description="RentBuddy OnRoute!"
+                HeightRequest="150"
+                HorizontalOptions="Center"/>
+
+
+            <Label
+                Text="Klik op de Knop om te inloggen"
+                SemanticProperties.HeadingLevel="Level2"
+                SemanticProperties.Description="Klik op de Knop om te inloggen"
+                FontSize="18"
+                HorizontalOptions="Center" />
+
+            <Button
+                x:Name="LoginBtn"
+                Text="Login"
+                SemanticProperties.Hint="Counts the number of times you click"
+                Clicked="LoginClicked"
+                HorizontalOptions="CenterAndExpand" 
+                VerticalOptions="EndAndExpand"/>
+            <VerticalStackLayout>
+                <Image Source="busje.png" 
+                       HeightRequest="220"/>
+            </VerticalStackLayout>
+        </VerticalStackLayout>
+
+
+    </ScrollView>
+
+
+</ContentPage>
+entPage>
