@@ -3,39 +3,42 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="LoginTest.MainPage">
 
-    <ScrollView>
+    <ScrollView
+        BackgroundColor="LightBlue">
         <VerticalStackLayout
-            Spacing="25"
+            Spacing="15"
             Padding="30,0"
-            VerticalOptions="Center">
+            VerticalOptions="Start">
 
             <Image
-                Source="dotnet_bot.png"
-                SemanticProperties.Description="Cute dot net bot waving hi to you!"
-                HeightRequest="200"
-                HorizontalOptions="Center" />
+                Source="rentbuddylogo.png"
+                SemanticProperties.Description="RentBuddy OnRoute!"
+                HeightRequest="150"
+                HorizontalOptions="Center"/>
+
 
             <Label
-                Text="Hello, World!"
-                SemanticProperties.HeadingLevel="Level1"
-                FontSize="32"
-                HorizontalOptions="Center" />
-
-            <Label
-                Text="Welcome to .NET Multi-platform App UI"
+                Text="Klik op de Knop om te inloggen"
                 SemanticProperties.HeadingLevel="Level2"
-                SemanticProperties.Description="Welcome to dot net Multi platform App U I"
+                SemanticProperties.Description="Klik op de Knop om te inloggen"
                 FontSize="18"
                 HorizontalOptions="Center" />
 
             <Button
-                x:Name="CounterBtn"
-                Text="Click me"
+                x:Name="LoginBtn"
+                Text="Login"
                 SemanticProperties.Hint="Counts the number of times you click"
-                Clicked="OnCounterClicked"
-                HorizontalOptions="Center" />
-
+                Clicked="LoginClicked"
+                HorizontalOptions="CenterAndExpand" 
+                VerticalOptions="EndAndExpand"/>
+            <VerticalStackLayout>
+                <Image Source="busje.png" 
+                       HeightRequest="220"/>
+            </VerticalStackLayout>
         </VerticalStackLayout>
+
+
     </ScrollView>
+
 
 </ContentPage>
