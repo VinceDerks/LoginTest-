@@ -33,13 +33,13 @@ namespace LoginTest
             if (ValidateLogin(username, password))
             {
                 SaveCredentials(username, password);
-                Preferences.Set("IsLoggedIn", true);
+                SecureStorage.SetAsync("IsLoggedIn", "true");
                 Navigation.PushAsync(new LoggedHome());
                 Navigation.RemovePage(this);
             }
             else
             {
-                Navigation.PopToRootAsync();
+                DisplayAlert("Error", "Invalid username or password", "OK");
             }
         }
 
@@ -53,8 +53,8 @@ namespace LoginTest
 
         private void SaveCredentials(string username, string password)
         {
-            Preferences.Set("Username", username);
-            Preferences.Set("Password", password);
+            SecureStorage.SetAsync("Username", username);
+            SecureStorage.SetAsync("Password", password);
         }
     }
 }

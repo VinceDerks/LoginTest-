@@ -1,9 +1,22 @@
-namespace LoginTest;
+using Microsoft.Maui.Controls;
 
-public partial class LoggedHome : ContentPage
+namespace LoginTest
 {
-	public LoggedHome()
-	{
-		InitializeComponent();
-	}
+    public partial class LoggedHome : ContentPage
+    {
+        public LoggedHome()
+        {
+            InitializeComponent();
+        }
+
+        private void LogoutButton_Clicked(object sender, EventArgs e)
+        {
+            // Clear stored credentials from secure storage
+            SecureStorage.Remove("username");
+            SecureStorage.Remove("password");
+
+            // Redirect to login page
+            Navigation.PopToRootAsync();
+        }
+    }
 }
