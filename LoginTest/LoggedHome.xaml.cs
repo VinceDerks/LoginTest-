@@ -25,6 +25,8 @@ namespace LoginTest
         private async void RetrieveName()
         {
             bobbert.Text = await SecureStorage.GetAsync("Username");
+
+            Home.Text =  await SecureStorage.GetAsync("Username");
         }
     }
 }

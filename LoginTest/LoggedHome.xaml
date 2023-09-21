@@ -3,209 +3,197 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:local="clr-namespace:LoginTest"
              x:Class="LoginTest.LoggedHome">
-    <StackLayout>
-        <Label Text="Welcome to the Homepage" HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand" />
-
-        <!-- Burger menu -->
-        <StackLayout IsVisible="{Binding IsLoggedIn}">
-            <Button Text="Logout" Clicked="LogoutButton_Clicked" />
-        </StackLayout>
-        <Grid Padding="10"
-          ColumnSpacing="5"
-          RowSpacing="5">
-            <Grid.RowDefinitions>
-                <RowDefinition Height="155" />
-                <RowDefinition Height="155"/>
-                <RowDefinition Height="155"/>
-                <RowDefinition Height="155"/>
-                <RowDefinition Height="75"/>
-            </Grid.RowDefinitions>
-            <Grid.ColumnDefinitions Padding="10">
-                <ColumnDefinition Width="*"/>
-                <ColumnDefinition Width="*"/>
-            </Grid.ColumnDefinitions>
+    <ScrollView>
+        <StackLayout>
+            <Grid Padding="10"
+              ColumnSpacing="5"
+              RowSpacing="5">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="155" />
+                    <RowDefinition Height="155"/>
+                    <RowDefinition Height="155"/>
+                    <RowDefinition Height="155"/>
+                    <RowDefinition Height="75"/>
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions Padding="10">
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
 
 
-            <BoxView Grid.Row="0" 
-                 Grid.ColumnSpan="2" 
-                 Color="Transparent"/>
-            <Label Grid.Row="0" 
-               Grid.ColumnSpan="2" 
-               HorizontalOptions="Center" 
-               VerticalOptions="Center"/>
-            <ImageButton Source="rentbuddylogo.png"
-                     Grid.Row="0" 
-                     Grid.ColumnSpan="2"
-                     HorizontalOptions="CenterAndExpand"/>
+                <BoxView Grid.Row="0" 
+                     Grid.Column="0" 
+                     Color="Transparent"/>
+                <Label Grid.Row="0" 
+                       Grid.Column="0" 
+                       Text="Welcome"
+                       HorizontalOptions="End" 
+                       VerticalOptions="CenterAndExpand"
+                       FontAttributes="Bold"
+                       FontSize="20"
+                       />
 
 
-            <BoxView Grid.Row="1"
-                     Color="Teal" />
-            <Label Grid.Row="1"
-                   Grid.Column="0"
-                   Text="test"
-                   HorizontalOptions="Center"
-                   VerticalOptions="End" 
-                   TextColor="White"
-                   x:Name="bobbert"/>
-            <ImageButton Source="urenplanning.png"
-                         Grid.Row="1"
-                        />
+                <BoxView Grid.Row="0" 
+                     Grid.Column="1" 
+                     Color="Transparent"/>
+                <Label Grid.Row="0" 
+                       Grid.Column="1" 
+                       x:Name="Home"
+                       HorizontalOptions="Start" 
+                       VerticalOptions="CenterAndExpand"
+                       FontAttributes="Bold"
+                       FontSize="20"
+                       />
 
 
 
-            <BoxView Grid.Row="1"
-                     Grid.Column="1"
-                     Color="Purple" />
-            <Label Grid.Row="1"
-                   Grid.Column="1"
-                   Text="Personeel"
-                   HorizontalOptions="Center"
-                   VerticalOptions="End" />
-            <ImageButton Source="persoon2.png"
-                         Grid.Row="1"
+                <BoxView Grid.Row="1"
+                         Color="White" />
+                <Label Grid.Row="1"
+                       Grid.Column="0"
+                       Text="test"
+                       HorizontalOptions="Center"
+                       VerticalOptions="End" 
+                       TextColor="Red"
+                       FontSize="18"
+                       x:Name="bobbert"/>
+                <ImageButton Source="persoon2.png"
+                             Grid.Row="1"
+                            />
+
+
+
+                <BoxView Grid.Row="1"
                          Grid.Column="1"
-                        />
+                         Color="White" />
+                <Label Grid.Row="1"
+                       Grid.Column="1"
+                       Text="Personeel"
+                       HorizontalOptions="Center"
+                       VerticalOptions="End" />
 
 
-            <BoxView Grid.Row="2"
-                     Grid.Column="0"
-                     Color="Red" />
-            <Label Grid.Row="2"
-                   Grid.Column="0"
-                   Text="WeerBericht"
-                   HorizontalOptions="Center"
-                   VerticalOptions="End" />
-            <ImageButton Source="weerbericht.png"
-                         Grid.Row="2"
+                <BoxView Grid.Row="2"
                          Grid.Column="0"
-                         HeightRequest="100"
-                        />
+                         Color="White" />
+                <Label Grid.Row="2"
+                       Grid.Column="0"
+                       Text="WeerBericht"
+                       HorizontalOptions="Center"
+                       VerticalOptions="End" />
+                <ImageButton Source="weerbericht.png"
+                             Grid.Row="2"
+                             Grid.Column="0"
+                             HeightRequest="100"
+                            />
 
-            <BoxView Grid.Row="2"
-                     Grid.Column="1"
-                     Color="DarkRed" />
-            <Label Grid.Row="2"
-                   Grid.Column="1"
-                   Text="Row2, Column 1"
-                   HorizontalOptions="Center"
-                   VerticalOptions="End" />
-            <ImageButton Source="persoon2.png"
-                         Grid.Row="2"
-                         Grid.Column="1"/>
+                <BoxView Grid.Row="2"
+                         Grid.Column="1"
+                         Color="White" />
+                <Label Grid.Row="2"
+                       Grid.Column="1"
+                       Text="Row2, Column 1"
+                       HorizontalOptions="Center"
+                       VerticalOptions="End" />
+                <ImageButton Source="persoon2.png"
+                             Grid.Row="2"
+                             Grid.Column="1"/>
 
-            <BoxView Grid.Row="2"
-                     Grid.Column="1"
-                     Color="DarkRed" />
-            <Label Grid.Row="2"
-                   Grid.Column="1"
-                   Text="Row2, Column 1"
-                   HorizontalOptions="Center"
-                   VerticalOptions="End" />
+                <BoxView Grid.Row="2"
+                         Grid.Column="1"
+                         Color="White" />
+                <Label Grid.Row="2"
+                       Grid.Column="1"
+                       Text="Row2, Column 1"
+                       HorizontalOptions="Center"
+                       VerticalOptions="End" />
 
-            <BoxView Grid.Row="3"
-                     Grid.Column="1"
-                     Color="Yellow"/>
-            <Label Grid.Row="3"
-                   Grid.Column="1"
-                   Text="Row3, Column 1"
-                   HorizontalOptions="Center"
-                   VerticalOptions="End" />
+                <BoxView Grid.Row="3"
+                         Grid.Column="1"
+                         Color="White"/>
+                <Label Grid.Row="3"
+                       Grid.Column="1"
+                       Text="Row3, Column 1"
+                       HorizontalOptions="Center"
+                       VerticalOptions="End" />
 
-            <BoxView Grid.Row="3"
-                     Grid.Column="0"
-                     Color="Orange" />
-            <Label Grid.Row="3"
-                   Grid.Column="0"
-                   Text="Row3, Column 0"
-                   HorizontalOptions="Center"
-                   VerticalOptions="End" />
-
-            <BoxView Grid.Row="4"
-                 Grid.ColumnSpan="2" 
-                 Color="Orange"/>
-            <Label Grid.Row="4" 
-               Grid.ColumnSpan="2" 
-                   HorizontalOptions="Center"
-                   VerticalOptions="End" />
-            <ImageButton Source="login.png"
-                     Grid.Row="4" 
-                     Grid.ColumnSpan="2"
-                     HorizontalOptions="CenterAndExpand"
-                     />
+                <BoxView Grid.Row="3"
+                         Grid.Column="0"
+                         Color="White" />
+                <Label Grid.Row="3"
+                       Grid.Column="0"
+                       Text="Row3, Column 0"
+                       HorizontalOptions="Center"
+                       VerticalOptions="End" />
 
 
 
 
+                <Border Grid.Row="0"
+                        Grid.ColumnSpan="2"
+                        HeightRequest="155"
+                        WidthRequest="385"
+                        BackgroundColor="Transparent" 
+                        Stroke="Black"
+                        StrokeThickness="2.5"
+                        StrokeShape="RoundRectangle 40 10"/>
 
+                <Border Grid.Row="1"
+                        Grid.Column="0"
+                        HeightRequest="164"
+                        WidthRequest="193"
+                        BackgroundColor="Transparent"    
+                        Stroke="Black"
+                        StrokeThickness="2.5"/>
 
-            <Border Grid.Row="0"
-                    Grid.ColumnSpan="2"
-                    HeightRequest="155"
-                    WidthRequest="385"
-                    BackgroundColor="Transparent" 
-                    Stroke="Black"
-                    StrokeThickness="2.5"
-                    StrokeShape="RoundRectangle 40 10"/>
+                <Border Grid.Row="1"
+                        Grid.Column="1"
+                        HeightRequest="164"
+                        WidthRequest="193"
+                        BackgroundColor="Transparent"    
+                        Stroke="Black"
+                        StrokeThickness="2.5"/>
 
-            <Border Grid.Row="1"
-                    Grid.Column="0"
-                    HeightRequest="164"
-                    WidthRequest="193"
-                    BackgroundColor="Transparent"    
-                    Stroke="Black"
-                    StrokeThickness="2.5"/>
+                <Border Grid.Row="2"
+                        Grid.Column="0"
+                        HeightRequest="164"
+                        WidthRequest="193"
+                        BackgroundColor="Transparent"    
+                        Stroke="Black"
+                        StrokeThickness="2.5"/>
 
-            <Border Grid.Row="1"
-                    Grid.Column="1"
-                    HeightRequest="164"
-                    WidthRequest="193"
-                    BackgroundColor="Transparent"    
-                    Stroke="Black"
-                    StrokeThickness="2.5"/>
+                <Border Grid.Row="2"
+                        Grid.Column="1"
+                        HeightRequest="164"
+                        WidthRequest="193"
+                        BackgroundColor="Transparent"    
+                        Stroke="Black"
+                        StrokeThickness="2.5"/>
 
-            <Border Grid.Row="2"
-                    Grid.Column="0"
-                    HeightRequest="164"
-                    WidthRequest="193"
-                    BackgroundColor="Transparent"    
-                    Stroke="Black"
-                    StrokeThickness="2.5"/>
+                <Border Grid.Row="3"
+                        Grid.Column="0"
+                        HeightRequest="164"
+                        WidthRequest="193"
+                        BackgroundColor="Transparent"    
+                        Stroke="Black"
+                        StrokeThickness="2.5"/>
 
-            <Border Grid.Row="2"
-                    Grid.Column="1"
-                    HeightRequest="164"
-                    WidthRequest="193"
-                    BackgroundColor="Transparent"    
-                    Stroke="Black"
-                    StrokeThickness="2.5"/>
+                <Border Grid.Row="3"
+                        Grid.Column="1"
+                        HeightRequest="164"
+                        WidthRequest="193"
+                        BackgroundColor="Transparent"    
+                        Stroke="Black"
+                        StrokeThickness="2.5"/>
 
-            <Border Grid.Row="3"
-                    Grid.Column="0"
-                    HeightRequest="164"
-                    WidthRequest="193"
-                    BackgroundColor="Transparent"    
-                    Stroke="Black"
-                    StrokeThickness="2.5"/>
+            </Grid>
 
-            <Border Grid.Row="3"
-                    Grid.Column="1"
-                    HeightRequest="164"
-                    WidthRequest="193"
-                    BackgroundColor="Transparent"    
-                    Stroke="Black"
-                    StrokeThickness="2.5"/>
-
-            <Border Grid.Row="4"
-                    Grid.ColumnSpan="2"
-                    HeightRequest="80"
-                    WidthRequest="383"
-                    BackgroundColor="Transparent" 
-                    Stroke="Black"
-                    StrokeThickness="2.5"/>
-
-        </Grid>
-    </StackLayout>
-    
+            <StackLayout IsVisible="{Binding IsLoggedIn}">
+                <Button Text="Logout" Clicked="LogoutButton_Clicked" />
+            </StackLayout>
+        
+        </StackLayout>
+    </ScrollView>
     
 </ContentPage>
