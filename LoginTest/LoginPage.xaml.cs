@@ -1,11 +1,8 @@
 using Microsoft.Maui.Controls;
-using System;
-using System.Security.Cryptography;
 namespace LoginTest
 {
     public partial class LoginPage : ContentPage
     {
-        private string encryptedUsername;
 
         public LoginPage()
         {
@@ -33,19 +30,13 @@ namespace LoginTest
             string password = PasswordEntry.Text;
 
             if (ValidateLogin(username, password))
-            {
-                SaveCredentials(username, password);
-
-                // Encrypt the username before saving it in a variable
-                encryptedUsername = Convert.ToBase64String(ProtectedData.Protect(
-                    System.Text.Encoding.UTF8.GetBytes(username),
-                    null,
-                    DataProtectionScope.CurrentUser
-                ));
+            { 
 
                 SecureStorage.SetAsync("IsLoggedIn", "true");
+                SaveCredentials(username, password);
                 Navigation.PushAsync(new LoggedHome());
                 Navigation.RemovePage(this);
+                
             }
             else
             {

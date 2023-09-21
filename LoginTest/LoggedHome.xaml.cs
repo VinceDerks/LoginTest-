@@ -7,16 +7,24 @@ namespace LoginTest
         public LoggedHome()
         {
             InitializeComponent();
+            RetrieveName();
         }
 
         private void LogoutButton_Clicked(object sender, EventArgs e)
         {
             // Clear stored credentials from secure storage
-            SecureStorage.Remove("username");
-            SecureStorage.Remove("password");
+            SecureStorage.Remove("Username");
+            SecureStorage.Remove("Password");
 
             // Redirect to login page
             Navigation.PopToRootAsync();
+
+
+        }
+
+        private async void RetrieveName()
+        {
+            bobbert.Text = await SecureStorage.GetAsync("Username");
         }
     }
 }
