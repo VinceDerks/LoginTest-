@@ -1,10 +1,12 @@
 using Microsoft.Maui.Controls;
 using System;
-
+using System.Security.Cryptography;
 namespace LoginTest
 {
     public partial class LoginPage : ContentPage
     {
+        private string encryptedUsername;
+
         public LoginPage()
         {
             InitializeComponent();
@@ -33,6 +35,14 @@ namespace LoginTest
             if (ValidateLogin(username, password))
             {
                 SaveCredentials(username, password);
+
+                // Encrypt the username before saving it in a variable
+                encryptedUsername = Convert.ToBase64String(ProtectedData.Protect(
+                    System.Text.Encoding.UTF8.GetBytes(username),
+                    null,
+                    DataProtectionScope.CurrentUser
+                ));
+
                 SecureStorage.SetAsync("IsLoggedIn", "true");
                 Navigation.PushAsync(new LoggedHome());
                 Navigation.RemovePage(this);

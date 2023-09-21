@@ -20,13 +20,6 @@
                 <Setter Property="FontSize" Value="16" />
                 <Setter Property="FontFamily" Value="OpenSansBold" />
             </Style>
-            <Style TargetType="Entry">
-                <Setter Property="BackgroundColor" Value="Transparent" />
-                <Setter Property="TextColor" Value="Black" />
-                <Setter Property="PlaceholderColor" Value="#6D7272" />
-                <Setter Property="Margin" Value="5,0" />
-                <Setter Property="IsPassword" Value="False" />
-            </Style>
             <Style TargetType="Frame">
                 <Setter Property="Opacity" Value="0.3" />
                 <Setter Property="BackgroundColor" Value="White" />
@@ -62,7 +55,8 @@
                 </Grid>
             </StackLayout>
 
-            <Button Margin="0,15" Text="Sign in"/>
+            <Button Margin="0,15" Text="Sign in"
+                    Clicked="SignInButton_Clicked"/>
 
       
         </StackLayout>
