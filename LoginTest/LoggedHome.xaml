@@ -59,8 +59,7 @@
                        Text="test"
                        HorizontalOptions="Center"
                        VerticalOptions="End" 
-                       TextColor="Red"
-                       FontSize="18"
+                       FontSize="15"
                        x:Name="bobbert"/>
                 <ImageButton Source="persoon2.png"
                              Grid.Row="1"
@@ -76,65 +75,65 @@
                        Text="Personeel"
                        HorizontalOptions="Center"
                        VerticalOptions="End" />
+                <ImageButton Source="group.svg"
+                        Grid.Row="1"
+                        Grid.Column="1"/>
 
 
-                <BoxView Grid.Row="2"
+            <BoxView Grid.Row="2"
                          Grid.Column="0"
                          Color="White" />
                 <Label Grid.Row="2"
                        Grid.Column="0"
-                       Text="WeerBericht"
+                       Text="Route"
                        HorizontalOptions="Center"
                        VerticalOptions="End" />
-                <ImageButton Source="weerbericht.png"
-                             Grid.Row="2"
-                             Grid.Column="0"
-                             HeightRequest="100"
-                            />
+            <ImageButton Source="route.svg"
+                     Grid.Row="2"
+                     Grid.Column="0"/>
 
+      
                 <BoxView Grid.Row="2"
                          Grid.Column="1"
                          Color="White" />
                 <Label Grid.Row="2"
                        Grid.Column="1"
-                       Text="Row2, Column 1"
+                       Text="Product Details"
                        HorizontalOptions="Center"
                        VerticalOptions="End" />
-                <ImageButton Source="persoon2.png"
-                             Grid.Row="2"
-                             Grid.Column="1"/>
+                <ImageButton Source="box.svg"
+                        Grid.Row="2"
+                        Grid.Column="1"
+                             HeightRequest="120"/>
 
-                <BoxView Grid.Row="2"
-                         Grid.Column="1"
-                         Color="White" />
-                <Label Grid.Row="2"
-                       Grid.Column="1"
-                       Text="Row2, Column 1"
-                       HorizontalOptions="Center"
-                       VerticalOptions="End" />
-
-                <BoxView Grid.Row="3"
+            <BoxView Grid.Row="3"
                          Grid.Column="1"
                          Color="White"/>
                 <Label Grid.Row="3"
                        Grid.Column="1"
-                       Text="Row3, Column 1"
+                       Text="Voertuig"
                        HorizontalOptions="Center"
                        VerticalOptions="End" />
+                <ImageButton Source="truck.svg"
+                         Grid.Row="3"
+                         Grid.Column="1"/>
 
-                <BoxView Grid.Row="3"
+            <BoxView Grid.Row="3"
                          Grid.Column="0"
                          Color="White" />
                 <Label Grid.Row="3"
                        Grid.Column="0"
-                       Text="Row3, Column 0"
+                       Text="Voorspellingen"
                        HorizontalOptions="Center"
                        VerticalOptions="End" />
+            <ImageButton Source="clock.svg"
+                         Grid.Row="3"
+                         Grid.Column="0"/>
 
 
 
 
-                <Border Grid.Row="0"
+            <Border Grid.Row="0"
                         Grid.ColumnSpan="2"
                         HeightRequest="155"
                         WidthRequest="385"

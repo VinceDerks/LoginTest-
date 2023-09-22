@@ -48,10 +48,15 @@
 	</ItemGroup>
 
 	<ItemGroup>
+	  <None Remove="Resources\Images\box.svg" />
+	  <None Remove="Resources\Images\clock.svg" />
+	  <None Remove="Resources\Images\group.svg" />
 	  <None Remove="Resources\Images\home.svg" />
 	  <None Remove="Resources\Images\Lock.svg" />
 	  <None Remove="Resources\Images\Person.svg" />
 	  <None Remove="Resources\Images\rentbuddylogo.png" />
+	  <None Remove="Resources\Images\route.svg" />
+	  <None Remove="Resources\Images\truck.svg" />
 	</ItemGroup>
 
 	<ItemGroup>

@@ -1,14 +1,14 @@
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="LoginTest.LoginPage"
-             BackgroundColor="#6D7272"
+             BackgroundColor="White"
              NavigationPage.HasNavigationBar="False"
              Shell.NavBarIsVisible="False"
              Shell.TabBarIsVisible="False">
     <ContentPage.Resources>
         <ResourceDictionary>
             <Color x:Key="PrimaryColor">#2979FF</Color>
-            <Color x:Key="SecondaryColor">#F2F2F2</Color>
+            <Color x:Key="SecondaryColor">#6D7272</Color>
             <Style TargetType="Label">
                 <Setter Property="TextColor" Value="{StaticResource SecondaryColor}" />
                 <Setter Property="FontSize" Value="16" />
@@ -29,33 +29,34 @@
     </ContentPage.Resources>
     <Grid>
         <StackLayout Margin="20">
-           
-            <StackLayout Margin="0,80">
-                <Label FontSize="32" Text="Welcome Back"/>
-                <Label Text="Sign in to continue"/>
+
+            <Image Source="rentbuddylogo.png" VerticalOptions="Start" HorizontalOptions="Center" Margin="0,40,0,0" HeightRequest="150" WidthRequest="300" />
+
+            <StackLayout Margin="0,0">
+                <Label FontSize="32" Text="Welkom bij RentBuddy" MinimumWidthRequest="30" MinimumHeightRequest="30" />
+             
             </StackLayout>
 
             <StackLayout>
-                <Label Text="Username"/>
+            
 
                 <Grid Margin="0,5">
 
                     <Frame/>
-                    <Entry Placeholder="Enter username"
+                    <Entry Placeholder="Username"
                            x:Name="UsernameEntry"/>
                 </Grid>
 
-                <Label Text="Password"/>
 
                 <Grid Margin="0,5">
                     <Frame/>
-                    <Entry Placeholder="Enter password"
+                    <Entry Placeholder="Password"
                            x:Name="PasswordEntry"
                            IsPassword="True"/>
                 </Grid>
             </StackLayout>
 
-            <Button Margin="0,15" Text="Sign in"
+            <Button Margin="0,15" Text="Aanmelden"
                     Clicked="SignInButton_Clicked"/>
 
       

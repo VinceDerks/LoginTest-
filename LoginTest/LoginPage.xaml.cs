@@ -46,13 +46,24 @@ namespace LoginTest
 
         private bool ValidateLogin(string username, string password)
         {
-            string specificUsername = "Angelo";
-            string specificPassword = "mark";
+            string specificUsername1 = "Angelo";
+            string specificPassword1 = "mark";
 
-            return (username == specificUsername && password == specificPassword);
+            string specificUsername2 = "John";
+            string specificPassword2 = "doe";
+
+            if ((username == specificUsername1 && password == specificPassword1) ||
+                (username == specificUsername2 && password == specificPassword2))
+            {
+                return true;
+            }
+            else
+            {
+                return false;
+            }
         }
 
-        private void SaveCredentials(string username, string password)
+            private void SaveCredentials(string username, string password)
         {
             SecureStorage.SetAsync("Username", username);
             SecureStorage.SetAsync("Password", password);
