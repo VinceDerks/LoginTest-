@@ -2,9 +2,13 @@
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:local="clr-namespace:LoginTest"
-             x:Class="LoginTest.LoggedHome">
-    <ScrollView>
-        <StackLayout>
+             x:Class="LoginTest.LoggedHome"
+        >
+
+    <Shell.BackButtonBehavior>
+        <BackButtonBehavior IsEnabled="False" IsVisible="False"/>
+    </Shell.BackButtonBehavior>
+    <StackLayout>
             <Grid Padding="10"
               ColumnSpacing="5"
               RowSpacing="5">
@@ -13,7 +17,7 @@
                     <RowDefinition Height="155"/>
                     <RowDefinition Height="155"/>
                     <RowDefinition Height="155"/>
-                    <RowDefinition Height="75"/>
+                    <RowDefinition Height="155"/>
                 </Grid.RowDefinitions>
                 <Grid.ColumnDefinitions Padding="10">
                     <ColumnDefinition Width="*"/>
@@ -186,14 +190,19 @@
                         BackgroundColor="Transparent"    
                         Stroke="Black"
                         StrokeThickness="2.5"/>
+                  
+            <StackLayout IsVisible="{Binding IsLoggedIn}" 
+                         Grid.Row="5"
+                         
+                         Grid.ColumnSpan="2"
+                         HeightRequest="155">
+                <Button Text="Logout" Clicked="LogoutButton_Clicked" />
+            </StackLayout>
 
             </Grid>
 
-            <StackLayout IsVisible="{Binding IsLoggedIn}">
-                <Button Text="Logout" Clicked="LogoutButton_Clicked" />
-            </StackLayout>
         
         </StackLayout>
-    </ScrollView>
+
     
 </ContentPage>

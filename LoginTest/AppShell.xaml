@@ -5,7 +5,7 @@
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
     xmlns:local="clr-namespace:LoginTest"
     Shell.TabBarIsVisible="True"
-    Shell.TabBarBackgroundColor="CornflowerBlue"
+    Shell.TabBarBackgroundColor="#0070B4"
     Shell.TabBarTitleColor="White"
     Shell.FlyoutBehavior="Disabled">
 
@@ -14,4 +14,5 @@
                           ContentTemplate="{DataTemplate local:LoginPage}"/>
 
 
+    
 </Shell>
