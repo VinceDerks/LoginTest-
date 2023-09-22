@@ -6,6 +6,10 @@
              NavigationPage.HasNavigationBar="False"
              Shell.NavBarIsVisible="False"
              Shell.TabBarIsVisible="False">
+
+    <Shell.BackButtonBehavior>
+        <BackButtonBehavior IsEnabled="True" IsVisible="True"/>
+    </Shell.BackButtonBehavior>
     <StackLayout Margin="20">
         <Label Text="Username: " FontAttributes="Bold" />
         <Label x:Name="UsernameLabel" />

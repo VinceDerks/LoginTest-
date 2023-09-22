@@ -26,33 +26,17 @@
 
 
                 <BoxView Grid.Row="0" 
-                     Grid.Column="0" 
+                     Grid.ColumnSpan="2" 
                      Color="Transparent"/>
                 <Label Grid.Row="0" 
-                       Grid.Column="0" 
-                       Text="Welcome"
-                       HorizontalOptions="End" 
-                       VerticalOptions="CenterAndExpand"
-                       FontAttributes="Bold"
-                       FontSize="20"
-                       />
+                       Grid.ColumnSpan="2"
+                       HorizontalOptions="CenterAndExpand" 
+                       VerticalOptions="CenterAndExpand"/>
+                <ImageButton Source="rentbuddylogo.png"
+                             Grid.Row="0" 
+                             Grid.ColumnSpan="2"/>
 
-
-                <BoxView Grid.Row="0" 
-                     Grid.Column="1" 
-                     Color="Transparent"/>
-                <Label Grid.Row="0" 
-                       Grid.Column="1" 
-                       x:Name="Home"
-                       HorizontalOptions="Start" 
-                       VerticalOptions="CenterAndExpand"
-                       FontAttributes="Bold"
-                       FontSize="20"
-                       />
-
-
-
-                <BoxView Grid.Row="1"
+            <BoxView Grid.Row="1"
                          Color="White" />
                 <Label Grid.Row="1"
                        Grid.Column="0"
