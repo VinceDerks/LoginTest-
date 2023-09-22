@@ -61,7 +61,9 @@
                        VerticalOptions="End" 
                        FontSize="15"
                        x:Name="bobbert"/>
-                <ImageButton Source="persoon2.png"
+                <ImageButton
+                    Clicked="RetrieveName"
+                    Source="persoon2.png"
                              Grid.Row="1"
                             />
 

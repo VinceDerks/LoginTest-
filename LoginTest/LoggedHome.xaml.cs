@@ -7,7 +7,6 @@ namespace LoginTest
         public LoggedHome()
         {
             InitializeComponent();
-            RetrieveName();
         }
 
         private void LogoutButton_Clicked(object sender, EventArgs e)
@@ -22,11 +21,18 @@ namespace LoginTest
 
         }
 
-        private async void RetrieveName()
+        private async void RetrieveName(object sender, EventArgs e)
         {
-            bobbert.Text = await SecureStorage.GetAsync("Username");
+            string username = await SecureStorage.GetAsync("Username");
+            string password = await SecureStorage.GetAsync("Password");
 
-            Home.Text =  await SecureStorage.GetAsync("Username");
+            bobbert.Text = username;
+
+            if (!string.IsNullOrEmpty(username) && !string.IsNullOrEmpty(password))
+            {
+                var userDetailsPage = new UserPage(username, password);
+                await Navigation.PushAsync(userDetailsPage);
+            }
         }
     }
 }
