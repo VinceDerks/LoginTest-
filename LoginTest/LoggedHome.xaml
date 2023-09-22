@@ -128,7 +128,8 @@
                        VerticalOptions="End" />
             <ImageButton Source="clock.svg"
                          Grid.Row="3"
-                         Grid.Column="0"/>
+                         Grid.Column="0"
+                         HeightRequest="120"/>
 
 
 

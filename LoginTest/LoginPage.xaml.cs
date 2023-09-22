@@ -47,10 +47,10 @@ namespace LoginTest
         private bool ValidateLogin(string username, string password)
         {
             string specificUsername1 = "Angelo";
-            string specificPassword1 = "mark";
+            string specificPassword1 = "erven";
 
-            string specificUsername2 = "John";
-            string specificPassword2 = "doe";
+            string specificUsername2 = "Geert";
+            string specificPassword2 = "erven";
 
             if ((username == specificUsername1 && password == specificPassword1) ||
                 (username == specificUsername2 && password == specificPassword2))
