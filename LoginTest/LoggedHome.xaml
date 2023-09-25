@@ -40,7 +40,6 @@
                          Color="White" />
                 <Label Grid.Row="1"
                        Grid.Column="0"
-                       Text="test"
                        HorizontalOptions="Center"
                        VerticalOptions="End" 
                        FontSize="15"
@@ -65,21 +64,19 @@
                         Grid.Row="1"
                         Grid.Column="1"/>
 
-
             <BoxView Grid.Row="2"
-                         Grid.Column="0"
-                         Color="White" />
-                <Label Grid.Row="2"
-                       Grid.Column="0"
-                       Text="Route"
-                       HorizontalOptions="Center"
-                       VerticalOptions="End" />
-            <ImageButton Source="route.svg"
-                     Grid.Row="2"
-                     Grid.Column="0"/>
-
-      
-                <BoxView Grid.Row="2"
+             Grid.Column="0"
+             Color="White" />
+            <Label Grid.Row="2"
+           Grid.Column="0"
+           Text="Route"
+           HorizontalOptions="Center"
+           VerticalOptions="End" />
+            <ImageButton Clicked="NavigateToRoutes"
+                 Source="route.svg"
+                 Grid.Row="2"
+                 Grid.Column="0" />
+            <BoxView Grid.Row="2"
                          Grid.Column="1"
                          Color="White" />
                 <Label Grid.Row="2"

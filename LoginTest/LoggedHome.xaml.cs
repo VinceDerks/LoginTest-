@@ -2,7 +2,7 @@ using Microsoft.Maui.Controls;
 
 namespace LoginTest
 {
-    public partial class LoggedHome : ContentPage
+   public partial class LoggedHome : ContentPage
     {
         public LoggedHome()
         {
@@ -33,6 +33,13 @@ namespace LoginTest
                 var userDetailsPage = new UserPage(username, password);
                 await Navigation.PushAsync(userDetailsPage);
             }
+        }
+
+        private async void NavigateToRoutes(object sender, EventArgs e)
+        {
+            // Logic to navigate to the RoutesPage
+            var routesPage = new RoutesPage();
+            await Navigation.PushAsync(routesPage);
         }
     }
 }

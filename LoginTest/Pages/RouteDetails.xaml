@@ -1,0 +1,9 @@
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="LoginTest.RouteDetails">
+    <StackLayout>
+        <Label Text="{Binding SelectedRoute.ID}" />
+        <Label Text="{Binding SelectedRoute.Location}" />
+        <!-- Add additional labels or controls to display more details -->
+    </StackLayout>
+</ContentPage>

@@ -1,0 +1,17 @@
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="LoginTest.RoutesPage">
+    <StackLayout>
+        <CollectionView ItemsSource="{Binding Routes}" SelectionChangedCommand="{Binding RouteSelectedCommand}">
+            <CollectionView.ItemTemplate>
+                <DataTemplate>
+                    <StackLayout>
+                        <Label Text="{Binding ID}" />
+                        <Label Text="{Binding Location}" />
+                        <Button Text="More Details" Command="{Binding BindingContext.ShowDetailsCommand, Source={x:Reference RoutesPage}}" CommandParameter="{Binding ID}" />
+                    </StackLayout>
+                </DataTemplate>
+            </CollectionView.ItemTemplate>
+        </CollectionView>
+    </StackLayout>
+</ContentPage>
