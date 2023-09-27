@@ -1,48 +1,102 @@
-using System.Collections.ObjectModel;
-using System.Linq;
-using System.Windows.Input;
+using System;
+using System.Collections.Generic;
 using Microsoft.Maui.Controls;
+using Newtonsoft.Json;
+using System.IO;
+using LoginTest.Model;
 
 namespace LoginTest
 {
     public partial class RoutesPage : ContentPage
     {
-        public ICommand ShowDetailsCommand { get; }
+        private DateTime currentDate;
+        private DateTime selectedDate;
 
         public RoutesPage()
         {
             InitializeComponent();
-            BindingContext = this;
-
-            ShowDetailsCommand = new Command<string>(ShowDetails);
+            currentDate = DateTime.Today;
+            selectedDate = currentDate;
+            UpdateRoutes();
+            DisplayRoutes(currentDate);
         }
 
-        private void ShowDetails(string routeId)
+        private void OnPreviousClicked(object sender, EventArgs e)
         {
-            // Navigate to the details page with the selected route ID
-            // You can use the Navigation service provided by .NET MAUI
+            // Call DisplayRoutes with the desired date
+            // Example: Display routes for the previous day
+            selectedDate = selectedDate.AddDays(-1);
+            DateTime previousDay = selectedDate;
+            
+            DisplayRoutes(previousDay);
         }
 
-        protected override void OnAppearing()
+        private void OnNextClicked(object sender, EventArgs e)
         {
-            base.OnAppearing();
+            // Call DisplayRoutes with the desired date
+            // Example: Display routes for the next day
+           selectedDate = selectedDate.AddDays(1);
+            DateTime nextDay = selectedDate;
+            DisplayRoutes(nextDay);
+        }
+        private void UpdateRoutes()
+        {
+            // Fetch the routes for the current date from your data source
+            var routes = FetchRoutesForDate(currentDate);
 
-            // Populate the Routes collection with sample data or retrieve it from a data source
-            routes = new ObservableCollection<Route>()
-            {
-                new Route() { ID = "1", Location = "Location 1", DateTime = new DateTime(2022, 12, 31, 10, 0, 0) },
-                new Route() { ID = "2", Location = "Location 2", DateTime = new DateTime(2022, 12, 30, 14, 30, 0) },
-                new Route() { ID = "3", Location = "Location 3", DateTime = new DateTime(2022, 12, 29, 16, 0, 0) },
-                new Route() { ID = "4", Location = "Location 4", DateTime = new DateTime(2022, 12, 28, 9, 0, 0) },
-            };
-
-            // Sort the Routes collection by date and time in ascending order
-            routes = new ObservableCollection<Route>(routes.OrderBy(r => r.DateTime));
-
-            // Remove routes that have already passed
-            routes = new ObservableCollection<Route>(routes.Where(r => r.DateTime > DateTime.Now));
+            // Update the collection view with the new routes
+            lblRoutes.ItemsSource = routes;
         }
 
-        public ObservableCollection<Route> routes { get; private set; }
+        private List<RoutesSrc> FetchRoutesForDate(DateTime date)
+        {
+            string jsonData = @"[
+                          {
+                            ""Id"": 1,
+                            ""Date"": ""2023-09-26"",
+                            ""City"": ""Tilburg"",
+                            ""Adress"": ""Distelweg 52"",
+                            ""TimeArrive"": ""17:00 PM"",
+                            ""TimeDepart"": ""18:00 PM"",
+                            ""TypeOf"": ""Delivery""
+                          },
+                          {
+                            ""Id"": 2,
+                            ""Date"": ""2023-09-26"",
+                            ""City"": ""Tilburg"",
+                            ""Adress"": ""Rentbuddy bv"",
+                            ""TimeArrive"": ""17:00 PM"",
+                            ""TimeDepart"": ""18:00 PM"",
+                            ""TypeOf"": ""Pickup""
+                          },
+                          {
+                            ""Id"": 3,
+                            ""Date"": ""2023-09-26"",
+                            ""City"": ""Tilburg"",
+                            ""Adress"": ""Oaksoft"",
+                            ""TimeArrive"": ""17:00 PM"",
+                            ""TimeDepart"": ""18:00 PM"",
+                            ""TypeOf"": ""Delivery""
+                          }
+                        ]";
+
+            // Deserialize the JSON data into a list of RoutesSrc objects
+            List<RoutesSrc> routes = JsonConvert.DeserializeObject<List<RoutesSrc>>(jsonData);
+
+            // Filter the routes based on the provided date
+            List<RoutesSrc> filteredRoutes = routes.FindAll(r => r.Date.Date == date.Date);
+
+            return filteredRoutes;
+        }
+
+        private void DisplayRoutes(DateTime date)
+        {
+            // Fetch the routes for the provided date
+            List<RoutesSrc> routes = FetchRoutesForDate(date);
+
+            // Set the ItemsSource of the CollectionView to the fetched routes
+            lblRoutes.ItemsSource = routes;
+            CurrentDate.Text = selectedDate.ToString();
+        }
     }
 }

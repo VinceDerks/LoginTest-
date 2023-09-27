@@ -12,7 +12,4 @@
     <ShellContent Title="Home"
                           Icon="home.png"
                           ContentTemplate="{DataTemplate local:LoginPage}"/>
-
-
-    
 </Shell>

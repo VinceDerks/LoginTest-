@@ -1,17 +1,37 @@
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:LoginTest"
              x:Class="LoginTest.RoutesPage">
-    <StackLayout>
-        <CollectionView ItemsSource="{Binding Routes}" SelectionChangedCommand="{Binding RouteSelectedCommand}">
-            <CollectionView.ItemTemplate>
-                <DataTemplate>
-                    <StackLayout>
-                        <Label Text="{Binding ID}" />
-                        <Label Text="{Binding Location}" />
-                        <Button Text="More Details" Command="{Binding BindingContext.ShowDetailsCommand, Source={x:Reference RoutesPage}}" CommandParameter="{Binding ID}" />
-                    </StackLayout>
-                </DataTemplate>
-            </CollectionView.ItemTemplate>
-        </CollectionView>
-    </StackLayout>
+    <ContentPage.Content>
+        
+        <StackLayout>
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="Auto" />
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="Auto" />
+                </Grid.ColumnDefinitions>
+
+                <ImageButton Source="backarrow.svg" Clicked="OnPreviousClicked" Grid.Column="0" />
+                <Label x:Name="CurrentDate" Grid.Column="1" HorizontalOptions="Center" Margin="12"/>
+                <ImageButton Source="forwardarrow.svg" Clicked="OnNextClicked" Grid.Column="2" />
+            </Grid>
+            <CollectionView x:Name="lblRoutes">
+                <CollectionView.ItemTemplate>
+                    <DataTemplate>
+                        <StackLayout Padding="10" BackgroundColor="#F0F0F0" Margin="5" >
+                            <Label Text="{Binding ID}" FontSize="18" FontAttributes="Bold" TextColor="#333333"/>
+                            <Label Text="{Binding Date}" FontSize="14" TextColor="#999999"/>
+                            <Label Text="{Binding City}" FontSize="16" TextColor="#666666"/>
+                            <Label Text="{Binding Adress}" FontSize="14" TextColor="#999999"/>
+                            <Label Text="{Binding TimeArrive}" FontSize="14" TextColor="#999999"/>
+                            <Label Text="{Binding TimeDepart}" FontSize="14" TextColor="#999999"/>
+                            <Label Text="{Binding TypeOf}" FontSize="14" TextColor="#999999"/>
+                            
+                        </StackLayout>
+                    </DataTemplate>
+                </CollectionView.ItemTemplate>
+            </CollectionView>
+        </StackLayout>
+    </ContentPage.Content>
 </ContentPage>

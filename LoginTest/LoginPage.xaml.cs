@@ -6,22 +6,19 @@ namespace LoginTest
 
         public LoginPage()
         {
-            InitializeComponent();
             CheckLoginStatus();
+            InitializeComponent();
+            
         }
 
         private async void CheckLoginStatus()
         {
-            if (Preferences.ContainsKey("IsLoggedIn"))
+            if (await SecureStorage.GetAsync("IsLoggedIn") == "true")
             {
-                bool isLoggedIn = Preferences.Get("IsLoggedIn", false);
-
-                if (isLoggedIn)
-                {
-                    await Navigation.PushAsync(new LoggedHome());
-                    Navigation.RemovePage(this);
-                }
+                await Navigation.PushAsync(new RoutesPage());
+                Navigation.RemovePage(this);
             }
+         
         }
 
         private void SignInButton_Clicked(object sender, EventArgs e)
@@ -34,7 +31,7 @@ namespace LoginTest
 
                 SecureStorage.SetAsync("IsLoggedIn", "true");
                 SaveCredentials(username, password);
-                Navigation.PushAsync(new LoggedHome());
+                Navigation.PushAsync(new RoutesPage());
                 Navigation.RemovePage(this);
                 
             }
