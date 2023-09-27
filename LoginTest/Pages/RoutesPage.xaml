@@ -20,6 +20,9 @@
                 <CollectionView.ItemTemplate>
                     <DataTemplate>
                         <StackLayout Padding="10" BackgroundColor="#F0F0F0" Margin="5" >
+                            <StackLayout.GestureRecognizers>
+                                <TapGestureRecognizer Tapped="OnRouteTapped" />
+                            </StackLayout.GestureRecognizers>
                             <Label Text="{Binding ID}" FontSize="18" FontAttributes="Bold" TextColor="#333333"/>
                             <Label Text="{Binding Date}" FontSize="14" TextColor="#999999"/>
                             <Label Text="{Binding City}" FontSize="16" TextColor="#666666"/>
@@ -27,7 +30,6 @@
                             <Label Text="{Binding TimeArrive}" FontSize="14" TextColor="#999999"/>
                             <Label Text="{Binding TimeDepart}" FontSize="14" TextColor="#999999"/>
                             <Label Text="{Binding TypeOf}" FontSize="14" TextColor="#999999"/>
-                            
                         </StackLayout>
                     </DataTemplate>
                 </CollectionView.ItemTemplate>

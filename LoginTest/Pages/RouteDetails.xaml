@@ -4,6 +4,6 @@
     <StackLayout>
         <Label Text="{Binding SelectedRoute.ID}" />
         <Label Text="{Binding SelectedRoute.Location}" />
-        <!-- Add additional labels or controls to display more details -->
+        <Label Text="FORTNITE"></Label>
     </StackLayout>
 </ContentPage>

@@ -98,5 +98,13 @@ namespace LoginTest
             lblRoutes.ItemsSource = routes;
             CurrentDate.Text = selectedDate.ToString();
         }
+        private void OnRouteTapped(object sender, EventArgs e)
+        {
+            // Navigeer naar de nieuwe pagina
+            Navigation.PushAsync(new RouteDetails());
+
+        }
     }
+
 }
+
