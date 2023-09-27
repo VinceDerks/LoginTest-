@@ -30,6 +30,7 @@
                             <Label Text="{Binding TimeArrive}" FontSize="14" TextColor="#999999"/>
                             <Label Text="{Binding TimeDepart}" FontSize="14" TextColor="#999999"/>
                             <Label Text="{Binding TypeOf}" FontSize="14" TextColor="#999999"/>
+                            
                         </StackLayout>
                     </DataTemplate>
                 </CollectionView.ItemTemplate>

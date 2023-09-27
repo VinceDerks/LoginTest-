@@ -23,8 +23,7 @@ namespace LoginTest
 
         private void OnPreviousClicked(object sender, EventArgs e)
         {
-            // Call DisplayRoutes with the desired date
-            // Example: Display routes for the previous day
+           
             selectedDate = selectedDate.AddDays(-1);
             DateTime previousDay = selectedDate;
             
@@ -33,18 +32,15 @@ namespace LoginTest
 
         private void OnNextClicked(object sender, EventArgs e)
         {
-            // Call DisplayRoutes with the desired date
-            // Example: Display routes for the next day
+            
            selectedDate = selectedDate.AddDays(1);
             DateTime nextDay = selectedDate;
             DisplayRoutes(nextDay);
         }
         private void UpdateRoutes()
         {
-            // Fetch the routes for the current date from your data source
+           
             var routes = FetchRoutesForDate(currentDate);
-
-            // Update the collection view with the new routes
             lblRoutes.ItemsSource = routes;
         }
 
@@ -80,10 +76,8 @@ namespace LoginTest
                           }
                         ]";
 
-            // Deserialize the JSON data into a list of RoutesSrc objects
             List<RoutesSrc> routes = JsonConvert.DeserializeObject<List<RoutesSrc>>(jsonData);
 
-            // Filter the routes based on the provided date
             List<RoutesSrc> filteredRoutes = routes.FindAll(r => r.Date.Date == date.Date);
 
             return filteredRoutes;
@@ -91,10 +85,10 @@ namespace LoginTest
 
         private void DisplayRoutes(DateTime date)
         {
-            // Fetch the routes for the provided date
+
             List<RoutesSrc> routes = FetchRoutesForDate(date);
 
-            // Set the ItemsSource of the CollectionView to the fetched routes
+           
             lblRoutes.ItemsSource = routes;
             CurrentDate.Text = selectedDate.ToString();
         }
