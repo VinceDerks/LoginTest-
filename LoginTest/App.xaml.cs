@@ -5,8 +5,11 @@
         public App()
         {
             InitializeComponent();
+        }
 
-            MainPage = new AppShell();
+        protected override async void OnStart()
+        {
+            await ViewModels.AuthenticationService.CheckLoginStatus();
         }
     }
 }

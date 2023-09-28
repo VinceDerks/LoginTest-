@@ -6,19 +6,8 @@ namespace LoginTest
 
         public LoginPage()
         {
-            CheckLoginStatus();
             InitializeComponent();
             
-        }
-
-        private async void CheckLoginStatus()
-        {
-            if (await SecureStorage.GetAsync("IsLoggedIn") == "true")
-            {
-                await Navigation.PushAsync(new RoutesPage());
-                Navigation.RemovePage(this);
-            }
-         
         }
 
         private void SignInButton_Clicked(object sender, EventArgs e)
@@ -31,7 +20,7 @@ namespace LoginTest
 
                 SecureStorage.SetAsync("IsLoggedIn", "true");
                 SaveCredentials(username, password);
-                Navigation.PushAsync(new RoutesPage());
+                Navigation.PushAsync(new UserPage());
                 Navigation.RemovePage(this);
                 
             }

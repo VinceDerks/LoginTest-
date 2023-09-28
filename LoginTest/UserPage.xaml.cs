@@ -7,39 +7,32 @@ namespace LoginTest
         public UserPage()
         {
             InitializeComponent();
+            RetrieveName();
         }
 
-        public UserPage(string username, string password)
-        {
-            InitializeComponent();
-            UsernameLabel.Text = username;
-            PasswordLabel.Text = password;
-        }
-
-        private void LogoutButton_Clicked(object sender, EventArgs e)
+        private async void LogoutButton_Clicked(object sender, EventArgs e)
         {
             // Clear stored credentials from secure storage
+            SecureStorage.Remove("IsLoggedIn");
             SecureStorage.Remove("Username");
             SecureStorage.Remove("Password");
 
             // Redirect to login page
-            Navigation.PopToRootAsync();
-
-
+            var LoginPage = new LoginPage();
+            await Navigation.PushAsync(LoginPage);
+            Navigation.RemovePage(this);
         }
 
-        private async void RetrieveName(object sender, EventArgs e)
+        private async void RetrieveName()
         {
             string username = await SecureStorage.GetAsync("Username");
             string password = await SecureStorage.GetAsync("Password");
 
-
             if (!string.IsNullOrEmpty(username) && !string.IsNullOrEmpty(password))
             {
-                var userDetailsPage = new UserPage(username, password);
-                await Navigation.PushAsync(userDetailsPage);
+                UsernameLabel.Text = username;
+                PasswordLabel.Text = password;
             }
         }
-
     }
 }

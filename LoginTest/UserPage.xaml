@@ -11,10 +11,11 @@
         <Label Text="Username: " FontAttributes="Bold" />
         <Label x:Name="UsernameLabel" />
         <Label Text="Password: " FontAttributes="Bold" />
-        <Label x:Name="PasswordLabel" />
+        <Label x:Name="PasswordLabel"
+           />
         <StackLayout IsVisible="{Binding IsLoggedIn}" 
                          Grid.Row="5"
-
+                         
                          Grid.ColumnSpan="2"
                          HeightRequest="155">
             <Button Text="Logout" Clicked="LogoutButton_Clicked" />
