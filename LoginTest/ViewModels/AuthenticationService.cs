@@ -32,7 +32,7 @@ namespace LoginTest.ViewModels
             if (await SecureStorage.GetAsync("IsLoggedIn") == "true" && ValidateLogin(await SecureStorage.GetAsync("Username"), await SecureStorage.GetAsync("Password")))
             {
 
-                App.Current.MainPage = new NavigationPage(new UserPage());
+                App.Current.MainPage = new NavigationPage(new RoutesPage());
             }
             else
             {
