@@ -4,6 +4,9 @@
     <StackLayout>
         <Label Text="{Binding SelectedRoute.ID}" />
         <Label Text="{Binding SelectedRoute.Location}" />
-        <Label Text="FORTNITE"></Label>
+        <Label Text="m"></Label>
+        <Button Clicked="Arrived" Text="Gearriveerd" BackgroundColor="Green">
+            
+        </Button>
     </StackLayout>
 </ContentPage>

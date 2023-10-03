@@ -34,5 +34,11 @@ namespace LoginTest
                 PasswordLabel.Text = password;
             }
         }
+
+        private async void NavToRoutes(object sender, EventArgs e)
+        {
+            var RoutesPage = new RoutesPage();
+            await Navigation.PushAsync(RoutesPage);
+        }
     }
 }

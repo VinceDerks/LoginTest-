@@ -13,8 +13,7 @@
     <Application.MainPage>
         <NavigationPage>
             <x:Arguments>
-                <local:UserPage />
-                <!-- Replace this with your initial page -->
+                <local:UserPage /> 
             </x:Arguments>
         </NavigationPage>
     </Application.MainPage>

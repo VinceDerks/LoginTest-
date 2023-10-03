@@ -1,14 +1,20 @@
+using LoginTest.Pages;
 using Microsoft.Maui.Controls;
-namespace LoginTest {
-        public partial class RouteDetails : ContentPage
+namespace LoginTest
+{
+    public partial class RouteDetails : ContentPage
+    {
+        public RouteDetails()
         {
-            public RouteDetails()
-            {
-                InitializeComponent();
+            InitializeComponent();
+        }
+        private ArrivedPage arrivedPage;
 
-                // Your custom code here
-            }
-
-            // Other methods and event handlers
+        private void Arrived(object sender, EventArgs e)
+        {
+            arrivedPage = new ArrivedPage();
+            Navigation.PushAsync(arrivedPage);
         }
     }
+ }
+    

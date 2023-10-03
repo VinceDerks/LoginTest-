@@ -3,6 +3,9 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="LoginTest.UserPage"
              BackgroundColor="White"
+                          NavigationPage.HasNavigationBar="True"
+Shell.NavBarIsVisible="True"
+Shell.TabBarIsVisible="True"
             >
 
     <StackLayout Margin="20">
@@ -17,6 +20,7 @@
                          Grid.ColumnSpan="2"
                          HeightRequest="155">
             <Button Text="Logout" Clicked="LogoutButton_Clicked" />
+            <Button Text="Routes" Clicked="NavToRoutes" />
         </StackLayout>
     </StackLayout>
 </ContentPage>
