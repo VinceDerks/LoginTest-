@@ -1,20 +1,27 @@
-using LoginTest.Pages;
+using LoginTest;
 using Microsoft.Maui.Controls;
+using LoginTest.Model;
 namespace LoginTest
 {
     public partial class RouteDetails : ContentPage
+{
+    public RoutesSrc SelectedRoute { get; set; }
+
+    public RouteDetails(RoutesSrc selectedRoute)
     {
-        public RouteDetails()
-        {
-            InitializeComponent();
-        }
-        private ArrivedPage arrivedPage;
+        InitializeComponent();
+        SelectedRoute = selectedRoute;
+        BindingContext = this;
+    }
+
+        private ArrivedPage arrivedPage; 
 
         private void Arrived(object sender, EventArgs e)
         {
-            arrivedPage = new ArrivedPage();
+            arrivedPage = new ArrivedPage(); 
             Navigation.PushAsync(arrivedPage);
         }
+
     }
- }
+}
     

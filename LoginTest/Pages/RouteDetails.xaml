@@ -3,10 +3,13 @@
              x:Class="LoginTest.RouteDetails">
     <StackLayout>
         <Label Text="{Binding SelectedRoute.ID}" />
-        <Label Text="{Binding SelectedRoute.Location}" />
-        <Label Text="m"></Label>
+        <Label Text="{Binding SelectedRoute.City}" />
+        <Label Text="{Binding SelectedRoute.Adress}" />
+        <Label Text="{Binding SelectedRoute.TimeArrive}" />
+        <Label Text="{Binding SelectedRoute.TimeDepart}" />
+        <Label Text="{Binding SelectedRoute.TypeOf}" />
         <Button Clicked="Arrived" Text="Gearriveerd" BackgroundColor="Green">
-            
+
         </Button>
     </StackLayout>
 </ContentPage>

@@ -48,25 +48,25 @@ namespace LoginTest
         {
             string jsonData = @"[
                           {
-                            ""Id"": 1,
+                            ""ID"": ""1"",
                             ""Date"": ""2023-09-26"",
                             ""City"": ""Tilburg"",
                             ""Adress"": ""Distelweg 52"",
-                            ""TimeArrive"": ""17:00 PM"",
+                            ""TimeArrive"": ""10:00 PM"",
                             ""TimeDepart"": ""18:00 PM"",
                             ""TypeOf"": ""Delivery""
                           },
                           {
-                            ""Id"": 2,
+                            ""ID"": 2,
                             ""Date"": ""2023-09-26"",
-                            ""City"": ""Tilburg"",
-                            ""Adress"": ""Rentbuddy bv"",
+                            ""City"": ""Varik"",
+                            ""Adress"": ""De Geus bv"",
                             ""TimeArrive"": ""17:00 PM"",
                             ""TimeDepart"": ""18:00 PM"",
                             ""TypeOf"": ""Pickup""
                           },
                           {
-                            ""Id"": 3,
+                            ""ID"": 3,
                             ""Date"": ""2023-09-26"",
                             ""City"": ""Tilburg"",
                             ""Adress"": ""Oaksoft"",
@@ -92,11 +92,12 @@ namespace LoginTest
             lblRoutes.ItemsSource = routes;
             CurrentDate.Text = selectedDate.ToString();
         }
+
+
         private void OnRouteTapped(object sender, EventArgs e)
         {
-            // Navigeer naar de nieuwe pagina
-            Navigation.PushAsync(new RouteDetails());
-
+            var selectedRoute = ((sender as StackLayout)?.BindingContext as RoutesSrc);
+            Navigation.PushAsync(new RouteDetails(selectedRoute));
         }
     }
 

@@ -8,7 +8,7 @@ namespace LoginTest.Model
 {
     public class RoutesSrc
     {
-        public int Id { get; set; }
+        public int ID { get; set; }
         public DateTime Date { get; set; }
         public string City { get; set; }
         public string Adress { get; set; }
