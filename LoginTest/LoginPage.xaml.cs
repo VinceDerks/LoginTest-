@@ -1,4 +1,5 @@
 using Microsoft.Maui.Controls;
+using LoginTest.Resources.Languages;
 namespace LoginTest
 {
     public partial class LoginPage : ContentPage

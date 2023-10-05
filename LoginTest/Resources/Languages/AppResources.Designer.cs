@@ -61,11 +61,11 @@ namespace LoginTest.Resources.Languages {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Hello, World!.
+        ///   Looks up a localized string similar to Welcome to Rentbuddy!.
         /// </summary>
-        internal static string HelloWorld {
+        internal static string Rent {
             get {
-                return ResourceManager.GetString("HelloWorld", resourceCulture);
+                return ResourceManager.GetString("Rent", resourceCulture);
             }
         }
     }

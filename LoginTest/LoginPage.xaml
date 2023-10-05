@@ -33,7 +33,7 @@
             <Image Source="rentbuddylogo.png" VerticalOptions="Start" HorizontalOptions="Center" Margin="0,40,0,0" HeightRequest="150" WidthRequest="300" />
 
             <StackLayout Margin="0,0">
-                <Label FontSize="32" Text="Welkom bij RentBuddy" MinimumWidthRequest="30" MinimumHeightRequest="30" />
+                <Label FontSize="32" Text="{Binding LanguagesLang[Rent], Mode=OneWay}" MinimumWidthRequest="30" MinimumHeightRequest="30" />
              
             </StackLayout>
 
