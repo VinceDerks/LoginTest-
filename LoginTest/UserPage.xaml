@@ -2,7 +2,7 @@
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="LoginTest.UserPage"
-             xmlns:lang="clr-namespace:taaltest.Resources.Languages"
+             xmlns:lang="clr-namespace:LoginTest.Resources.Languages"
              BackgroundColor="White"
                           NavigationPage.HasNavigationBar="True"
 Shell.NavBarIsVisible="True"

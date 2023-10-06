@@ -61,6 +61,15 @@ namespace LoginTest.Resources.Languages {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Arrived.
+        /// </summary>
+        internal static string Arrived {
+            get {
+                return ResourceManager.GetString("Arrived", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Login.
         /// </summary>
         internal static string Loginbutton {
