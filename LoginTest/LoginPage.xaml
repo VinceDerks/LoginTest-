@@ -1,5 +1,6 @@
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:lang="clr-namespace:LoginTest.Resources.Languages"
              x:Class="LoginTest.LoginPage"
              BackgroundColor="White"
              NavigationPage.HasNavigationBar="False"
@@ -33,7 +34,10 @@
             <Image Source="rentbuddylogo.png" VerticalOptions="Start" HorizontalOptions="Center" Margin="0,40,0,0" HeightRequest="150" WidthRequest="300" />
 
             <StackLayout Margin="0,0">
-                <Label FontSize="32" Text="{Binding LanguagesLang[Rent], Mode=OneWay}" MinimumWidthRequest="30" MinimumHeightRequest="30" />
+                <Label FontSize="30" 
+                       Text="{x:Static lang:AppResources.RentIntro}"
+                       MinimumWidthRequest="30" 
+                       MinimumHeightRequest="30" />
              
             </StackLayout>
 
@@ -43,23 +47,23 @@
                 <Grid Margin="0,5">
 
                     <Frame/>
-                    <Entry Placeholder="Username"
-                           x:Name="UsernameEntry"/>
+                    <Entry Placeholder="{x:Static lang:AppResources.User}"
+                           x:Name="UsernameEntry"
+                           TextColor=" red"/>
                 </Grid>
 
 
                 <Grid Margin="0,5">
                     <Frame/>
-                    <Entry Placeholder="Password"
+                    <Entry Placeholder="{x:Static lang:AppResources.Pass}"
                            x:Name="PasswordEntry"
                            IsPassword="True"/>
                 </Grid>
             </StackLayout>
 
-            <Button Margin="0,15" Text="Aanmelden"
-                    Clicked="SignInButton_Clicked"/>
+            <Button Margin="0,15" Text="{x:Static lang:AppResources.Loginbutton}"
+                    Clicked="SignInButton_Clicked"/>    
 
-      
         </StackLayout>
     </Grid>
 </ContentPage>

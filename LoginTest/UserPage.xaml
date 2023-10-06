@@ -2,6 +2,7 @@
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="LoginTest.UserPage"
+             xmlns:lang="clr-namespace:taaltest.Resources.Languages"
              BackgroundColor="White"
                           NavigationPage.HasNavigationBar="True"
 Shell.NavBarIsVisible="True"
@@ -9,9 +10,11 @@ Shell.TabBarIsVisible="True"
             >
 
     <StackLayout Margin="20">
-        <Label Text="Username: " FontAttributes="Bold" />
+        <Label Text="{x:Static lang:AppResources.User:}" 
+               FontAttributes="Bold" />
         <Label x:Name="UsernameLabel" />
-        <Label Text="Password: " FontAttributes="Bold" />
+        <Label Text="{x:Static lang:AppResources.Pass:}"
+               FontAttributes="Bold" />
         <Label x:Name="PasswordLabel"
            />
         <StackLayout IsVisible="{Binding IsLoggedIn}" 
@@ -19,8 +22,10 @@ Shell.TabBarIsVisible="True"
                          
                          Grid.ColumnSpan="2"
                          HeightRequest="155">
-            <Button Text="Logout" Clicked="LogoutButton_Clicked" />
-            <Button Text="Routes" Clicked="NavToRoutes" />
+            <Button Text="{x:Static lang:AppResources.Logoutbutton}" 
+                    Clicked="LogoutButton_Clicked" />
+            <Button Text="Routes" 
+                    Clicked="NavToRoutes" />
         </StackLayout>
     </StackLayout>
 </ContentPage>

@@ -1,16 +1,26 @@
-using Microsoft.Maui.Controls;
 using LoginTest.Resources.Languages;
+using System.Globalization;
 namespace LoginTest
 {
     public partial class LoginPage : ContentPage
     {
-
+        public LocalizationResourceManager localizationResourceManager
+            => LocalizationResourceManager.Instance;
         public LoginPage()
         {
             InitializeComponent();
+            BindingContext = this;
             
         }
 
+        private void TestButton_Clicked(object sender, EventArgs e)
+        {
+            var switchToCulture = !AppResources.Culture.TwoLetterISOLanguageName
+            .Equals("nl", StringComparison.InvariantCultureIgnoreCase) ?
+            new CultureInfo("nl-NL") : new CultureInfo("en-US");
+
+            LocalizationResourceManager.Instance.SetCulture(switchToCulture);
+        }
         private void SignInButton_Clicked(object sender, EventArgs e)
         {
             string username = UsernameEntry.Text;

@@ -61,11 +61,47 @@ namespace LoginTest.Resources.Languages {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Login.
+        /// </summary>
+        internal static string Loginbutton {
+            get {
+                return ResourceManager.GetString("Loginbutton", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Logout.
+        /// </summary>
+        internal static string Logoutbutton {
+            get {
+                return ResourceManager.GetString("Logoutbutton", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Password.
+        /// </summary>
+        internal static string Pass {
+            get {
+                return ResourceManager.GetString("Pass", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Welcome to Rentbuddy!.
         /// </summary>
-        internal static string Rent {
+        internal static string RentIntro {
             get {
-                return ResourceManager.GetString("Rent", resourceCulture);
+                return ResourceManager.GetString("RentIntro", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Username.
+        /// </summary>
+        internal static string User {
+            get {
+                return ResourceManager.GetString("User", resourceCulture);
             }
         }
     }
