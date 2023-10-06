@@ -135,4 +135,22 @@
   <data name="User" xml:space="preserve">
     <value>Gebruikersnaam</value>
   </data>
+  <data name="Arrival" xml:space="preserve">
+    <value>Aankomst</value>
+  </data>
+  <data name="ID" xml:space="preserve">
+    <value>Ordernummer</value>
+  </data>
+  <data name="Place" xml:space="preserve">
+    <value>Plaats</value>
+  </data>
+  <data name="Adress" xml:space="preserve">
+    <value>Adres</value>
+  </data>
+  <data name="Departure" xml:space="preserve">
+    <value>Vertrek</value>
+  </data>
+  <data name="Type" xml:space="preserve">
+    <value>Type</value>
+  </data>
 </root>

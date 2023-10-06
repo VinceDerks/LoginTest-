@@ -10,10 +10,10 @@ Shell.TabBarIsVisible="True"
             >
 
     <StackLayout Margin="20">
-        <Label Text="{x:Static lang:AppResources.User:}" 
+        <Label Text="{x:Static lang:AppResources.User}" 
                FontAttributes="Bold" />
         <Label x:Name="UsernameLabel" />
-        <Label Text="{x:Static lang:AppResources.Pass:}"
+        <Label Text="{x:Static lang:AppResources.Pass}"
                FontAttributes="Bold" />
         <Label x:Name="PasswordLabel"
            />

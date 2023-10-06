@@ -135,4 +135,22 @@
   <data name="User" xml:space="preserve">
     <value>Username</value>
   </data>
+  <data name="Arrival" xml:space="preserve">
+    <value>Arrival</value>
+  </data>
+  <data name="ID" xml:space="preserve">
+    <value>Ordernumber</value>
+  </data>
+  <data name="Place" xml:space="preserve">
+    <value>Place</value>
+  </data>
+  <data name="Adress" xml:space="preserve">
+    <value>Adress</value>
+  </data>
+  <data name="Departure" xml:space="preserve">
+    <value>Departure</value>
+  </data>
+  <data name="Type" xml:space="preserve">
+    <value>Type</value>
+  </data>
 </root>
