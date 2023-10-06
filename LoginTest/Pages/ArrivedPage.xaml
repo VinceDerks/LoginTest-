@@ -1,10 +1,29 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
-             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             xmlns:skia="Microsoft.Maui.Graphics.Skia"
-             x:Class="LoginTest.ArrivedPage"
-             Title="ArrivedPage">
-    <VerticalStackLayout>
-        
-    </VerticalStackLayout>
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:toolkit="http://schemas.microsoft.com/dotnet/2022/maui/toolkit"
+     xmlns:mct="clr-namespace:CommunityToolkit.Maui.Views;assembly=CommunityToolkit.Maui"
+    x:Class="LoginTest.ArrivedPage"
+    Title="ArrivedPage"
+             BackgroundColor="Red">
+    <StackLayout>
+        <Image x:Name="Signature"
+               HorizontalOptions="Center"
+               HeightRequest="200"
+               WidthRequest="200"
+               BackgroundColor="Blue"/>
+        <mct:DrawingView
+            x:Name="SignatureEntry"
+            BackgroundColor="LightGray"
+            WidthRequest="200"
+            HeightRequest="200"
+            IsMultiLineModeEnabled="True"
+            LineColor="Black"
+            LineWidth="5"
+            DrawingLineCompleted="DrawingView_DrawingLineCompleted"/>
+        <Button Clicked="ClearButton_Clicked" Text="Opnieuw">
+            
+        </Button>
+    </StackLayout>
+    
 </ContentPage>
