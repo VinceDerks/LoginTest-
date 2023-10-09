@@ -16,7 +16,7 @@
         </ResourceDictionary>
     </ContentPage.Resources>
     <StackLayout>
-        <Label Text="{x:Static lang:AppResources.Id}"
+        <Label Text="{Binding x:Static lang:AppResources.Id}"
                FontAttributes="Bold"/>
         <Label Text="{Binding SelectedRoute.ID}" 
                Style="{StaticResource LabelStyle}" />
