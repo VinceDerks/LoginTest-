@@ -117,8 +117,20 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <data name="Adress" xml:space="preserve">
+    <value>Adres</value>
+  </data>
+  <data name="Arrival" xml:space="preserve">
+    <value>Aankomst</value>
+  </data>
   <data name="Arrived" xml:space="preserve">
     <value>Gearriveerd</value>
+  </data>
+  <data name="Departure" xml:space="preserve">
+    <value>Vertrek</value>
+  </data>
+  <data name="ID" xml:space="preserve">
+    <value>Ordernummer</value>
   </data>
   <data name="Loginbutton" xml:space="preserve">
     <value>Aanmelden</value>
@@ -129,28 +141,16 @@
   <data name="Pass" xml:space="preserve">
     <value>Wachtwoord</value>
   </data>
-  <data name="RentIntro" xml:space="preserve">
-    <value>Welkom bij RentBuddy!</value>
-  </data>
-  <data name="User" xml:space="preserve">
-    <value>Gebruikersnaam</value>
-  </data>
-  <data name="Arrival" xml:space="preserve">
-    <value>Aankomst</value>
-  </data>
-  <data name="ID" xml:space="preserve">
-    <value>Ordernummer</value>
-  </data>
   <data name="Place" xml:space="preserve">
     <value>Plaats</value>
   </data>
-  <data name="Adress" xml:space="preserve">
-    <value>Adres</value>
-  </data>
-  <data name="Departure" xml:space="preserve">
-    <value>Vertrek</value>
+  <data name="RentIntro" xml:space="preserve">
+    <value>Welkom bij RentBuddy!</value>
   </data>
   <data name="Type" xml:space="preserve">
     <value>Type</value>
+  </data>
+  <data name="User" xml:space="preserve">
+    <value>Gebruikersnaam</value>
   </data>
 </root>
