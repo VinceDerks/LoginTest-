@@ -36,10 +36,10 @@
 
 	<ItemGroup>
 		<!-- App Icon -->
-		<MauiIcon Include="Resources\AppIcon\appicon.svg" ForegroundFile="Resources\AppIcon\appiconfg.svg" Color="#512BD4" />
+		<MauiAppIcon Include="Resources\AppIcon\appicon.png" />
 
 		<!-- Splash Screen -->
-		<MauiSplashScreen Include="Resources\Splash\splash.svg" Color="#512BD4" BaseSize="128,128" />
+		<MauiSplashScreen Include="Resources\Images\rentbuddylogo.png" Color="#ffffff" BaseSize="425,225" />
 
 		<!-- Images -->
 		<MauiImage Include="Resources\Images\*" />
@@ -60,7 +60,6 @@
 	  <None Remove="Resources\Images\home.svg" />
 	  <None Remove="Resources\Images\Lock.svg" />
 	  <None Remove="Resources\Images\Person.svg" />
-	  <None Remove="Resources\Images\rentbuddylogo.png" />
 	  <None Remove="Resources\Images\route.svg" />
 	  <None Remove="Resources\Images\truck.svg" />
 	</ItemGroup>
