@@ -4,24 +4,54 @@
              x:Class="LoginTest.UserPage"
              xmlns:lang="clr-namespace:LoginTest.Resources.Languages"
              BackgroundColor="White"
-                          NavigationPage.HasNavigationBar="True"
-Shell.NavBarIsVisible="True"
-Shell.TabBarIsVisible="True"
-            >
+             NavigationPage.HasNavigationBar="True"
+             Shell.NavBarIsVisible="True"
+             Shell.TabBarIsVisible="True">
 
     <StackLayout Margin="20">
-        <Label Text="{x:Static lang:AppResources.User}" 
-               FontAttributes="Bold" />
-        <Label x:Name="UsernameLabel" />
-        <Label Text="{x:Static lang:AppResources.Pass}"
-               FontAttributes="Bold" />
-        <Label x:Name="PasswordLabel"
-           />
+        <Border Stroke="Black"
+                StrokeThickness="3">
+            <StackLayout Background="Cornflowerblue"
+                         Padding="5"
+                         Spacing="5">
+           
+                    <Label Text="{x:Static lang:AppResources.User}" 
+                           FontAttributes="Bold"
+                           HorizontalOptions="Center"
+                           VerticalOptions="Center" />
+                    <Label x:Name="UsernameLabel" 
+                           HorizontalOptions="Center"
+                           VerticalOptions="Center"/>
+            </StackLayout>
+        </Border>
+
+        <Border Stroke="Black"
+                StrokeThickness="3">
+            <StackLayout Background="Cornflowerblue"
+                         Padding="5"
+                         Spacing="5">
+            
+                <Label Text="{x:Static lang:AppResources.Pass}"
+                       FontAttributes="Bold"
+                       HorizontalOptions="Center"
+                       VerticalOptions="Center"/>
+                <Label x:Name="PasswordLabel"
+                       HorizontalOptions="Center"
+                       VerticalOptions="Center"/>
+
+            </StackLayout>
+        </Border>
+        
+        <StackLayout
+            Spacing="10">
+            
+        </StackLayout>
+
         <StackLayout IsVisible="{Binding IsLoggedIn}" 
-                         Grid.Row="5"
-                         
-                         Grid.ColumnSpan="2"
-                         HeightRequest="155">
+                     Grid.Row="5"
+                     Grid.ColumnSpan="2"
+                     HeightRequest="155"
+                     Spacing="10">
             <Button Text="{x:Static lang:AppResources.Logoutbutton}" 
                     Clicked="LogoutButton_Clicked" />
             <Button Text="Routes" 

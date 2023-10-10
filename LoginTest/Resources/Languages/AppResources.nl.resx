@@ -139,7 +139,7 @@
     <value>Uitloggen</value>
   </data>
   <data name="Pass" xml:space="preserve">
-    <value>Wachtwoord</value>
+    <value>Wachtwoord:</value>
   </data>
   <data name="Place" xml:space="preserve">
     <value>Plaats</value>
@@ -151,6 +151,6 @@
     <value>Type</value>
   </data>
   <data name="User" xml:space="preserve">
-    <value>Gebruikersnaam</value>
+    <value>Gebruikersnaam:</value>
   </data>
 </root>

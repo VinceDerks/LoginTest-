@@ -56,6 +56,7 @@ namespace LoginTest
                             ""TimeDepart"": ""18:00 PM"",
                             ""TypeOf"": ""Delivery""
                           },
+
                           {
                             ""ID"": 2,
                             ""Date"": ""2023-09-26"",
@@ -65,9 +66,40 @@ namespace LoginTest
                             ""TimeDepart"": ""18:00 PM"",
                             ""TypeOf"": ""Pickup""
                           },
+
                           {
                             ""ID"": 3,
                             ""Date"": ""2023-09-26"",
+                            ""City"": ""Tilburg"",
+                            ""Adress"": ""Oaksoft"",
+                            ""TimeArrive"": ""17:00 PM"",
+                            ""TimeDepart"": ""18:00 PM"",
+                            ""TypeOf"": ""Delivery""
+                          },
+
+                          {
+                            ""ID"": 4,
+                            ""Date"": ""2023-10-11"",
+                            ""City"": ""Tilburg"",
+                            ""Adress"": ""Distelweg 52"",
+                            ""TimeArrive"": ""10:00 PM"",
+                            ""TimeDepart"": ""18:00 PM"",
+                            ""TypeOf"": ""Delivery""
+                          },
+
+                          {
+                            ""ID"": 5,
+                            ""Date"": ""2023-10-11"",
+                            ""City"": ""Varik"",
+                            ""Adress"": ""De Geus bv"",
+                            ""TimeArrive"": ""17:00 PM"",
+                            ""TimeDepart"": ""18:00 PM"",
+                            ""TypeOf"": ""Pickup""
+                          },
+
+                          {
+                            ""ID"": 6,
+                            ""Date"": ""2023-10-11"",
                             ""City"": ""Tilburg"",
                             ""Adress"": ""Oaksoft"",
                             ""TimeArrive"": ""17:00 PM"",

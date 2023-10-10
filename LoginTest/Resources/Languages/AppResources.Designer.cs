@@ -124,7 +124,7 @@ namespace LoginTest.Resources.Languages {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Password.
+        ///   Looks up a localized string similar to Password:.
         /// </summary>
         internal static string Pass {
             get {
@@ -160,7 +160,7 @@ namespace LoginTest.Resources.Languages {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Username.
+        ///   Looks up a localized string similar to Username:.
         /// </summary>
         internal static string User {
             get {
