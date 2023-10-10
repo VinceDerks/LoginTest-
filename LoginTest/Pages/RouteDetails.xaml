@@ -16,38 +16,77 @@
         </ResourceDictionary>
     </ContentPage.Resources>
     <StackLayout>
-        <Label Text="{Binding x:Static lang:AppResources.Id}"
-               FontAttributes="Bold"/>
-        <Label Text="{Binding SelectedRoute.ID}" 
-               Style="{StaticResource LabelStyle}" />
+        <Border Stroke="black"
+                StrokeThickness="3">
+            <StackLayout>
+                <Label Text="{x:Static lang:AppResources.ID}"
+                       FontAttributes="Bold"
+                       HorizontalOptions="Center"
+                       VerticalOptions="Center"/>
+                <Label Text="{Binding SelectedRoute.ID}" 
+                        HorizontalOptions="Center"
+                       VerticalOptions="Center"              
+                       Style="{StaticResource LabelStyle}" />
+            </StackLayout>
+        </Border>
 
-        <Label Text="{x:Static lang:AppResources.Place}" 
-               FontAttributes="Bold"/>
-        <Label Text="{Binding SelectedRoute.City}" 
-               Style="{StaticResource LabelStyle}" />
+        <StackLayout>
+            <Label Text="{x:Static lang:AppResources.Place}" 
+                   FontAttributes="Bold"
+                   HorizontalOptions="Center"
+                   VerticalOptions="Center"               />
+            <Label Text="{Binding SelectedRoute.City}" 
+                    HorizontalOptions="Center"
+                   VerticalOptions="Center"              
+                   Style="{StaticResource LabelStyle}" />
+        </StackLayout>
+            
+        <StackLayout>
+            <Label Text="{x:Static lang:AppResources.Adress}"  
+                   FontAttributes="Bold"
+                   HorizontalOptions="Center"
+                   VerticalOptions="Center"/>
+            <Label Text="{Binding SelectedRoute.Adress}" 
+                   HorizontalOptions="Center"
+                   VerticalOptions="Center"               
+                   Style="{StaticResource LabelStyle}" />
+        </StackLayout>
+            
+        <StackLayout>
+            <Label Text="{x:Static lang:AppResources.Arrival}" 
+                   FontAttributes="Bold"
+                   HorizontalOptions="Center"
+                   VerticalOptions="Center"               />
+            <Label Text="{Binding SelectedRoute.TimeArrive}"
+                   HorizontalOptions="Center"
+                   VerticalOptions="Center"               
+                   Style="{StaticResource LabelStyle}" />
+        </StackLayout>
+            
+        <StackLayout>
+            <Label Text="{x:Static lang:AppResources.Departure}" 
+                   FontAttributes="Bold"
+                   HorizontalOptions="Center"
+                   VerticalOptions="Center"               />
+            <Label Text="{Binding SelectedRoute.TimeDepart}"
+                   HorizontalOptions="Center"
+                   VerticalOptions="Center"               
+                   Style="{StaticResource LabelStyle}" />
+        </StackLayout>
+            
+        <StackLayout>
+            <Label Text="{x:Static lang:AppResources.Type}" 
+                   FontAttributes="Bold"
+                   HorizontalOptions="Center"
+                   VerticalOptions="Center"/>
+            <Label Text="{Binding SelectedRoute.TypeOf}"
+                   HorizontalOptions="Center"
+                   VerticalOptions="Center"
+                   Style="{StaticResource LabelStyle}" />
+        </StackLayout>
 
-        <Label Text="{x:Static lang:AppResources.Adress}"  
-               FontAttributes="Bold"/>
-        <Label Text="{Binding SelectedRoute.Adress}" 
-               Style="{StaticResource LabelStyle}" />
-
-        <Label Text="{x:Static lang:AppResources.Arrival}" 
-               FontAttributes="Bold"/>
-        <Label Text="{Binding SelectedRoute.TimeArrive}" 
-               Style="{StaticResource LabelStyle}" />
-        
-        <Label Text="{x:Static lang:AppResources.Departure}" 
-               FontAttributes="Bold"/>
-        <Label Text="{Binding SelectedRoute.TimeDepart}" 
-               Style="{StaticResource LabelStyle}" />
-
-        <Label Text="{x:Static lang:AppResources.Type}" 
-               FontAttributes="Bold"/>
-        <Label Text="{Binding SelectedRoute.TypeOf}" 
-               Style="{StaticResource LabelStyle}" />
-        
         <Button Clicked="Arrived" Text="{x:Static lang:AppResources.Arrived}" 
-                BackgroundColor="Green" 
-                Style="{StaticResource ButtonStyle}" />
-    </StackLayout>
+                    BackgroundColor="Green" 
+                    Style="{StaticResource ButtonStyle}" />
+        </StackLayout>
 </ContentPage>
