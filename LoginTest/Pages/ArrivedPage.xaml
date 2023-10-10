@@ -5,13 +5,13 @@
      xmlns:mct="clr-namespace:CommunityToolkit.Maui.Views;assembly=CommunityToolkit.Maui"
     x:Class="LoginTest.ArrivedPage"
     Title="ArrivedPage"
-             BackgroundColor="White">
+             BackgroundColor="Red">
     <StackLayout>
         <Image x:Name="Signature"
                HorizontalOptions="Center"
                HeightRequest="200"
                WidthRequest="200"
-               />
+               BackgroundColor="Blue"/>
         <mct:DrawingView
             x:Name="SignatureEntry"
             BackgroundColor="LightGray"
