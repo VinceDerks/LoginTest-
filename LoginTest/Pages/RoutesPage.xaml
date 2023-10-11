@@ -2,6 +2,7 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:local="clr-namespace:LoginTest"
              xmlns:lang="clr-namespace:LoginTest.Resources.Languages"
+             xmlns:controls="clr-namespace:Microsoft.Maui.Controls;assembly=Microsoft.Maui.Controls"
              x:Class="LoginTest.RoutesPage"
              NavigationPage.HasNavigationBar="True">
     <ContentPage.Content>
@@ -13,11 +14,13 @@
                     <ColumnDefinition Width="*" />
                     <ColumnDefinition Width="Auto" />
                 </Grid.ColumnDefinitions>
-
                 <ImageButton Source="backarrow.svg" Clicked="OnPreviousClicked" Grid.Column="0" />
                 <Label x:Name="CurrentDate" Grid.Column="1" HorizontalOptions="Center" Margin="12"/>
                 <ImageButton Source="forwardarrow.svg" Clicked="OnNextClicked" Grid.Column="2" />
             </Grid>
+            <controls:DatePicker x:Name="SelectedDate" 
+                                 Date="{Binding SelectedDate}" 
+                                 HorizontalOptions="Center"/>
             <CollectionView x:Name="lblRoutes">
                 <CollectionView.ItemTemplate>
                     <DataTemplate>
@@ -29,14 +32,39 @@
                                 <StackLayout.GestureRecognizers>
                                     <TapGestureRecognizer Tapped="OnRouteTapped" />
                                 </StackLayout.GestureRecognizers>
-                                <Label Text="{Binding ID}" FontSize="10" TextColor="NavajoWhite"/>
-                                <Label Text="{Binding Date}" FontSize="14" TextColor="#999999"/>
-                                <Label Text="{Binding City}" FontSize="16" TextColor="#666666"/>
-                                <Label Text="{Binding Adress}" FontSize="14" TextColor="#999999"/>
-                                <Label Text="{Binding TimeArrive}" FontSize="14" TextColor="#999999"/>
-                                <Label Text="{Binding TimeDepart}" FontSize="14" TextColor="#999999"/>
-                                <Label Text="{Binding TypeOf}" FontSize="14" TextColor="#999999"/>
-                            
+                                
+                                <Label Text="{Binding ID}" 
+                                       FontSize="10" 
+                                       TextColor="NavajoWhite"/>
+                                
+                                <Label Text="{Binding Date}" 
+                                       FontSize="14" 
+                                       TextColor="#999999"/>
+                                
+                                <Label Text="{Binding City}" 
+                                       FontSize="16" 
+                                       TextColor="Black"
+                                       HorizontalOptions="Center"/>
+                                
+                                <Label Text="{Binding Adress}" 
+                                       FontSize="14" 
+                                       TextColor="Black"
+                                       HorizontalOptions="Center"/>
+
+                                <Label Text="{Binding TimeArrive}" 
+                                       FontSize="14" 
+                                       TextColor="#999999"
+                                       HorizontalOptions="Center"/>
+
+                                <Label Text="{Binding TimeDepart}" 
+                                       FontSize="14" 
+                                       TextColor="#999999"
+                                       HorizontalOptions="Center"/>
+
+                                <Label Text="{Binding TypeOf}" 
+                                       FontSize="14" 
+                                       TextColor="#999999"/>
+                                
                             </StackLayout>
                         </Border>
                     </DataTemplate>

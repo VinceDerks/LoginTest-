@@ -10,7 +10,8 @@ namespace LoginTest
     public partial class RoutesPage : ContentPage
     {
         private DateTime currentDate;
-        private DateTime selectedDate;
+        private DateTime selectedDate { get; set; }
+
 
         public RoutesPage()
         {
