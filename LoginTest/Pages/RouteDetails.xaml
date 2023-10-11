@@ -30,7 +30,9 @@
             </StackLayout>
         </Border>
 
-        <StackLayout>
+        <Border Stroke="black"
+                StrokeThickness="3">
+            <StackLayout>
             <Label Text="{x:Static lang:AppResources.Place}" 
                    FontAttributes="Bold"
                    HorizontalOptions="Center"
@@ -39,9 +41,12 @@
                     HorizontalOptions="Center"
                    VerticalOptions="Center"              
                    Style="{StaticResource LabelStyle}" />
-        </StackLayout>
-            
-        <StackLayout>
+            </StackLayout>
+        </Border>
+
+        <Border Stroke="black"
+                StrokeThickness="3">
+            <StackLayout>
             <Label Text="{x:Static lang:AppResources.Adress}"  
                    FontAttributes="Bold"
                    HorizontalOptions="Center"
@@ -50,9 +55,13 @@
                    HorizontalOptions="Center"
                    VerticalOptions="Center"               
                    Style="{StaticResource LabelStyle}" />
-        </StackLayout>
-            
-        <StackLayout>
+            </StackLayout>
+        </Border>
+
+
+        <Border Stroke="black"
+                StrokeThickness="3">
+            <StackLayout>
             <Label Text="{x:Static lang:AppResources.Arrival}" 
                    FontAttributes="Bold"
                    HorizontalOptions="Center"
@@ -61,9 +70,12 @@
                    HorizontalOptions="Center"
                    VerticalOptions="Center"               
                    Style="{StaticResource LabelStyle}" />
-        </StackLayout>
-            
-        <StackLayout>
+            </StackLayout>
+        </Border>
+
+        <Border Stroke="black"
+                StrokeThickness="3">
+            <StackLayout>
             <Label Text="{x:Static lang:AppResources.Departure}" 
                    FontAttributes="Bold"
                    HorizontalOptions="Center"
@@ -72,9 +84,12 @@
                    HorizontalOptions="Center"
                    VerticalOptions="Center"               
                    Style="{StaticResource LabelStyle}" />
-        </StackLayout>
-            
-        <StackLayout>
+            </StackLayout>
+        </Border>
+
+        <Border Stroke="black"
+                StrokeThickness="3">
+            <StackLayout>
             <Label Text="{x:Static lang:AppResources.Type}" 
                    FontAttributes="Bold"
                    HorizontalOptions="Center"
@@ -83,7 +98,8 @@
                    HorizontalOptions="Center"
                    VerticalOptions="Center"
                    Style="{StaticResource LabelStyle}" />
-        </StackLayout>
+            </StackLayout>
+        </Border>
 
         <Button Clicked="Arrived" Text="{x:Static lang:AppResources.Arrived}" 
                     BackgroundColor="Green" 
