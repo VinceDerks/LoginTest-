@@ -9,17 +9,18 @@
     Shell.TabBarTitleColor="White"
     Shell.FlyoutBehavior="Disabled">
 
-    <ShellContent Route="RoutesPage"
-                  Title="Home"
-                  Icon="home.png"
-                  ContentTemplate="{DataTemplate local:RoutesPage}" />
+    <TabBar>
+        <ShellContent Route="RoutesPage"
+                      Title="Home"
+                      Icon="home.png"
+                      ContentTemplate="{DataTemplate local:RoutesPage}" />
 
-    <ShellContent Route="UserPage"
-                  Title="Personal"
-                  Icon="person.png"
-                  ContentTemplate="{DataTemplate local:UserPage}" />
+        <ShellContent Route="UserPage"
+                      Title="Personal"
+                      Icon="person.png"
+                      ContentTemplate="{DataTemplate local:UserPage}" />
+    </TabBar>
 
 </Shell>
-    
     
     

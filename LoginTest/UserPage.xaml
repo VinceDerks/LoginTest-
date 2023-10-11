@@ -54,8 +54,7 @@
                      Spacing="10">
             <Button Text="{x:Static lang:AppResources.Logoutbutton}" 
                     Clicked="LogoutButton_Clicked" />
-            <Button Text="Routes" 
-                    Clicked="NavToRoutes" />
+      
         </StackLayout>
     </StackLayout>
 </ContentPage>

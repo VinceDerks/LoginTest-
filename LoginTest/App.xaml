@@ -13,7 +13,12 @@
     <Application.MainPage>
         <NavigationPage>
             <x:Arguments>
-                <local:UserPage /> 
+                <Shell>
+                    <ShellContent Route="UserPage"
+                                  Title="Personal"
+                                  Icon="person.png"
+                                  ContentTemplate="{DataTemplate local:UserPage}" />
+                </Shell>
             </x:Arguments>
         </NavigationPage>
     </Application.MainPage>
