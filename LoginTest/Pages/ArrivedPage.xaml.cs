@@ -18,15 +18,15 @@ namespace LoginTest
             this.selectedRoute = selectedRoute;
         }
 
-        private void SaveButton_Clicked(object sender, EventArgs e)
+
+        private async void SaveButton_Clicked(object sender, EventArgs e)
         {
-#if ANDROID
+            var stream2 = await SignatureEntry.GetImageStream(200, 200);
 
-#elif IOS
-
-#elif WINDOWS
-
-#endif
+            byte[] bytes = new byte[stream2.Length];
+            stream2.Read(bytes, 0, bytes.Length);
+            
+            selectedRoute.Image = bytes;
         }
 
         [Obsolete]

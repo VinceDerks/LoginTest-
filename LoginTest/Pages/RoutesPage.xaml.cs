@@ -4,6 +4,7 @@ using Microsoft.Maui.Controls;
 using Newtonsoft.Json;
 using System.IO;
 using LoginTest.Model;
+using Microsoft.VisualBasic;
 
 namespace LoginTest
 {
@@ -20,6 +21,13 @@ namespace LoginTest
             selectedDate = currentDate;
             UpdateRoutes();
             DisplayRoutes(currentDate);
+            
+        }
+
+        private void DatePicker_DateSelected(object sender, DateChangedEventArgs e)
+        {
+            selectedDate = e.NewDate;
+            DisplayRoutes(selectedDate);
         }
 
         private void OnPreviousClicked(object sender, EventArgs e)
@@ -123,7 +131,7 @@ namespace LoginTest
 
            
             lblRoutes.ItemsSource = routes;
-            CurrentDate.Text = selectedDate.ToString();
+            CurrentDate.Text = selectedDate.ToString("MM-dd-yyyy");
         }
 
 

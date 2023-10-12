@@ -108,7 +108,7 @@
 	</ItemGroup>
 
 	<ItemGroup>
-	  <MauiXaml Update="LoginPage.xaml">
+	  <MauiXaml Update="Pages\LoginPage.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
 	  <MauiXaml Update="Pages\ArrivedPage.xaml">
@@ -120,7 +120,10 @@
 	  <MauiXaml Update="Pages\RoutesPage.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
-	  <MauiXaml Update="UserPage.xaml">
+	  <MauiXaml Update="Pages\SettingsPage.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
+	  <MauiXaml Update="Pages\UserPage.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
 	</ItemGroup>

@@ -1,3 +1,4 @@
+using LoginTest.Pages;
 using Microsoft.Maui.Controls;
 
 namespace LoginTest
@@ -8,6 +9,7 @@ namespace LoginTest
         {
             InitializeComponent();
             RetrieveName();
+            
         }
 
         private async void LogoutButton_Clicked(object sender, EventArgs e)
@@ -33,10 +35,12 @@ namespace LoginTest
             }
         }
 
-        private async void NavToRoutes(object sender, EventArgs e)
+        private async void NavToSettingsPage(object sender, EventArgs e)
         {
-            var RoutesPage = new RoutesPage();
-            await Navigation.PushAsync(RoutesPage);
+            var SettingsPage = new SettingsPage();
+            await Navigation.PushAsync(SettingsPage);
         }
+
+
     }
 }

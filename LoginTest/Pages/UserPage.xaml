@@ -53,8 +53,12 @@
                      HeightRequest="155"
                      Spacing="10">
             <Button Text="{x:Static lang:AppResources.Logoutbutton}" 
-                    Clicked="LogoutButton_Clicked" />
-      
+                    Clicked="LogoutButton_Clicked"
+                    />
+            <Button Text="Settings" 
+            Clicked="NavToSettingsPage" />
+
+            <Label Text="test" x:Name="testdate" TextColor="Black"/>
         </StackLayout>
     </StackLayout>
 </ContentPage>

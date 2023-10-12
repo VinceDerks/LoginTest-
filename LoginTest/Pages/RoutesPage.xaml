@@ -9,7 +9,7 @@
         <ResourceDictionary>
             <Style TargetType="controls:DatePicker">
                 <Setter Property="TextColor" Value="Black" />
-                <Setter Property="PopupTextColor" Value="Black" />
+                
             </Style>
         </ResourceDictionary>
     </ContentPage.Resources>
@@ -27,8 +27,8 @@
             </Grid>
 
             <controls:DatePicker x:Name="SelectedDate" 
-                                 Date="{Binding SelectedDate}" 
-                                 HorizontalOptions="Center"/>
+                     Date="{Binding selectedDate, Mode=TwoWay}" 
+                     HorizontalOptions="Center"/>
             <CollectionView x:Name="lblRoutes">
                 <CollectionView.ItemTemplate>
                     <DataTemplate>
@@ -45,9 +45,7 @@
                                        FontSize="10" 
                                        TextColor="NavajoWhite"/>
                                 
-                                <Label Text="{Binding Date}" 
-                                       FontSize="14" 
-                                       TextColor="#999999"/>
+                                
                                 
                                 <Label Text="{Binding City}" 
                                        FontSize="16" 

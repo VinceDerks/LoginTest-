@@ -23,6 +23,7 @@ namespace LoginTest
             Navigation.PushAsync(arrivedPage);
         }
 
+
     }
 }
     
