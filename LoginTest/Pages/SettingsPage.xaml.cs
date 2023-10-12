@@ -6,4 +6,15 @@ public partial class SettingsPage : ContentPage
 	{
 		InitializeComponent();
 	}
+
+    private async void LogoutButton_Clicked(object sender, EventArgs e)
+    {
+        SecureStorage.Remove("IsLoggedIn");
+        SecureStorage.Remove("Username");
+        SecureStorage.Remove("Password");
+
+        var LoginPage = new LoginPage();
+        await Navigation.PushAsync(LoginPage);
+        Navigation.RemovePage(this);
+    }
 }
