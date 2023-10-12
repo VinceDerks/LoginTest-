@@ -21,9 +21,8 @@
             LineColor="Black"
             LineWidth="5"
             DrawingLineCompleted="DrawingView_DrawingLineCompleted"/>
-        <Button Clicked="ClearButton_Clicked" Text="Opnieuw">
-            
-        </Button>
+        <Button Clicked="ClearButton_Clicked" Text="Opnieuw"></Button>
+        <Button Clicked="SaveButton_Clicked" Text="Save"></Button>
     </StackLayout>
     
 </ContentPage>

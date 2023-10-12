@@ -46,33 +46,29 @@ namespace LoginTest.ViewModels
                 {
                     if (App.Current.MainPage is AppShell)
                     {
-                        // User is already logged in and using the AppShell
                         return;
                     }
                     else
                     {
-                        // User is logged in, set the AppShell as MainPage
                         App.Current.MainPage = new AppShell();
                     }
                 }
                 else
                 {
-                    // Handle case when username or password validation fails
                     await App.Current.MainPage.DisplayAlert("Login Failed", "Invalid username or password.", "OK");
-                    await SecureStorage.SetAsync("IsLoggedIn", "false"); // Reset login status
+                    await SecureStorage.SetAsync("IsLoggedIn", "false"); 
                     App.Current.MainPage = new LoginPage();
                 }
             }
             else if (isLoggedIn == "true")
             {
-                // Handle case when username or password is not set
+
                 await App.Current.MainPage.DisplayAlert("Login Failed", "Please enter your username and password.", "OK");
-                await SecureStorage.SetAsync("IsLoggedIn", "false"); // Reset login status
+                await SecureStorage.SetAsync("IsLoggedIn", "false"); 
                 App.Current.MainPage = new LoginPage();
             }
             else
             {
-                // User is not logged in, set the LoginPage as MainPage
                 App.Current.MainPage = new LoginPage();
             }
         }

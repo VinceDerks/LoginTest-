@@ -5,16 +5,28 @@ using System.Collections.ObjectModel;
 using System;
 using System.Collections.Generic;
 using CommunityToolkit.Maui.Core.Views;
-
+using LoginTest.Model;
 namespace LoginTest
 {
     public partial class ArrivedPage : ContentPage
     {
+        private RoutesSrc selectedRoute;
 
-
-        public ArrivedPage()
+        public ArrivedPage(RoutesSrc selectedRoute)
         {
             InitializeComponent();
+            this.selectedRoute = selectedRoute;
+        }
+
+        private void SaveButton_Clicked(object sender, EventArgs e)
+        {
+#if ANDROID
+
+#elif IOS
+
+#elif WINDOWS
+
+#endif
         }
 
         [Obsolete]

@@ -15,11 +15,11 @@ namespace LoginTest
         BindingContext = this;
     }
 
-        private ArrivedPage arrivedPage; 
+        private ArrivedPage arrivedPage;
 
         private void Arrived(object sender, EventArgs e)
         {
-            arrivedPage = new ArrivedPage(); 
+            arrivedPage = new ArrivedPage(SelectedRoute);
             Navigation.PushAsync(arrivedPage);
         }
 
