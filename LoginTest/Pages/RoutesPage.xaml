@@ -5,8 +5,15 @@
              xmlns:controls="clr-namespace:Microsoft.Maui.Controls;assembly=Microsoft.Maui.Controls"
              x:Class="LoginTest.RoutesPage"
              NavigationPage.HasNavigationBar="True">
+    <ContentPage.Resources>
+        <ResourceDictionary>
+            <Style TargetType="controls:DatePicker">
+                <Setter Property="TextColor" Value="Black" />
+                <Setter Property="PopupTextColor" Value="Black" />
+            </Style>
+        </ResourceDictionary>
+    </ContentPage.Resources>
     <ContentPage.Content>
-        
         <StackLayout>
             <Grid>
                 <Grid.ColumnDefinitions>
@@ -18,6 +25,7 @@
                 <Label x:Name="CurrentDate" Grid.Column="1" HorizontalOptions="Center" Margin="12"/>
                 <ImageButton Source="forwardarrow.svg" Clicked="OnNextClicked" Grid.Column="2" />
             </Grid>
+
             <controls:DatePicker x:Name="SelectedDate" 
                                  Date="{Binding SelectedDate}" 
                                  HorizontalOptions="Center"/>
@@ -32,7 +40,7 @@
                                 <StackLayout.GestureRecognizers>
                                     <TapGestureRecognizer Tapped="OnRouteTapped" />
                                 </StackLayout.GestureRecognizers>
-                                
+
                                 <Label Text="{Binding ID}" 
                                        FontSize="10" 
                                        TextColor="NavajoWhite"/>
