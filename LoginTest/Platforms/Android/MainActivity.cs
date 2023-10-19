@@ -2,9 +2,6 @@
 using Android.Content.PM;
 using Android.OS;
 using Microsoft.Maui.Controls;
-using SkiaSharp;
-using SkiaSharp.Views.Maui;
-using SkiaSharp.Views.Maui.Controls;
 using System.Collections.Generic;
 using System.Drawing;
 

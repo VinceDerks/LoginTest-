@@ -2,7 +2,6 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:lang="clr-namespace:LoginTest.Resources.Languages"
              x:Class="LoginTest.LoginPage"
-              xmlns:mdc="clr-namespace:Material.Components.Maui;assembly=Material.Components.Maui"
              xmlns:material="http://schemas.enisn-projects.io/dotnet/maui/uraniumui/material"
              BackgroundColor="White"
              NavigationPage.HasNavigationBar="False"
@@ -62,7 +61,7 @@
                            IsPassword="True"/>
                 </Grid>
             </StackLayout>
-            <mdc:Button Style="{DynamicResource OutlinedButtonStyle}" OutlineColor="#2979FF" WidthRequest="300" Text="{x:Static lang:AppResources.Loginbutton}" Clicked="SignInButton_Clicked" Margin="0,15" />  
+            <Button Style="{DynamicResource OutlinedButtonStyle}"  WidthRequest="300" Text="{x:Static lang:AppResources.Loginbutton}" Clicked="SignInButton_Clicked" Margin="0,15" />  
         </StackLayout>
         <material:TextField Title="Name" />
         <material:TextField Title="Surname" />

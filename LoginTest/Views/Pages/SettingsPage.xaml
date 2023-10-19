@@ -2,7 +2,6 @@
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="LoginTest.Pages.SettingsPage"
-             xmlns:mdc="clr-namespace:Material.Components.Maui;assembly=Material.Components.Maui"
              xmlns:lang="clr-namespace:LoginTest.Resources.Languages"
              Title="Settings">
     <ContentPage.Resources>
@@ -13,6 +12,6 @@
         </ResourceDictionary>
     </ContentPage.Resources>
     <VerticalStackLayout>
-        <mdc:Button Style="{DynamicResource OutlinedButtonStyle}" Text="{x:Static lang:AppResources.Logoutbutton}" Clicked="LogoutButton_Clicked" OutlineColor="Red" WidthRequest="300" Margin="0,15" />
+        <Button Text="{x:Static lang:AppResources.Logoutbutton}" Clicked="LogoutButton_Clicked" WidthRequest="300" Margin="0,15" />
     </VerticalStackLayout>
 </ContentPage>

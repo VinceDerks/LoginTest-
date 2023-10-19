@@ -76,13 +76,10 @@
 	</ItemGroup>
 
 	<ItemGroup>
-		<PackageReference Include="AsyncAwaitBestPractices" Version="6.0.6" />
 		<PackageReference Include="AsyncAwaitBestPractices.MVVM" Version="6.0.6" />
 		<PackageReference Include="CommunityToolkit.Maui" Version="6.0.0" />
 		<PackageReference Include="CommunityToolkit.Maui.Core" Version="6.0.0" />
 		<PackageReference Include="CommunityToolkit.Mvvm" Version="8.2.1" />
-		<PackageReference Include="CustomSheets" Version="1.0.6" />
-		<PackageReference Include="Material.Components.Maui" Version="0.1.2-beta" />
 		<PackageReference Include="Microsoft.AppCenter.Analytics" Version="5.0.3" />
 		<PackageReference Include="Microsoft.AppCenter.Crashes" Version="5.0.3" />
 		<PackageReference Include="Microsoft.Extensions.Logging.Debug" Version="7.0.0" />
