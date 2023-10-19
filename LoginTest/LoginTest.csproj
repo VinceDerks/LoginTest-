@@ -58,6 +58,7 @@
 
 	<ItemGroup>
 	  <None Remove="Resources\AppIcon\appiconfg.png" />
+	  <None Remove="Resources\Fonts\Roboto-Italic.ttf" />
 	  <None Remove="Resources\Images\backarrow.svg" />
 	  <None Remove="Resources\Images\box.svg" />
 	  <None Remove="Resources\Images\clock.svg" />
@@ -75,22 +76,34 @@
 	</ItemGroup>
 
 	<ItemGroup>
+		<PackageReference Include="AsyncAwaitBestPractices" Version="6.0.6" />
+		<PackageReference Include="AsyncAwaitBestPractices.MVVM" Version="6.0.6" />
 		<PackageReference Include="CommunityToolkit.Maui" Version="6.0.0" />
 		<PackageReference Include="CommunityToolkit.Maui.Core" Version="6.0.0" />
 		<PackageReference Include="CommunityToolkit.Mvvm" Version="8.2.1" />
+		<PackageReference Include="CustomSheets" Version="1.0.6" />
+		<PackageReference Include="Material.Components.Maui" Version="0.1.2-beta" />
+		<PackageReference Include="Microsoft.AppCenter.Analytics" Version="5.0.3" />
+		<PackageReference Include="Microsoft.AppCenter.Crashes" Version="5.0.3" />
 		<PackageReference Include="Microsoft.Extensions.Logging.Debug" Version="7.0.0" />
 		<PackageReference Include="Newtonsoft.Json" Version="13.0.3" />
-		<PackageReference Include="SkiaSharp" Version="2.88.6" />
-		<PackageReference Include="SkiaSharp.Views.Maui.Controls" Version="2.88.6" />
-		<PackageReference Include="SkiaSharp.Views.Maui.Controls.Compatibility" Version="2.88.6" />
-		<PackageReference Include="SkiaSharp.Views.Maui.Core" Version="2.88.6" />
 		<PackageReference Include="System.Security.Cryptography.Algorithms" Version="4.3.1" />
 		<PackageReference Include="System.Security.Cryptography.Cng" Version="5.0.0" />
 		<PackageReference Include="System.Security.Cryptography.ProtectedData" Version="7.0.1" />
+		<PackageReference Include="UraniumUI" Version="2.5.6" />
+		<PackageReference Include="UraniumUI.Blurs" Version="2.5.6" />
+		<PackageReference Include="UraniumUI.Dialogs.CommunityToolkit" Version="2.5.6" />
+		<PackageReference Include="UraniumUI.Dialogs.Mopups" Version="2.5.6" />
+		<PackageReference Include="UraniumUI.Icons.FontAwesome" Version="2.5.6" />
+		<PackageReference Include="UraniumUI.Icons.MaterialIcons" Version="2.5.6" />
+		<PackageReference Include="UraniumUI.Icons.SegoeFluent" Version="2.5.6" />
+		<PackageReference Include="UraniumUI.Material" Version="2.5.6" />
+		<PackageReference Include="UraniumUI.Validations.DataAnnotations" Version="2.5.6" />
+		<PackageReference Include="UraniumUI.WebComponents" Version="2.5.6" />
 	</ItemGroup>
 
 	<ItemGroup>
-	  <Compile Update="Pages\RoutesPage.xaml.cs">
+	  <Compile Update="Views\Pages\RoutesPage.xaml.cs">
 	    <DependentUpon>RoutesPage.xaml</DependentUpon>
 	  </Compile>
 	  <Compile Update="Resources\Languages\AppResources.Designer.cs">
@@ -108,25 +121,27 @@
 	</ItemGroup>
 
 	<ItemGroup>
-	  <MauiXaml Update="Pages\LoginPage.xaml">
+	  <MauiXaml Update="Views\Pages\LoginPage.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
-	  <MauiXaml Update="Pages\ArrivedPage.xaml">
+	  <MauiXaml Update="Views\Pages\ArrivedPage.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
-	  <MauiXaml Update="Pages\RouteDetails.xaml">
+	  <MauiXaml Update="Views\Pages\RouteDetails.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
-	  <MauiXaml Update="Pages\RoutesPage.xaml">
+	  <MauiXaml Update="Views\Pages\RoutesPage.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
-	  <MauiXaml Update="Pages\SettingsPage.xaml">
+	  <MauiXaml Update="Views\Pages\SettingsPage.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
-	  <MauiXaml Update="Pages\UserPage.xaml">
+	  <MauiXaml Update="Views\Pages\UserPage.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
 	</ItemGroup>
+
+	<ProjectExtensions><VisualStudio><UserProperties XamarinHotReloadDebuggerTimeoutExceptionLoginTestHideInfoBar="True" /></VisualStudio></ProjectExtensions>
 
 
 </Project>

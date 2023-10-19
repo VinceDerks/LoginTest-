@@ -41,10 +41,6 @@
                                     <TapGestureRecognizer Tapped="OnRouteTapped" />
                                 </StackLayout.GestureRecognizers>
 
-                                <Label Text="{Binding ID}" 
-                                       FontSize="10" 
-                                       TextColor="NavajoWhite"/>
-
                                 <Label Text="{Binding City}" 
                                        FontSize="16" 
                                        TextColor="Black"
