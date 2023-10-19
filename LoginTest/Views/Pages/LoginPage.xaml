@@ -9,7 +9,7 @@
              Shell.TabBarIsVisible="False">
     <ContentPage.Resources>
         <ResourceDictionary>
-            <Color x:Key="PrimaryColor">#2979FF</Color>
+            <Color x:Key="PrimaryColor">#0073BA</Color>
             <Color x:Key="SecondaryColor">#6D7272</Color>
             <Style TargetType="Label">
                 <Setter Property="TextColor" Value="{StaticResource SecondaryColor}" />
@@ -31,40 +31,20 @@
     </ContentPage.Resources>
     <Grid>
         <StackLayout Margin="20">
-
             <Image Source="rentbuddylogo.png" VerticalOptions="Start" HorizontalOptions="Center" Margin="0,40,0,0" HeightRequest="150" WidthRequest="300" />
-
             <StackLayout Margin="0,0">
                 <Label FontSize="30" 
                        Text="{x:Static lang:AppResources.RentIntro}"
                        MinimumWidthRequest="30" 
                        MinimumHeightRequest="30" />
-             
-            </StackLayout>
-
-            <StackLayout>
-
-
-                <Grid Margin="0,5">
-
-                    <Frame/>
-                    <Entry Placeholder="{x:Static lang:AppResources.User}"
+                <material:TextField AccentColor="#0073BA" Title="{x:Static lang:AppResources.User}"
                            x:Name="UsernameEntry"
-                           TextColor=" red"/>
-                </Grid>
-
-
-                <Grid Margin="0,5">
-                    <Frame/>
-                    <Entry Placeholder="{x:Static lang:AppResources.Pass}"
+                           />
+                <material:TextField AccentColor="#0073BA"   Title="{x:Static lang:AppResources.Pass}"
                            x:Name="PasswordEntry"
                            IsPassword="True"/>
-                </Grid>
             </StackLayout>
-            <Button Style="{DynamicResource OutlinedButtonStyle}"  WidthRequest="300" Text="{x:Static lang:AppResources.Loginbutton}" Clicked="SignInButton_Clicked" Margin="0,15" />  
+            <Button Style="{DynamicResource OutlinedButtonStyle}"  WidthRequest="300" Text="{x:Static lang:AppResources.Loginbutton}" Clicked="SignInButton_Clicked" Margin="0,15" />
         </StackLayout>
-        <material:TextField Title="Name" />
-        <material:TextField Title="Surname" />
-        <material:TextField Title="Age" Keyboard="Numeric" />
     </Grid>
 </ContentPage>

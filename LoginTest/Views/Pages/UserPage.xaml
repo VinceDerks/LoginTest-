@@ -53,7 +53,7 @@
                      HeightRequest="155"
                      Spacing="10">
             
-            <Button Text="Settings" 
+            <Button BackgroundColor="Black" TextColor="White" Text="Settings" 
             Clicked="NavToSettingsPage" />
         </StackLayout>
     </StackLayout>

@@ -12,13 +12,18 @@ namespace LoginTest
             builder
                 .UseMauiApp<App>()
                 .UseMauiCommunityToolkit()
+                .UseUraniumUI()
+                .UseUraniumUIMaterial()
                 .ConfigureFonts(fonts =>
                 {
                     fonts.AddFont("OpenSans-Regular.ttf", "OpenSansRegular");
                     fonts.AddFont("OpenSans-Semibold.ttf", "OpenSansSemibold");
                 })
-            .UseUraniumUI()
-            .UseUraniumUIMaterial();
+                .UseUraniumUI()
+                .UseUraniumUIMaterial();
+
+
+
             return builder.Build();
 
 

@@ -12,6 +12,6 @@
         </ResourceDictionary>
     </ContentPage.Resources>
     <VerticalStackLayout>
-        <Button Text="{x:Static lang:AppResources.Logoutbutton}" Clicked="LogoutButton_Clicked" WidthRequest="300" Margin="0,15" />
+        <Button BackgroundColor="Black" TextColor="White" Text="{x:Static lang:AppResources.Logoutbutton}" Clicked="LogoutButton_Clicked" WidthRequest="300" Margin="0,15" />
     </VerticalStackLayout>
 </ContentPage>
