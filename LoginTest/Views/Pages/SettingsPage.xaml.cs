@@ -1,4 +1,4 @@
-namespace LoginTest.Pages;
+namespace LoginTest;
 
 public partial class SettingsPage : ContentPage
 {

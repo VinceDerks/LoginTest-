@@ -1,5 +1,7 @@
 ﻿using CommunityToolkit.Maui;
 using Microsoft.Extensions.Logging;
+using InputKit.Shared.Controls;
+using Mopups.Hosting;
 using UraniumUI;
 
 namespace LoginTest
@@ -10,23 +12,22 @@ namespace LoginTest
         {
             var builder = MauiApp.CreateBuilder();
             builder
-                .UseMauiApp<App>()
                 .UseMauiCommunityToolkit()
+                .UseMauiApp<App>()
+                .ConfigureMopups()
                 .UseUraniumUI()
                 .UseUraniumUIMaterial()
                 .ConfigureFonts(fonts =>
                 {
                     fonts.AddFont("OpenSans-Regular.ttf", "OpenSansRegular");
                     fonts.AddFont("OpenSans-Semibold.ttf", "OpenSansSemibold");
-                })
-                .UseUraniumUI()
-                .UseUraniumUIMaterial();
+
+                    fonts.AddMaterialIconFonts();
+                });
 
 
-
+            builder.Services.AddMopupsDialogs();
             return builder.Build();
-
-
         }
     }
 }

@@ -139,7 +139,7 @@
     <value>Logout</value>
   </data>
   <data name="Pass" xml:space="preserve">
-    <value>Password:</value>
+    <value>Password</value>
   </data>
   <data name="Place" xml:space="preserve">
     <value>Place</value>
@@ -151,6 +151,6 @@
     <value>Type</value>
   </data>
   <data name="User" xml:space="preserve">
-    <value>Username:</value>
+    <value>Username</value>
   </data>
 </root>

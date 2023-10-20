@@ -1,16 +1,18 @@
-﻿<Application xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+﻿<?xml version = "1.0" encoding = "UTF-8" ?>
+    <Application xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             xmlns:material="http://schemas.enisn-projects.io/dotnet/maui/uraniumui/material"
+             xmlns:material="clr-namespace:UraniumUI.Material.Resources;assembly=UraniumUI.Material"
              xmlns:m="clr-namespace:UraniumUI.Material.Resources;assembly=UraniumUI.Material"
              xmlns:local="clr-namespace:LoginTest"
              x:Class="LoginTest.App">
     <Application.Resources>
         <ResourceDictionary>
             <ResourceDictionary.MergedDictionaries>
-                <ResourceDictionary x:Name="appStyles" Source="Resources/Styles/Colors.xaml" />
-                <ResourceDictionary Source="Resources/Styles/Styles.xaml" />
+                <ResourceDictionary x:Name="appColors" Source="Resources/Styles/Colors.xaml" />
+                <ResourceDictionary x:Name="appStyles" Source="Resources/Styles/Styles.xaml" />
                 <m:StyleResource />
-                <m:StyleResource BasedOn="{x:Reference appStyles}" />
+
+                <m:StyleResource ColorsOverride="{x:Reference appStyles}" />
             </ResourceDictionary.MergedDictionaries>
         </ResourceDictionary>
     </Application.Resources>
@@ -18,10 +20,10 @@
         <NavigationPage>
             <x:Arguments>
                 <Shell>
-                    <ShellContent Route="UserPage"
-                                  Title="Personal"
-                                  Icon="person.png"
-                                  ContentTemplate="{DataTemplate local:UserPage}" />
+                    <ShellContent Route="RoutesPage"
+                                  Title="Routes"
+                                  Icon="home.png"
+                                  ContentTemplate="{DataTemplate local:RoutesPage}" />
                 </Shell>
             </x:Arguments>
         </NavigationPage>

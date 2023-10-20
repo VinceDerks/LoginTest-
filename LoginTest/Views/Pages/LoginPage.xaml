@@ -1,8 +1,11 @@
-<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+<?xml version="1.0" encoding="utf-8" ?>
+    <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:lang="clr-namespace:LoginTest.Resources.Languages"
              x:Class="LoginTest.LoginPage"
-             xmlns:material="http://schemas.enisn-projects.io/dotnet/maui/uraniumui/material"
+             xmlns:uranium="http://schemas.enisn-projects.io/dotnet/maui/uraniumui"
+            xmlns:material="http://schemas.enisn-projects.io/dotnet/maui/uraniumui/material"
+              xmlns:m="clr-namespace:UraniumUI.Icons.MaterialIcons;assembly=UraniumUI.Icons.MaterialIcons"
              BackgroundColor="White"
              NavigationPage.HasNavigationBar="False"
              Shell.NavBarIsVisible="False"
@@ -30,23 +33,31 @@
         </ResourceDictionary>
     </ContentPage.Resources>
     <Grid>
-        <StackLayout Margin="20">
+        <VerticalStackLayout Margin="20">
             <Image Source="rentbuddylogo.png" VerticalOptions="Start" HorizontalOptions="Center" Margin="0,40,0,0" HeightRequest="150" WidthRequest="300" />
             <StackLayout Margin="0,0">
                 <Label FontSize="30" 
+                       StyleClass="Elevation1"
+                       HorizontalTextAlignment="Center"
+                       FontAttributes="Bold"
                        Text="{x:Static lang:AppResources.RentIntro}"
                        HorizontalOptions="CenterAndExpand"
                        VerticalOptions="CenterAndExpand"
                        MinimumWidthRequest="30" 
                        MinimumHeightRequest="30" />
-                <material:TextField AccentColor="#0073BA" Title="{x:Static lang:AppResources.User}"
+                <material:TextField  Icon="{FontImageSource FontFamily=MaterialRegular, Glyph={x:Static m:MaterialRegular.Person}}" AllowClear="True" AccentColor="#0073BA" BorderColor="#6D7272" TitleColor="#6D7272" Title="{x:Static lang:AppResources.User}"
                            x:Name="UsernameEntry"
                            />
-                <material:TextField AccentColor="#0073BA"   Title="{x:Static lang:AppResources.Pass}"
+
+                <material:TextField Icon="{FontImageSource FontFamily=MaterialRegular, Glyph={x:Static m:MaterialRegular.Lock}}" AccentColor="#0073BA" BorderColor="#6D7272" TitleColor="#6D7272"  Title="{x:Static lang:AppResources.Pass}"
                            x:Name="PasswordEntry"
-                           IsPassword="True"/>
+                           IsPassword="True">
+                    <material:TextField.Attachments>
+                        <material:TextFieldPasswordShowHideAttachment />
+                    </material:TextField.Attachments>
+                </material:TextField>
             </StackLayout>
-            <Button Style="{DynamicResource OutlinedButtonStyle}"  WidthRequest="300" Text="{x:Static lang:AppResources.Loginbutton}" Clicked="SignInButton_Clicked" Margin="0,15" />
-        </StackLayout>
+            <Button StyleClass="Elevation5"  TextColor="White" BackgroundColor="#0073BA"  WidthRequest="300" Text="{x:Static lang:AppResources.Loginbutton}" Clicked="SignInButton_Clicked" Margin="0,15" />
+        </VerticalStackLayout>
     </Grid>
 </ContentPage>

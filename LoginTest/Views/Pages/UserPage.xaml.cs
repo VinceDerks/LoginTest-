@@ -1,4 +1,4 @@
-using LoginTest.Pages;
+using LoginTest;
 using Microsoft.Maui.Controls;
 
 namespace LoginTest

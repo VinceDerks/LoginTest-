@@ -55,6 +55,7 @@
             
             <Button BackgroundColor="Black" TextColor="White" Text="Settings" 
             Clicked="NavToSettingsPage" />
+
         </StackLayout>
     </StackLayout>
     
