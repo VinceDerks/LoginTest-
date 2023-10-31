@@ -5,6 +5,7 @@ using Newtonsoft.Json;
 using System.IO;
 using LoginTest.Model;
 using Microsoft.VisualBasic;
+using System.Windows.Input;
 
 namespace LoginTest
 {
@@ -139,7 +140,8 @@ namespace LoginTest
         {
             var selectedRoute = ((sender as StackLayout)?.BindingContext as RoutesSrc);
             Navigation.PushAsync(new RouteDetails(selectedRoute));
-        }
+        } 
+        
     }
 
 }

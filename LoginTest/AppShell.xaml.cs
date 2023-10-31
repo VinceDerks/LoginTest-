@@ -1,4 +1,6 @@
-﻿namespace LoginTest
+﻿using System.Windows.Input;
+
+namespace LoginTest
 {
     public partial class AppShell : Shell
     {
@@ -7,5 +9,6 @@
             InitializeComponent();
 
         }
+
     }
 }

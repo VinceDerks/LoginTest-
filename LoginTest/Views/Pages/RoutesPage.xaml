@@ -26,7 +26,8 @@
                 <ImageButton Source="forwardarrow.svg" Clicked="OnNextClicked" Grid.Column="2" />
             </Grid>
 
-            <controls:DatePicker x:Name="SelectedDate" 
+
+            <DatePicker x:Name="SelectedDate" 
                      Date="{Binding selectedDate, Mode=TwoWay}" 
                      HorizontalOptions="Center"/>
             <CollectionView x:Name="lblRoutes">

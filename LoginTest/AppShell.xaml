@@ -23,7 +23,7 @@
 
 
     <Shell.ToolbarItems>
-        <ToolbarItem IconImageSource="home.svg" Command="{Binding GoToRoutesPageCommand}" />
+        <ToolbarItem IconImageSource="home.svg" Command="{Binding GoToRoutesCommandPage}" />
     </Shell.ToolbarItems>
 
 </Shell>
