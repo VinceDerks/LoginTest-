@@ -20,6 +20,12 @@
                       Title="Settings"
                       ContentTemplate="{DataTemplate local:SettingsPage}" />
     </FlyoutItem>
+    <FlyoutItem Title="Routes">
+        <ShellContent Route="routes"
+                  FlyoutIcon="home.svg"
+                  Title="Routes"
+                  ContentTemplate="{DataTemplate local:RoutesPage}" />
+    </FlyoutItem>
 
 
     <Shell.ToolbarItems>

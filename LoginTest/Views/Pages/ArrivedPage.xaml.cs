@@ -6,6 +6,8 @@ using System;
 using System.Collections.Generic;
 using CommunityToolkit.Maui.Core.Views;
 using LoginTest.Model;
+using LoginTest.Views.Pages;
+
 namespace LoginTest
 {
     public partial class ArrivedPage : ContentPage
@@ -30,18 +32,15 @@ namespace LoginTest
         }
 
         [Obsolete]
-        private async void DrawingView_DrawingLineCompleted(object sender, CommunityToolkit.Maui.Core.DrawingLineCompletedEventArgs e)
-        {
-            var stream = await SignatureEntry.GetImageStream(200,200);
-            Device.BeginInvokeOnMainThread(() => {
-                Signature.Source = ImageSource.FromStream(() => stream);
-            });
-        }
-
         private void ClearButton_Clicked(object sender, EventArgs e)
         {
             SignatureEntry.Clear();
-            Signature.Source = null;
+        }
+
+        private async void NavigateToNotArrived(object sender, EventArgs e)
+        {
+
+            await Navigation.PushAsync(new NotArrivedPage());
         }
 
     }

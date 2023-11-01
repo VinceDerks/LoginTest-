@@ -64,7 +64,8 @@ namespace LoginTest
                             ""Adress"": ""Distelweg 52"",
                             ""TimeArrive"": ""10:00 PM"",
                             ""TimeDepart"": ""18:00 PM"",
-                            ""TypeOf"": ""Delivery""
+                            ""TypeOf"": ""Delivery"",
+                            ""Status"": ""Not completed""
                           },
 
                           {
@@ -74,7 +75,8 @@ namespace LoginTest
                             ""Adress"": ""De Geus bv"",
                             ""TimeArrive"": ""17:00 PM"",
                             ""TimeDepart"": ""18:00 PM"",
-                            ""TypeOf"": ""Pickup""
+                            ""TypeOf"": ""Pickup"",
+                            ""Status"": ""Not completed""
                           },
 
                           {
@@ -84,37 +86,41 @@ namespace LoginTest
                             ""Adress"": ""Oaksoft"",
                             ""TimeArrive"": ""17:00 PM"",
                             ""TimeDepart"": ""18:00 PM"",
-                            ""TypeOf"": ""Delivery""
+                            ""TypeOf"": ""Delivery"",
+                            ""Status"": ""Not completed""
                           },
 
                           {
                             ""ID"": 4,
-                            ""Date"": ""2023-10-11"",
+                            ""Date"": ""2023-10-31"",
                             ""City"": ""Tilburg"",
                             ""Adress"": ""Distelweg 52"",
                             ""TimeArrive"": ""10:00 PM"",
                             ""TimeDepart"": ""18:00 PM"",
-                            ""TypeOf"": ""Delivery""
+                            ""TypeOf"": ""Delivery"",
+                            ""Status"": ""Not completed""
                           },
 
                           {
                             ""ID"": 5,
-                            ""Date"": ""2023-10-11"",
+                            ""Date"": ""2023-10-31"",
                             ""City"": ""Varik"",
                             ""Adress"": ""De Geus bv"",
                             ""TimeArrive"": ""17:00 PM"",
                             ""TimeDepart"": ""18:00 PM"",
-                            ""TypeOf"": ""Pickup""
+                            ""TypeOf"": ""Pickup"",
+                            ""Status"": ""Not completed""
                           },
 
                           {
                             ""ID"": 6,
-                            ""Date"": ""2023-10-11"",
+                            ""Date"": ""2023-10-31"",
                             ""City"": ""Tilburg"",
                             ""Adress"": ""Oaksoft"",
                             ""TimeArrive"": ""17:00 PM"",
                             ""TimeDepart"": ""18:00 PM"",
-                            ""TypeOf"": ""Delivery""
+                            ""TypeOf"": ""Delivery"",
+                            ""Status"": ""Not completed""
                           }
                         ]";
 
