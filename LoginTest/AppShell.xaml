@@ -2,7 +2,8 @@
        xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
        xmlns:local="clr-namespace:LoginTest"
        x:Class="LoginTest.AppShell"
-       FlyoutBehavior="Flyout">
+       FlyoutBehavior="Flyout"
+       FlyoutBackground="lightgray">
 
     <Shell.FlyoutHeader>
         <Image Source="rentbuddylogo.png" Aspect="AspectFit" />
@@ -14,13 +15,30 @@
                       ContentTemplate="{DataTemplate local:RoutesPage}" />
     </TabBar>
 
+    <FlyoutItem Title="Directions">
+        <FlyoutItem.Icon>
+            <FileImageSource File="altroute.png" />
+        </FlyoutItem.Icon>
+        <ShellContent Route="RoutesDirection"
+                      Title="Directions"
+                      ContentTemplate="{DataTemplate local:RouteDirections}" />
+    </FlyoutItem>
+
     <FlyoutItem Title="Settings">
+        <FlyoutItem.Icon>
+            <FileImageSource File="home.svg" />
+        </FlyoutItem.Icon>
         <ShellContent Route="settings"
-                      FlyoutIcon="home.svg"
                       Title="Settings"
                       ContentTemplate="{DataTemplate local:SettingsPage}" />
     </FlyoutItem>
 
+    <Shell.FlyoutFooter>
+        <StackLayout VerticalOptions="End">
+            <Image Source="copyright_logo.png" WidthRequest="50" HeightRequest="50" HorizontalOptions="Center" />
+            <Label Text="Copyright | RentBuddy" HorizontalOptions="Center" TextColor="Black" FontSize="Small" />
+        </StackLayout>
+    </Shell.FlyoutFooter>
 
     <Shell.ToolbarItems>
         <ToolbarItem IconImageSource="home.svg" Command="{Binding GoToRoutesCommandPage}" />
