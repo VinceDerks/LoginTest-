@@ -16,5 +16,6 @@ namespace LoginTest.Model
         public string TimeDepart { get; set; }
         public string TypeOf { get; set; }
         public byte[] Image { get; set; }
+        public string Status { get; set; }
     }
 }
