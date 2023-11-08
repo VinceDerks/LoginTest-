@@ -32,8 +32,6 @@
                 <ImageButton Source="forwardarrow.svg" Clicked="OnNextClicked" Grid.Column="2" />
             </Grid>
 
-
-
             <CollectionView x:Name="lblRoutes">
                 <CollectionView.ItemTemplate>
                     <DataTemplate>
