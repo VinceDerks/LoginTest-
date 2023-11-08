@@ -12,6 +12,7 @@
         </ResourceDictionary>
     </ContentPage.Resources>
     <VerticalStackLayout>
+        <Switch x:Name="DarkModeSwitch" IsToggled="{Binding DarkMode}" HorizontalOptions="End" VerticalOptions="Center" />
         <Button BackgroundColor="Black" TextColor="White" Text="{x:Static lang:AppResources.Logoutbutton}" Clicked="LogoutButton_Clicked" WidthRequest="300" Margin="0,15" />
     </VerticalStackLayout>
 </ContentPage>

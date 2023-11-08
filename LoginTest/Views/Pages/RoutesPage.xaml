@@ -22,15 +22,18 @@
                     <ColumnDefinition Width="*" />
                     <ColumnDefinition Width="Auto" />
                 </Grid.ColumnDefinitions>
+
                 <ImageButton Source="backarrow.svg" Clicked="OnPreviousClicked" Grid.Column="0" />
-                <Label x:Name="CurrentDate" Grid.Column="1" HorizontalOptions="Center" Margin="12"/>
+
+                <DatePicker x:Name="CurrentDate" 
+                            Date="{Binding selectedDate, Mode=TwoWay}" 
+                            HorizontalOptions="Center" Grid.Column="1" />
+
                 <ImageButton Source="forwardarrow.svg" Clicked="OnNextClicked" Grid.Column="2" />
             </Grid>
 
 
-            <DatePicker x:Name="SelectedDate" 
-                     Date="{Binding selectedDate, Mode=TwoWay}" 
-                     HorizontalOptions="Center"/>
+
             <CollectionView x:Name="lblRoutes">
                 <CollectionView.ItemTemplate>
                     <DataTemplate>

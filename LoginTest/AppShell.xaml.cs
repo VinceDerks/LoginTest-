@@ -1,7 +1,6 @@
 ﻿using LoginTest;
 using Microsoft.Maui.Controls;
 using Microsoft.Maui.Controls.Xaml;
-using LoginTest;
 
 namespace LoginTest
 {

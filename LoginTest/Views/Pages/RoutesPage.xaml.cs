@@ -12,8 +12,7 @@ namespace LoginTest
     public partial class RoutesPage : ContentPage
     {
         private DateTime currentDate;
-        private DateTime selectedDate { get; set; }
-
+        private DateTime selectedDate;
 
         public RoutesPage()
         {
@@ -22,7 +21,8 @@ namespace LoginTest
             selectedDate = currentDate;
             UpdateRoutes();
             DisplayRoutes(currentDate);
-            
+
+            CurrentDate.DateSelected += DatePicker_DateSelected;
         }
 
         private void DatePicker_DateSelected(object sender, DateChangedEventArgs e)
@@ -33,19 +33,14 @@ namespace LoginTest
 
         private void OnPreviousClicked(object sender, EventArgs e)
         {
-           
             selectedDate = selectedDate.AddDays(-1);
-            DateTime previousDay = selectedDate;
-            
-            DisplayRoutes(previousDay);
+            DisplayRoutes(selectedDate);
         }
 
         private void OnNextClicked(object sender, EventArgs e)
         {
-            
-           selectedDate = selectedDate.AddDays(1);
-            DateTime nextDay = selectedDate;
-            DisplayRoutes(nextDay);
+            selectedDate = selectedDate.AddDays(1);
+            DisplayRoutes(selectedDate);
         }
         private void UpdateRoutes()
         {
@@ -130,15 +125,12 @@ namespace LoginTest
 
             return filteredRoutes;
         }
-
         private void DisplayRoutes(DateTime date)
         {
-
             List<RoutesSrc> routes = FetchRoutesForDate(date);
-
-           
             lblRoutes.ItemsSource = routes;
-            CurrentDate.Text = selectedDate.ToString("MM-dd-yyyy");
+
+            CurrentDate.Date = selectedDate;
         }
 
 
