@@ -4,25 +4,60 @@
              x:Class="LoginTest.SettingsPage"
              xmlns:lang="clr-namespace:LoginTest.Resources.Languages"
              Title="Settings">
+
     <ContentPage.Resources>
         <ResourceDictionary>
-            <Color x:Key="PrimaryColor">red</Color>
-            <Color x:Key="SecondaryColor">#6D7272</Color>
-           
+
+  
+            <Style TargetType="Switch">
+                <Setter Property="ThumbColor" Value="#007AFF" />
+            </Style>
+
+            <Style TargetType="Picker">
+                <Setter Property="TextColor" Value="#007AFF" />
+            </Style>
+
+            <Style TargetType="Button">
+                <Setter Property="BackgroundColor" Value="#007AFF" />
+                <Setter Property="TextColor" Value="White" />
+                <Setter Property="CornerRadius" Value="10" />
+            </Style>
+
         </ResourceDictionary>
     </ContentPage.Resources>
-    <VerticalStackLayout>
+
+    <StackLayout Spacing="10" Padding="20">
+
+        <Label Text="Dark Mode" 
+                   TextColor="#333" 
+                   FontSize="18" 
+                   HorizontalOptions="Center" 
+                   VerticalOptions="Center" />
+        
         <Switch x:Name="DarkModeSwitch"
-                
-                IsToggled="{Binding DarkMode}" 
-                HorizontalOptions="Center" 
+                IsToggled="{Binding DarkMode}"
+                HorizontalOptions="Center"
                 VerticalOptions="Center" />
-        
-        <Button BackgroundColor="Black" 
-                TextColor="White" 
-                Text="{x:Static lang:AppResources.Logoutbutton}" 
-                Clicked="LogoutButton_Clicked" 
-                WidthRequest="300" Margin="0,15" />
-        
-    </VerticalStackLayout>
+        <StackLayout>
+            <Label Text="Select Language" 
+                   TextColor="#333" 
+                   FontSize="18" 
+                   HorizontalOptions="Start" 
+                   VerticalOptions="CenterAndExpand" />
+
+            <Picker x:Name="LanguagePicker" Title="Select Language" TitleColor="#007AFF">
+                <Picker.Items>
+                    <x:String>English</x:String>
+                    <x:String>Nederlands</x:String>
+                </Picker.Items>
+            </Picker>
+        </StackLayout>
+    <Button BackgroundColor="#007AFF"
+                TextColor="White"
+                Text="{x:Static lang:AppResources.Logoutbutton}"
+                Clicked="LogoutButton_Clicked"
+                CornerRadius="10"
+                HorizontalOptions="FillAndExpand"
+                VerticalOptions="CenterAndExpand" />
+    </StackLayout>
 </ContentPage>

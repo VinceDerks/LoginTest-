@@ -14,6 +14,8 @@ namespace LoginTest
         private DateTime currentDate;
         private DateTime selectedDate;
 
+        public static ContentPage RootPage { get; set; }
+
         public RoutesPage()
         {
             InitializeComponent();
@@ -23,6 +25,8 @@ namespace LoginTest
             DisplayRoutes(currentDate);
 
             CurrentDate.DateSelected += DatePicker_DateSelected;
+
+            RootPage = this; 
         }
 
         private void DatePicker_DateSelected(object sender, DateChangedEventArgs e)
