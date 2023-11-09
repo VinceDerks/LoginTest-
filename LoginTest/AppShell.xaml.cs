@@ -1,4 +1,5 @@
 ﻿using LoginTest;
+using LoginTest.Resources.Languages;
 using Microsoft.Maui.Controls;
 using Microsoft.Maui.Controls.Xaml;
 
@@ -11,6 +12,14 @@ namespace LoginTest
         {
             InitializeComponent();
             BindingContext = new AppShellViewModel();
+        }
+    }
+
+    public class Appie : Application
+    {
+        public Appie()
+        {
+            MainPage = new AppShell();
         }
     }
 }

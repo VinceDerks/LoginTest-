@@ -53,12 +53,15 @@ namespace LoginTest
                 AppResources.Culture = new System.Globalization.CultureInfo("nl-NL");
             }
 
+            SecureStorage.SetAsync("SelectedLanguage", selectedLanguage);
+
             ReloadApp();
+
         }
 
         private void ReloadApp()
         {
-            Application.Current.MainPage = new NavigationPage(new RoutesPage());
+            Application.Current.MainPage = new AppShell();
         }
 
         private async void LogoutButton_Clicked(object sender, EventArgs e)
