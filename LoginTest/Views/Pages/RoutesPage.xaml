@@ -15,64 +15,66 @@
         </ResourceDictionary>
     </ContentPage.Resources>
     <ContentPage.Content>
-        <StackLayout>
-            <Grid>
-                <Grid.ColumnDefinitions>
-                    <ColumnDefinition Width="Auto" />
-                    <ColumnDefinition Width="*" />
-                    <ColumnDefinition Width="Auto" />
-                </Grid.ColumnDefinitions>
+        <ScrollView>    
+            <StackLayout>
+                <Grid>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="Auto" />
+                        <ColumnDefinition Width="*" />
+                        <ColumnDefinition Width="Auto" />
+                    </Grid.ColumnDefinitions>
 
-                <ImageButton Source="backarrow.svg" Clicked="OnPreviousClicked" Grid.Column="0" />
+                    <ImageButton Source="backarrow.svg" Clicked="OnPreviousClicked" Grid.Column="0" />
 
-                <DatePicker x:Name="CurrentDate" 
-                            Date="{Binding selectedDate, Mode=TwoWay}" 
-                            HorizontalOptions="Center" Grid.Column="1" />
+                    <DatePicker x:Name="CurrentDate" 
+                                Date="{Binding selectedDate, Mode=TwoWay}" 
+                                HorizontalOptions="Center" Grid.Column="1" />
 
-                <ImageButton Source="forwardarrow.svg" Clicked="OnNextClicked" Grid.Column="2" />
-            </Grid>
+                    <ImageButton Source="forwardarrow.svg" Clicked="OnNextClicked" Grid.Column="2" />
+                </Grid>
 
-            <CollectionView x:Name="lblRoutes">
-                <CollectionView.ItemTemplate>
-                    <DataTemplate>
-                        <Border Stroke="black"
-                                StrokeThickness="3">
-                            <StackLayout Padding="10" 
-                                         BackgroundColor="LightGray" 
-                                         Margin="5" >
-                                <StackLayout.GestureRecognizers>
-                                    <TapGestureRecognizer Tapped="OnRouteTapped" />
-                                </StackLayout.GestureRecognizers>
+                <CollectionView x:Name="lblRoutes">
+                    <CollectionView.ItemTemplate>
+                        <DataTemplate>
+                            <Border Stroke="black"
+                                    StrokeThickness="3">
+                                <StackLayout Padding="10" 
+                                             BackgroundColor="LightGray" 
+                                             Margin="5" >
+                                    <StackLayout.GestureRecognizers>
+                                        <TapGestureRecognizer Tapped="OnRouteTapped" />
+                                    </StackLayout.GestureRecognizers>
 
-                                <Label Text="{Binding City}" 
-                                       FontSize="16" 
-                                       TextColor="Black"
-                                       HorizontalOptions="Center"/>
+                                    <Label Text="{Binding City}" 
+                                           FontSize="16" 
+                                           TextColor="Black"
+                                           HorizontalOptions="Center"/>
                                 
-                                <Label Text="{Binding Adress}" 
-                                       FontSize="14" 
-                                       TextColor="Black"
-                                       HorizontalOptions="Center"/>
+                                    <Label Text="{Binding Adress}" 
+                                           FontSize="14" 
+                                           TextColor="Black"
+                                           HorizontalOptions="Center"/>
 
-                                <Label Text="{Binding TimeArrive}" 
-                                       FontSize="14" 
-                                       TextColor="#999999"
-                                       HorizontalOptions="Center"/>
+                                    <Label Text="{Binding TimeArrive}" 
+                                           FontSize="14" 
+                                           TextColor="#999999"
+                                           HorizontalOptions="Center"/>
 
-                                <Label Text="{Binding TimeDepart}" 
-                                       FontSize="14" 
-                                       TextColor="#999999"
-                                       HorizontalOptions="Center"/>
+                                    <Label Text="{Binding TimeDepart}" 
+                                           FontSize="14" 
+                                           TextColor="#999999"
+                                           HorizontalOptions="Center"/>
 
-                                <Label Text="{Binding TypeOf}" 
-                                       FontSize="14" 
-                                       TextColor="#999999"/>
+                                    <Label Text="{Binding TypeOf}" 
+                                           FontSize="14" 
+                                           TextColor="#999999"/>
                                 
-                            </StackLayout>
-                        </Border>
-                    </DataTemplate>
-                </CollectionView.ItemTemplate>
-            </CollectionView>
-        </StackLayout>
+                                </StackLayout>
+                            </Border>
+                        </DataTemplate>
+                    </CollectionView.ItemTemplate>
+                </CollectionView>
+            </StackLayout>
+        </ScrollView>
     </ContentPage.Content>
 </ContentPage>
