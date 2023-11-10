@@ -171,4 +171,7 @@
   <data name="NotDel" xml:space="preserve">
     <value>Niet Afgeleverd/Opgehaald</value>
   </data>
+  <data name="ArrivedPage" xml:space="preserve">
+    <value>Bestemming</value>
+  </data>
 </root>

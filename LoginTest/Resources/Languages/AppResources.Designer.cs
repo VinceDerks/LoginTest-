@@ -88,6 +88,15 @@ namespace LoginTest.Resources.Languages {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Arrived.
+        /// </summary>
+        internal static string ArrivedPage {
+            get {
+                return ResourceManager.GetString("ArrivedPage", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Departure.
         /// </summary>
         internal static string Departure {
@@ -165,15 +174,6 @@ namespace LoginTest.Resources.Languages {
         internal static string RentIntro {
             get {
                 return ResourceManager.GetString("RentIntro", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to Retry.
-        /// </summary>
-        internal static string Retry {
-            get {
-                return ResourceManager.GetString("Retry", resourceCulture);
             }
         }
         

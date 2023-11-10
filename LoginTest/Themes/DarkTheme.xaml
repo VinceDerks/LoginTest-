@@ -20,7 +20,7 @@
     <Color x:Key="Blue">#4ACAFF</Color>
     <Color x:Key="HyperLink">#3EAFFF</Color>
 
-    <!--<Color x:Key="Gray100">#222831</Color>
+    <Color x:Key="Gray100">#222831</Color>
     <Color x:Key="Gray200">#454D59</Color>
     <Color x:Key="Gray300">#57616F</Color>
     <Color x:Key="Gray400">#656F81</Color>
@@ -28,7 +28,7 @@
     <Color x:Key="Gray600">#848E9F</Color>
     <Color x:Key="Gray700">#9BA3B1</Color>
     <Color x:Key="Gray800">#BDC3CB</Color>
-    <Color x:Key="Gray900">#EBEDEF</Color>-->
+    <Color x:Key="Gray900">#EBEDEF</Color>
     <Color x:Key="GrayBg">#2e302f</Color>
     <Color x:Key="Black">#2e302f</Color>
     <Color x:Key="White">#ffffff</Color>
@@ -41,7 +41,7 @@
 
     <Color x:Key="BaseButtonBorderColor">Transparent</Color>
 
-    <Color x:Key="NavigationBarBackgroundColor">#222831</Color>
+    <Color x:Key="NavigationBarBackgroundColor">#3E94FF</Color>
     <Color x:Key="NavigationBarTextColor">#EBEDEF</Color>
     <Color x:Key="NavigationBarIconColor">#EBEDEF</Color>
     <Color x:Key="MainMenuOverlayBackgroundColor">#22F1F3F5</Color>

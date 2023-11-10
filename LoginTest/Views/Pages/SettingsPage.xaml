@@ -7,8 +7,6 @@
 
     <ContentPage.Resources>
         <ResourceDictionary>
-
-  
             <Style TargetType="Switch">
                 <Setter Property="ThumbColor" Value="#007AFF" />
             </Style>
@@ -21,43 +19,52 @@
                 <Setter Property="BackgroundColor" Value="#007AFF" />
                 <Setter Property="TextColor" Value="White" />
                 <Setter Property="CornerRadius" Value="10" />
+                <Setter Property="FontSize" Value="18" />
+            </Style>
+
+            <Style TargetType="Label">
+                <Setter Property="TextColor" Value="#333" />
+                <Setter Property="FontSize" Value="18" />
+            </Style>
+
+            <Style TargetType="StackLayout">
+                <Setter Property="Spacing" Value="10" />
+                <Setter Property="Padding" Value="20" />
             </Style>
 
         </ResourceDictionary>
     </ContentPage.Resources>
 
-    <StackLayout Spacing="10" Padding="20">
+    <StackLayout>
 
         <Label Text="{x:Static lang:AppResources.Theme}" 
-                   TextColor="#333" 
-                   FontSize="18" 
-                   HorizontalOptions="Center" 
-                   VerticalOptions="Center" />
-        
+               HorizontalOptions="Center" 
+               VerticalOptions="Center" />
+
         <Switch x:Name="DarkModeSwitch"
                 IsToggled="{Binding DarkMode}"
                 HorizontalOptions="Center"
                 VerticalOptions="Center" />
+
         <StackLayout>
             <Label Text="{x:Static lang:AppResources.SelLang}" 
-                   TextColor="#333" 
-                   FontSize="18" 
-                   HorizontalOptions="Start" 
+                   HorizontalOptions="Center" 
                    VerticalOptions="CenterAndExpand" />
 
-            <Picker x:Name="LanguagePicker" Title="{x:Static lang:AppResources.SelLang}" TitleColor="#007AFF">
+            <Picker x:Name="LanguagePicker" 
+                    Title="{x:Static lang:AppResources.SelLang}" 
+                    TitleColor="#007AFF"
+                    HorizontalTextAlignment="Center ">
                 <Picker.Items>
                     <x:String>English</x:String>
                     <x:String>Nederlands</x:String>
                 </Picker.Items>
             </Picker>
         </StackLayout>
-    <Button BackgroundColor="#007AFF"
-                TextColor="White"
-                Text="{x:Static lang:AppResources.Logoutbutton}"
+
+        <Button Text="{x:Static lang:AppResources.Logoutbutton}"
                 Clicked="LogoutButton_Clicked"
-                CornerRadius="10"
-                HorizontalOptions="FillAndExpand"
-                VerticalOptions="CenterAndExpand" />
+                HorizontalOptions="Fill"
+                VerticalOptions="Center" />
     </StackLayout>
 </ContentPage>

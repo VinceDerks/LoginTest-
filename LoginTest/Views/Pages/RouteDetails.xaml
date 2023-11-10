@@ -7,100 +7,111 @@
         <ResourceDictionary>
             <Style x:Key="LabelStyle" TargetType="Label">
                 <Setter Property="FontSize" Value="16" />
-                <Setter Property="Margin" Value="10" />
+                <Setter Property="Margin" Value="5" />
+                <Setter Property="TextColor" Value="Black" />
+            </Style>
+            <Style x:Key="BoldLabelStyle" TargetType="Label">
+                <Setter Property="FontAttributes" Value="Bold" />
             </Style>
             <Style x:Key="ButtonStyle" TargetType="Button">
-                <Setter Property="FontSize" Value="18" />
+                <Setter Property="FontSize" Value="20" />
+                <Setter Property="Margin" Value="10" />
+                <Setter Property="BackgroundColor" Value="Green" />
+                <Setter Property="TextColor" Value="White" />
+            </Style>
+            <Style x:Key="FrameBoxStyle" TargetType="Frame">
+                <Setter Property="BorderColor" Value="Black" />
+                <Setter Property="CornerRadius" Value="10" />
                 <Setter Property="Margin" Value="10" />
             </Style>
         </ResourceDictionary>
     </ContentPage.Resources>
-    <StackLayout>
-        <Border Stroke="black" StrokeThickness="3">
-            <StackLayout>
-                <Label Text="{x:Static lang:AppResources.ID}"
-                       FontAttributes="Bold"
-                       HorizontalOptions="Center"
-                       VerticalOptions="Center"/>
-                <Label Text="{Binding SelectedRoute.ID}" 
-                       HorizontalOptions="Center"
-                       VerticalOptions="Center"              
-                       Style="{StaticResource LabelStyle}" />
-            </StackLayout>
-        </Border>
+    <ScrollView>
+        <StackLayout>
+            <Frame Style="{StaticResource FrameBoxStyle}">
+                <StackLayout>
+                    <Label Text="{x:Static lang:AppResources.ID}"
+                           Style="{StaticResource BoldLabelStyle}"
+                           HorizontalOptions="Center"
+                           VerticalOptions="Center"/>
+                    <Label Text="{Binding SelectedRoute.ID}" 
+                           HorizontalOptions="Center"
+                           VerticalOptions="Center"
+                           Style="{StaticResource LabelStyle}" />
+                </StackLayout>
+            </Frame>
 
-        <Border Stroke="black" StrokeThickness="3">
-            <StackLayout>
-                <Label Text="{x:Static lang:AppResources.Place}" 
-                       FontAttributes="Bold"
-                       HorizontalOptions="Center"
-                       VerticalOptions="Center"               />
-                <Label Text="{Binding SelectedRoute.City}" 
-                       HorizontalOptions="Center"
-                       VerticalOptions="Center"              
-                       Style="{StaticResource LabelStyle}" />
-            </StackLayout>
-        </Border>
+            <Frame Style="{StaticResource FrameBoxStyle}">
+                <StackLayout>
+                    <Label Text="{x:Static lang:AppResources.Place}" 
+                           Style="{StaticResource BoldLabelStyle}"
+                           HorizontalOptions="Center"
+                           VerticalOptions="Center" />
+                    <Label Text="{Binding SelectedRoute.City}" 
+                           HorizontalOptions="Center"
+                           VerticalOptions="Center"
+                           Style="{StaticResource LabelStyle}" />
+                </StackLayout>
+            </Frame>
 
-        <Border Stroke="black" StrokeThickness="3">
-            <StackLayout>
-                <Label Text="{x:Static lang:AppResources.Adress}"  
-                       FontAttributes="Bold"
-                       HorizontalOptions="Center"
-                       VerticalOptions="Center"/>
-                <Label Text="{Binding SelectedRoute.Adress}" 
-                       HorizontalOptions="Center"
-                       VerticalOptions="Center"               
-                       Style="{StaticResource LabelStyle}" />
-            </StackLayout>
-        </Border>
+            <Frame Style="{StaticResource FrameBoxStyle}">
+                <StackLayout>
+                    <Label Text="{x:Static lang:AppResources.Adress}"  
+                           Style="{StaticResource BoldLabelStyle}"
+                           HorizontalOptions="Center"
+                           VerticalOptions="Center"/>
+                    <Label Text="{Binding SelectedRoute.Adress}" 
+                           HorizontalOptions="Center"
+                           VerticalOptions="Center"
+                           Style="{StaticResource LabelStyle}" />
+                </StackLayout>
+            </Frame>
 
-        <Border Stroke="black" StrokeThickness="3">
-            <StackLayout>
-                <Label Text="{x:Static lang:AppResources.Arrival}" 
-                       FontAttributes="Bold"
-                       HorizontalOptions="Center"
-                       VerticalOptions="Center"               />
-                <Label Text="{Binding SelectedRoute.TimeArrive}"
-                       HorizontalOptions="Center"
-                       VerticalOptions="Center"               
-                       Style="{StaticResource LabelStyle}" />
-            </StackLayout>
-        </Border>
+            <Frame Style="{StaticResource FrameBoxStyle}">
+                <StackLayout>
+                    <Label Text="{x:Static lang:AppResources.Arrival}" 
+                           Style="{StaticResource BoldLabelStyle}"
+                           HorizontalOptions="Center"
+                           VerticalOptions="Center"/>
+                    <Label Text="{Binding SelectedRoute.TimeArrive}"
+                           HorizontalOptions="Center"
+                           VerticalOptions="Center"
+                           Style="{StaticResource LabelStyle}" />
+                </StackLayout>
+            </Frame>
 
-        <Border Stroke="black" StrokeThickness="3">
-            <StackLayout>
-                <Label Text="{x:Static lang:AppResources.Departure}" 
-                       FontAttributes="Bold"
-                       HorizontalOptions="Center"
-                       VerticalOptions="Center"               />
-                <Label Text="{Binding SelectedRoute.TimeDepart}"
-                       HorizontalOptions="Center"
-                       VerticalOptions="Center"               
-                       Style="{StaticResource LabelStyle}" />
-            </StackLayout>
-        </Border>
+            <Frame Style="{StaticResource FrameBoxStyle}">
+                <StackLayout>
+                    <Label Text="{x:Static lang:AppResources.Departure}" 
+                           Style="{StaticResource BoldLabelStyle}"
+                           HorizontalOptions="Center"
+                           VerticalOptions="Center"               />
+                    <Label Text="{Binding SelectedRoute.TimeDepart}"
+                           HorizontalOptions="Center"
+                           VerticalOptions="Center"
+                           Style="{StaticResource LabelStyle}" />
+                </StackLayout>
+            </Frame>
 
-        <Border Stroke="black" StrokeThickness="3">
-            <StackLayout>
-                <Label Text="{x:Static lang:AppResources.Type}" 
-                       FontAttributes="Bold"
-                       HorizontalOptions="Center"
-                       VerticalOptions="Center"/>
-                <Label Text="{Binding SelectedRoute.TypeOf}"
-                       HorizontalOptions="Center"
-                       VerticalOptions="Center"
-                       Style="{StaticResource LabelStyle}" />
-            </StackLayout>
-        </Border>
+            <Frame Style="{StaticResource FrameBoxStyle}">
+                <StackLayout>
+                    <Label Text="{x:Static lang:AppResources.Type}" 
+                           Style="{StaticResource BoldLabelStyle}"
+                           HorizontalOptions="Center"
+                           VerticalOptions="Center"/>
+                    <Label Text="{Binding SelectedRoute.TypeOf}"
+                           HorizontalOptions="Center"
+                           VerticalOptions="Center"
+                           Style="{StaticResource LabelStyle}" />
+                </StackLayout>
+            </Frame>
 
-        <StackLayout HorizontalOptions="Center" VerticalOptions="Center">
-            <Image Source="{Binding SelectedRoute.Image}"
-                   Style="{StaticResource LabelStyle}" />
+            <StackLayout HorizontalOptions="Center" VerticalOptions="Center">
+                <Image Source="{Binding SelectedRoute.Image}" />
+            </StackLayout>
+
+            <Button Clicked="Arrived" Text="{x:Static lang:AppResources.Arrived}" 
+                    Style="{StaticResource ButtonStyle}" />
         </StackLayout>
-
-        <Button Clicked="Arrived" Text="{x:Static lang:AppResources.Arrived}" 
-                BackgroundColor="Green" 
-                Style="{StaticResource ButtonStyle}" />
-    </StackLayout>
+    </ScrollView>
 </ContentPage>

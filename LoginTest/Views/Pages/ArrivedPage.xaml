@@ -1,14 +1,22 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
-    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-    xmlns:toolkit="http://schemas.microsoft.com/dotnet/2022/maui/toolkit"
-    xmlns:mct="clr-namespace:CommunityToolkit.Maui.Views;assembly=CommunityToolkit.Maui"
-    xmlns:lang="clr-namespace:LoginTest.Resources.Languages"
-    x:Class="LoginTest.ArrivedPage"
-    Title="ArrivedPage"
-          >
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:toolkit="http://schemas.microsoft.com/dotnet/2022/maui/toolkit"
+             xmlns:mct="clr-namespace:CommunityToolkit.Maui.Views;assembly=CommunityToolkit.Maui"
+             xmlns:lang="clr-namespace:LoginTest.Resources.Languages"
+             x:Class="LoginTest.ArrivedPage"
+             Title="{x:Static lang:AppResources.ArrivedPage}">
+    <ContentPage.Resources>
+        <ResourceDictionary>
+            <Style TargetType="Button">
+                <Setter Property="FontSize" Value="18" />
+                <Setter Property="Margin" Value="5" />
+                <Setter Property="TextColor" Value="White" />
+                <Setter Property="CornerRadius" Value="10" />
+            </Style>
+        </ResourceDictionary>
+    </ContentPage.Resources>
     <StackLayout>
-        
         <mct:DrawingView
             x:Name="SignatureEntry"
             BackgroundColor="LightGray"
@@ -17,9 +25,9 @@
             IsMultiLineModeEnabled="True"
             LineColor="Black"
             LineWidth="5"
-            />
-        <Button BackgroundColor="Black" Clicked="ClearButton_Clicked" Text="{x:Static lang:AppResources.NewSig}"></Button>
-        <Button BackgroundColor="Black" Clicked="SaveButton_Clicked" Text="{x:Static lang:AppResources.Save}"></Button>
-        <Button BackgroundColor="Red" Clicked="NavigateToNotArrived" Text="{x:Static lang:AppResources.NotDel}"/>
+        />
+        <Button BackgroundColor="Black" Clicked="ClearButton_Clicked" Text="{x:Static lang:AppResources.NewSig}" />
+        <Button BackgroundColor="Black" Clicked="SaveButton_Clicked" Text="{x:Static lang:AppResources.Save}" />
+        <Button BackgroundColor="Red" Clicked="NavigateToNotArrived" Text="{x:Static lang:AppResources.NotDel}" />
     </StackLayout>
 </ContentPage>
