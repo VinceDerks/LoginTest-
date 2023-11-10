@@ -17,7 +17,6 @@
         <ScrollView>
             <StackLayout Padding="10">
 
-                <!-- Date Picker Section -->
                 <Grid>
                     <Grid.ColumnDefinitions>
                         <ColumnDefinition Width="Auto" />
@@ -34,7 +33,6 @@
                     <ImageButton Source="forwardarrow.svg" Clicked="OnNextClicked" Grid.Column="2" />
                 </Grid>
 
-                <!-- CollectionView Section -->
                 <CollectionView x:Name="lblRoutes" BackgroundColor="White">
                     <CollectionView.ItemTemplate>
                         <DataTemplate>
@@ -66,7 +64,10 @@
                                                HorizontalOptions="EndAndExpand" />
 
                                         <Label/>
-
+                                        <Label Text="-"
+                                               FontSize="14"
+                                               TextColor="#999999"
+                                               HorizontalOptions="Center" />
                                         <Label Text="{Binding TimeDepart}"
                                                FontSize="14"
                                                TextColor="#999999"

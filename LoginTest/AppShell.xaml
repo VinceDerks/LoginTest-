@@ -41,12 +41,12 @@
                   ContentTemplate="{DataTemplate local:RoutesPage}" />
     </FlyoutItem>
 
-<Shell.FlyoutFooter>
+    <Shell.FlyoutFooter>
         <StackLayout Orientation="Vertical" VerticalOptions="Center">
             <Label Text="Copyright | RentBuddy" HorizontalOptions="Center" VerticalOptions="Center" TextColor="Black" FontSize="Small" />
             <Label Text="{Binding SelectedLanguage}" HorizontalOptions="End" VerticalOptions="Center" TextColor="Black" FontSize="Small" />
         </StackLayout>
-</Shell.FlyoutFooter>
+    </Shell.FlyoutFooter>
 
     <Shell.ToolbarItems>
         <ToolbarItem IconImageSource="home.svg" Command="{Binding GoToRoutesCommandPage}" />
