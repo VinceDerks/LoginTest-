@@ -153,4 +153,22 @@
   <data name="User" xml:space="preserve">
     <value>Gebruikersnaam</value>
   </data>
+  <data name="Settings" xml:space="preserve">
+    <value>Instellingen</value>
+  </data>
+  <data name="SelLang" xml:space="preserve">
+    <value>Selecteer Taal</value>
+  </data>
+  <data name="Theme" xml:space="preserve">
+    <value>Thema</value>
+  </data>
+  <data name="NewSig" xml:space="preserve">
+    <value>Nieuwe Handtekening</value>
+  </data>
+  <data name="Save" xml:space="preserve">
+    <value>Opslaan</value>
+  </data>
+  <data name="NotDel" xml:space="preserve">
+    <value>Niet Afgeleverd/Opgehaald</value>
+  </data>
 </root>

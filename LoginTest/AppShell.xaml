@@ -1,7 +1,9 @@
 <Shell xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
        xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
        xmlns:local="clr-namespace:LoginTest"
+       xmlns:lang="clr-namespace:LoginTest.Resources.Languages"
        x:Class="LoginTest.AppShell"
+       BindingContext="{x:Static local:App.ViewModel}"
        FlyoutBehavior="Flyout"
        FlyoutBackground="lightgray">
 
@@ -24,9 +26,9 @@
                       ContentTemplate="{DataTemplate local:RouteDirections}" />
     </FlyoutItem>
 
-    <FlyoutItem Title="Settings">
+    <FlyoutItem Title="{x:Static lang:AppResources.Settings}">
         <FlyoutItem.Icon>
-            <FileImageSource File="home.svg" />
+            <FileImageSource File="settings.svg" />
         </FlyoutItem.Icon>
         <ShellContent Route="settings"
                       Title="Settings"
@@ -39,12 +41,12 @@
                   ContentTemplate="{DataTemplate local:RoutesPage}" />
     </FlyoutItem>
 
-    <Shell.FlyoutFooter>
-        <StackLayout VerticalOptions="End">
-            <Image Source="copyright_logo.png" WidthRequest="50" HeightRequest="50" HorizontalOptions="Center" />
-            <Label Text="Copyright | RentBuddy" HorizontalOptions="Center" TextColor="Black" FontSize="Small" />
+<Shell.FlyoutFooter>
+        <StackLayout Orientation="Vertical" VerticalOptions="Center">
+            <Label Text="Copyright | RentBuddy" HorizontalOptions="Center" VerticalOptions="Center" TextColor="Black" FontSize="Small" />
+            <Label Text="{Binding SelectedLanguage}" HorizontalOptions="End" VerticalOptions="Center" TextColor="Black" FontSize="Small" />
         </StackLayout>
-    </Shell.FlyoutFooter>
+</Shell.FlyoutFooter>
 
     <Shell.ToolbarItems>
         <ToolbarItem IconImageSource="home.svg" Command="{Binding GoToRoutesCommandPage}" />

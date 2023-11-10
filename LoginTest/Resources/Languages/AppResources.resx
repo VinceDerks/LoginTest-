@@ -153,4 +153,22 @@
   <data name="User" xml:space="preserve">
     <value>Username</value>
   </data>
+  <data name="Settings" xml:space="preserve">
+    <value>Settings</value>
+  </data>
+  <data name="SelLang" xml:space="preserve">
+    <value>Select Language</value>
+  </data>
+  <data name="Theme" xml:space="preserve">
+    <value>Theme</value>
+  </data>
+  <data name="NewSig" xml:space="preserve">
+    <value>New Signature</value>
+  </data>
+  <data name="Save" xml:space="preserve">
+    <value>Save</value>
+  </data>
+  <data name="NotDel" xml:space="preserve">
+    <value>Not Delivered/Picked up</value>
+  </data>
 </root>
