@@ -32,17 +32,21 @@ public partial class RouteDirections : ContentPage
         string jsonData = @"[
                         {
                             ""Name"": ""DENBOSCH"",
-                            ""ID"": ""1"",
+                            ""ID"": ""2"",
                             ""Date"": ""14-11-2023"",
                             ""TimeStart"": ""10:00 AM"",
-                            ""TimeEnd"": ""1:00 PM""
+                            ""TimeEnd"": ""1:00 PM"",
+                            ""LadingGewicht"": ""45 kg"",
+                            ""LadingVolume"": ""4 m3""
                           }, 
                         {
                             ""Name"": ""DENBOSCH"",
                             ""ID"": ""1"",
                             ""Date"": ""13-11-2023"",
                             ""TimeStart"": ""10:00 AM"",
-                            ""TimeEnd"": ""1:00 PM""
+                            ""TimeEnd"": ""1:00 PM"",
+                            ""LadingGewicht"": ""45"",
+                            ""LadingVolume"": ""4""
                           }
                         ]";
         List<Route> routes = JsonConvert.DeserializeObject<List<Route>>(jsonData, settings);

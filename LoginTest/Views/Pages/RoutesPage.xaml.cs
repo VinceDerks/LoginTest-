@@ -32,8 +32,7 @@ namespace LoginTest
         {
             ""ID"": ""1"",
             ""Date"": ""2023-11-10"",
-            ""City"": ""Tilburg"",
-            ""Address"": ""Distelweg 52"",
+            ""Adress"": ""Distelweg 52 5345KD Oss"",
             ""TimeArrive"": ""10:00 PM"",
             ""TimeDepart"": ""18:00 PM"",
             ""TypeOf"": ""Delivery"",
@@ -43,7 +42,7 @@ namespace LoginTest
             ""ID"": ""1"",
             ""Date"": ""2023-11-10"",
             ""City"": ""Varik"",
-            ""Address"": ""De Geus bv"",
+            ""Adress"": ""De Geus bv"",
             ""TimeArrive"": ""17:00 PM"",
             ""TimeDepart"": ""18:00 PM"",
             ""TypeOf"": ""Pickup"",
@@ -53,7 +52,7 @@ namespace LoginTest
             ""ID"": ""1"",
             ""Date"": ""2023-11-10"",
             ""City"": ""Tilburg"",
-            ""Address"": ""Oaksoft"",
+            ""Adress"": ""Oaksoft"",
             ""TimeArrive"": ""17:00 PM"",
             ""TimeDepart"": ""18:00 PM"",
             ""TypeOf"": ""Delivery"",
@@ -73,7 +72,14 @@ namespace LoginTest
         private void DisplayDestinations(int routeId)
         {
             List<Destination> routes = FetchRoutesForId(routeId);
-            lblDestinations.ItemsSource = routes;
+            if(routes != null)
+            { 
+              lblDestinations.ItemsSource = routes;
+            }
+            else
+            {
+                Errorlbl.Text = "Geen afleverpunten gevonden";
+            }
         }
 
         private void OnRouteTapped(object sender, EventArgs e)

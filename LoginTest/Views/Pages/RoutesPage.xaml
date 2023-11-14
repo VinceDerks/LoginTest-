@@ -9,6 +9,7 @@
     <ContentPage.Content>
         <ScrollView >
             <StackLayout Padding="10" >
+                <Label x:Name="Errorlbl" FontSize="16" TextColor="Black"/>
                 <CollectionView x:Name="lblDestinations" BackgroundColor="White">
                     <CollectionView.ItemTemplate >
                         <DataTemplate>
@@ -20,13 +21,6 @@
                                     <StackLayout.GestureRecognizers>
                                         <TapGestureRecognizer Tapped="OnRouteTapped" />
                                     </StackLayout.GestureRecognizers>
-
-                                    <Label Text="{Binding City}"
-                                           FontSize="18"
-                                           TextColor="Black"
-                                           HorizontalOptions="CenterAndExpand"
-                                           VerticalOptions="CenterAndExpand" />
-
                                     <Label Text="{Binding Adress}"
                                            FontSize="16"
                                            TextColor="Black"
