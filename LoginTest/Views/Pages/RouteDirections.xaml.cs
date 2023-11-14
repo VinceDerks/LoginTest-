@@ -24,7 +24,11 @@ public partial class RouteDirections : ContentPage
     }
 
     private List<Route> FetchRoutesForDate(DateTime date)
-    {
+    { 
+        var settings = new JsonSerializerSettings
+        {
+            DateFormatString = "dd-MM-yyyy" 
+        };
         string jsonData = @"[
                         {
                             ""Name"": ""DENBOSCH"",
@@ -32,27 +36,29 @@ public partial class RouteDirections : ContentPage
                             ""Date"": ""14-11-2023"",
                             ""TimeStart"": ""10:00 AM"",
                             ""TimeEnd"": ""1:00 PM""
+                          }, 
+                        {
+                            ""Name"": ""DENBOSCH"",
+                            ""ID"": ""1"",
+                            ""Date"": ""13-11-2023"",
+                            ""TimeStart"": ""10:00 AM"",
+                            ""TimeEnd"": ""1:00 PM""
                           }
                         ]";
+        List<Route> routes = JsonConvert.DeserializeObject<List<Route>>(jsonData, settings);
 
-        List<Route> routes = JsonConvert.DeserializeObject<List<Route>>(jsonData);
+        List<Route> sortedRoutes = routes.OrderBy(r => r.Date).ToList();
 
-        List<Route> filteredRoutes = routes.FindAll(r => r.Date.Date == date.Date);
-
-        return filteredRoutes;
+        return sortedRoutes;
     }
     private void DisplayRoutes(DateTime date)
     {
         List<Route> routes = FetchRoutesForDate(date);
         lblRoutes.ItemsSource = routes;
     }
-
     private void OnRouteTapped(object sender, EventArgs e)
     {
         var selectedRoute = ((sender as StackLayout)?.BindingContext as Route);
         Navigation.PushAsync(new RoutesPage(selectedRoute.ID));
     }
-
-
-
 }

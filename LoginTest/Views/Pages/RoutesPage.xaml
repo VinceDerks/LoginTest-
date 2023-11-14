@@ -7,10 +7,10 @@
              x:Class="LoginTest.RoutesPage"
              NavigationPage.HasNavigationBar="True">
     <ContentPage.Content>
-        <ScrollView>
-            <StackLayout Padding="10">
+        <ScrollView >
+            <StackLayout Padding="10" >
                 <CollectionView x:Name="lblDestinations" BackgroundColor="White">
-                    <CollectionView.ItemTemplate>
+                    <CollectionView.ItemTemplate >
                         <DataTemplate>
                             <Frame HasShadow="True"
                                    BorderColor="LightGray"
@@ -59,8 +59,12 @@
                             </Frame>
                         </DataTemplate>
                     </CollectionView.ItemTemplate>
-                </CollectionView>
+                </CollectionView><StackLayout>
+        <Label x:Name="lblerror" TextColor="black" />
+    </StackLayout>
             </StackLayout>
+               
         </ScrollView>
     </ContentPage.Content>
+    
 </ContentPage>

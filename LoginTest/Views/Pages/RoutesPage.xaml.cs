@@ -26,37 +26,38 @@ namespace LoginTest
         private List<Destination> FetchRoutesForId(int routeId)
         {
             string jsonData = @"[
-                {
-                    ""ID"": 1,
-                    ""Date"": ""2023-11-10"",
-                    ""City"": ""Tilburg"",
-                    ""Address"": ""Distelweg 52"",
-                    ""TimeArrive"": ""10:00 PM"",
-                    ""TimeDepart"": ""18:00 PM"",
-                    ""TypeOf"": ""Delivery"",
-                    ""Status"": ""Not completed""
-                },
-                {
-                    ""ID"": 2,
-                    ""Date"": ""2023-11-10"",
-                    ""City"": ""Varik"",
-                    ""Address"": ""De Geus bv"",
-                    ""TimeArrive"": ""17:00 PM"",
-                    ""TimeDepart"": ""18:00 PM"",
-                    ""TypeOf"": ""Pickup"",
-                    ""Status"": ""Not completed""
-                },
-                {
-                    ""ID"": 3,
-                    ""Date"": ""2023-11-10"",
-                    ""City"": ""Tilburg"",
-                    ""Address"": ""Oaksoft"",
-                    ""TimeArrive"": ""17:00 PM"",
-                    ""TimeDepart"": ""18:00 PM"",
-                    ""TypeOf"": ""Delivery"",
-                    ""Status"": ""Not completed""
-                }
-            ]";
+        {
+            ""ID"": 1,
+            ""Date"": ""2023-11-10"",
+            ""City"": ""Tilburg"",
+            ""Address"": ""Distelweg 52"",
+            ""TimeArrive"": ""10:00 PM"",
+            ""TimeDepart"": ""18:00 PM"",
+            ""TypeOf"": ""Delivery"",
+            ""Status"": ""Not completed"",
+        },
+        {
+            ""ID"": 2,
+            ""Date"": ""2023-11-10"",
+            ""City"": ""Varik"",
+            ""Address"": ""De Geus bv"",
+            ""TimeArrive"": ""17:00 PM"",
+            ""TimeDepart"": ""18:00 PM"",
+            ""TypeOf"": ""Pickup"",
+            ""Status"": ""Not completed"",
+        },
+        {
+            ""ID"": 3,
+            ""Date"": ""2023-11-10"",
+            ""City"": ""Tilburg"",
+            ""Address"": ""Oaksoft"",
+            ""TimeArrive"": ""17:00 PM"",
+            ""TimeDepart"": ""18:00 PM"",
+            ""TypeOf"": ""Delivery"",
+            ""Status"": ""Not completed"",
+
+        }
+    ]";
 
             List<Destination> destinations = JsonConvert.DeserializeObject<List<Destination>>(jsonData);
 
@@ -68,7 +69,7 @@ namespace LoginTest
         private void DisplayDestinations(int routeId)
         {
             List<Destination> routes = FetchRoutesForId(routeId);
-            lblDestinations.ItemsSource = routes;
+            lblDestinations.ItemsSource = routes; 
         }
 
         private void OnRouteTapped(object sender, EventArgs e)

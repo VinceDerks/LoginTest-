@@ -21,7 +21,7 @@ namespace LoginTest.Model
 
     public class Route
     {
-        public int Name { get; set; }
+        public string Name { get; set; }
         public int ID { get; set; }
         public DateTime Date { get; set; }
         public string TimeStart { get; set; }
