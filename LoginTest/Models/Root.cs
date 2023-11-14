@@ -18,4 +18,14 @@ namespace LoginTest.Model
         public byte[] Image { get; set; }
         public string Status { get; set; }
     }
+
+    public class Route
+    {
+        public int Name { get; set; }
+        public int ID { get; set; }
+        public DateTime Date { get; set; }
+        public string TimeStart { get; set; }
+        public string TimeEnd{ get; set; }
+
+    }
 }

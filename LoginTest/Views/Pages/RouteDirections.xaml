@@ -3,105 +3,49 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="LoginTest.RouteDirections"
              Title="RouteDirections">
-    <StackLayout>
-        <StackLayout>
+    <CollectionView x:Name="lblRoutes" BackgroundColor="White">
+        <CollectionView.ItemTemplate>
+            <DataTemplate>
+                <Frame HasShadow="True"
+                   BorderColor="LightGray"
+                   CornerRadius="5"
+                   Margin="5">
+                    <StackLayout Padding="10">
+                        <StackLayout.GestureRecognizers>
+                            <TapGestureRecognizer Tapped="OnRouteTapped" />
+                        </StackLayout.GestureRecognizers>
 
-            <StackLayout.GestureRecognizers>
-                <TapGestureRecognizer Tapped="OnRouteTapped" />
-            </StackLayout.GestureRecognizers>
-            <StackLayout Padding="10" 
-                         BackgroundColor="LightGray" 
-                         Margin="5">
+                        <Label Text="{Binding Name}"
+                           FontSize="18"
+                           TextColor="Black"
+                           HorizontalOptions="CenterAndExpand"
+                           VerticalOptions="CenterAndExpand" />
 
-            <Label Text="{Binding City}" 
-                   FontSize="16" 
-                       TextColor="Black"
-                       HorizontalOptions="Center"/>
+                        <Label Text="{Binding Date}"
+                           FontSize="16"
+                           TextColor="Black"
+                           HorizontalOptions="CenterAndExpand"
+                           VerticalOptions="CenterAndExpand" />
 
-            <Label Text="{Binding Adress}" 
-                       FontSize="14" 
-                       TextColor="Black"
-                       HorizontalOptions="Center"/>
+                        <StackLayout Orientation="Horizontal">
+                            <Label Text="{Binding TimeStart}"
+                               FontSize="14"
+                               TextColor="#999999"
+                               HorizontalOptions="EndAndExpand" />
 
-            <Label Text="{Binding TimeArrive}" 
-                       FontSize="14" 
-                       TextColor="#999999"
-                       HorizontalOptions="Center"/>
-
-            <Label Style="{StaticResource Key=LblStyle}" 
-                       Text="{Binding TimeDepart}" 
-                       FontSize="14" 
-                       TextColor="#999999"
-                       HorizontalOptions="Center"/>
-
-            <Label Text="{Binding TypeOf}" 
-                       FontSize="14" 
-                       TextColor="#999999"/>
-
-        </StackLayout>
-
-            <StackLayout Padding="10" 
-                         BackgroundColor="LightGray" 
-                         Margin="5">
-
-
-                <Label Text="{Binding City}" 
-                   FontSize="16" 
-                       TextColor="Black"
-                       HorizontalOptions="Center"/>
-
-                <Label Text="{Binding Adress}" 
-                       FontSize="14" 
-                       TextColor="Black"
-                       HorizontalOptions="Center"/>
-
-                <Label Text="{Binding TimeArrive}" 
-                       FontSize="14" 
-                       TextColor="#999999"
-                       HorizontalOptions="Center"/>
-
-                <Label Text="{Binding TimeDepart}" 
-                       FontSize="14" 
-                       TextColor="#999999"
-                       HorizontalOptions="Center"/>
-
-                <Label Text="{Binding TypeOf}" 
-                       FontSize="14" 
-                       TextColor="#999999"/>
-
-            </StackLayout>
-
-            <StackLayout Padding="10" 
-                 BackgroundColor="LightGray" 
-                 Margin="5">
-
-
-                <Label Text="{Binding City}" 
-               FontSize="16" 
-               TextColor="Black"
-               HorizontalOptions="Center"/>
-
-                <Label Text="{Binding Adress}" 
-               FontSize="14" 
-               TextColor="Black"
-               HorizontalOptions="Center"/>
-
-                <Label Text="{Binding TimeArrive}" 
-               FontSize="14" 
-               TextColor="#999999"
-               HorizontalOptions="Center"/>
-
-                <Label Text="{Binding TimeDepart}" 
-               FontSize="14" 
-               TextColor="#999999"
-               HorizontalOptions="Center"/>
-
-                <Label Text="{Binding TypeOf}" 
-               FontSize="14" 
-               TextColor="#999999"/>
-
-            </StackLayout>
-        </StackLayout>
-    </StackLayout>
-    
+                            <Label/>
+                            <Label Text="-"
+                               FontSize="14"
+                               TextColor="#999999"
+                               HorizontalOptions="Center" />
+                            <Label Text="{Binding TimeEnd}"
+                               FontSize="14"
+                               TextColor="#999999"
+                               HorizontalOptions="StartAndExpand" />
+                        </StackLayout>
+                    </StackLayout>
+                </Frame>
+            </DataTemplate>
+        </CollectionView.ItemTemplate>
+    </CollectionView>
 </ContentPage>
