@@ -6,34 +6,10 @@
              xmlns:controls="clr-namespace:Microsoft.Maui.Controls;assembly=Microsoft.Maui.Controls"
              x:Class="LoginTest.RoutesPage"
              NavigationPage.HasNavigationBar="True">
-    <ContentPage.Resources>
-        <ResourceDictionary>
-            <Style TargetType="controls:DatePicker">
-                <Setter Property="TextColor" Value="Black" />
-            </Style>
-        </ResourceDictionary>
-    </ContentPage.Resources>
     <ContentPage.Content>
         <ScrollView>
             <StackLayout Padding="10">
-
-                <Grid>
-                    <Grid.ColumnDefinitions>
-                        <ColumnDefinition Width="Auto" />
-                        <ColumnDefinition Width="*" />
-                        <ColumnDefinition Width="Auto" />
-                    </Grid.ColumnDefinitions>
-
-                    <ImageButton Source="backarrow.svg" Clicked="OnPreviousClicked" Grid.Column="0" />
-
-                    <DatePicker x:Name="CurrentDate"
-                                Date="{Binding selectedDate, Mode=TwoWay}"
-                                HorizontalOptions="Center" Grid.Column="1" />
-
-                    <ImageButton Source="forwardarrow.svg" Clicked="OnNextClicked" Grid.Column="2" />
-                </Grid>
-
-                <CollectionView x:Name="lblRoutes" BackgroundColor="White">
+                <CollectionView x:Name="lblDestinations" BackgroundColor="White">
                     <CollectionView.ItemTemplate>
                         <DataTemplate>
                             <Frame HasShadow="True"

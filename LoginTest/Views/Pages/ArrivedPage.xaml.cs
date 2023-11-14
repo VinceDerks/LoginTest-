@@ -12,9 +12,9 @@ namespace LoginTest
 {
     public partial class ArrivedPage : ContentPage
     {
-        private RoutesSrc selectedRoute;
+        private Destination selectedRoute;
 
-        public ArrivedPage(RoutesSrc selectedRoute)
+        public ArrivedPage(Destination selectedRoute)
         {
             InitializeComponent();
             this.selectedRoute = selectedRoute;

@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace LoginTest.Model
 {
-    public class RoutesSrc
+    public class Destination
     {
         public int ID { get; set; }
         public DateTime Date { get; set; }
@@ -25,7 +25,7 @@ namespace LoginTest.Model
         public int ID { get; set; }
         public DateTime Date { get; set; }
         public string TimeStart { get; set; }
-        public string TimeEnd{ get; set; }
+        public string TimeEnd { get; set; }
 
     }
 }

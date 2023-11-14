@@ -6,9 +6,9 @@ namespace LoginTest
 {
     public partial class RouteDetails : ContentPage
 {
-    public RoutesSrc SelectedRoute { get; set; }
+    public Destination SelectedRoute { get; set; }
 
-    public RouteDetails(RoutesSrc selectedRoute)
+    public RouteDetails(Destination selectedRoute)
     {
         InitializeComponent();
         SelectedRoute = selectedRoute;

@@ -11,29 +11,19 @@ namespace LoginTest;
 public partial class RouteDirections : ContentPage
 {
     private DateTime currentDate;
-    private DateTime selectedDate;
-
-    public static ContentPage RootPage { get; set; }
-
     public RouteDirections()
     {
         InitializeComponent();
-        currentDate = DateTime.Today;
-        selectedDate = currentDate;
         UpdateRoutes();
         DisplayRoutes(currentDate);
-
-        RootPage = this;
     }
-
     private void UpdateRoutes()
     {
-
-        var routes = FetchRouteForDate(currentDate);
+        var routes = FetchRoutesForDate(currentDate);
         lblRoutes.ItemsSource = routes;
     }
 
-    private List<Route> FetchRouteForDate(DateTime date)
+    private List<Route> FetchRoutesForDate(DateTime date)
     {
         string jsonData = @"[
                         {
@@ -51,10 +41,18 @@ public partial class RouteDirections : ContentPage
 
         return filteredRoutes;
     }
+    private void DisplayRoutes(DateTime date)
+    {
+        List<Route> routes = FetchRoutesForDate(date);
+        lblRoutes.ItemsSource = routes;
+    }
 
     private void OnRouteTapped(object sender, EventArgs e)
     {
-        Navigation.PushAsync(new RoutePage(selectedRoute));
+        var selectedRoute = ((sender as StackLayout)?.BindingContext as Route);
+        Navigation.PushAsync(new RoutesPage(selectedRoute.ID));
     }
+
+
 
 }

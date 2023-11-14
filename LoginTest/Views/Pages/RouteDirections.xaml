@@ -14,7 +14,6 @@
                         <StackLayout.GestureRecognizers>
                             <TapGestureRecognizer Tapped="OnRouteTapped" />
                         </StackLayout.GestureRecognizers>
-
                         <Label Text="{Binding Name}"
                            FontSize="18"
                            TextColor="Black"
