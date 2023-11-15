@@ -80,10 +80,20 @@ public partial class RouteDirections : ContentPage
     private void DisplayRoutes(DateTime date)
     {
         List<Route> routes = FetchRoutesForDate(date);
-        lblRoutes.ItemsSource = routes;
+        if (routes.Count > 0)
+        {
+            lblRoutes.ItemsSource = routes;
+            Errorlbl.IsVisible=false; // Clear the error message
+        }
+        else
+        {
+            lblRoutes.ItemsSource = null; // Clear the items source
+            Errorlbl.IsVisible = true;
+            Errorlbl.Text = "Geen routes gevonden voor deze dag"; // Display the error message
+        }
 
         CurrentDate.Date = selectedDate;
-    }   
+    }
 
     private void OnRouteTapped(object sender, EventArgs e)
     {

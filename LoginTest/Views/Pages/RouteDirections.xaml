@@ -8,6 +8,8 @@
         <ResourceDictionary>
             <Style TargetType="controls:DatePicker">
                 <Setter Property="TextColor" Value="Black" />
+                <Setter Property="FontSize" Value="18" />
+
 
             </Style>
         </ResourceDictionary>
@@ -28,6 +30,7 @@
 
             <ImageButton Source="forwardarrow.svg" Clicked="OnNextClicked" Grid.Column="2" />
         </Grid>
+        <Label VerticalOptions="CenterAndExpand"  HorizontalOptions="Center" FontSize="22" x:Name="Errorlbl" TextColor="Black"/>
         <CollectionView x:Name="lblRoutes" BackgroundColor="White">
         <CollectionView.ItemTemplate>
             <DataTemplate>
