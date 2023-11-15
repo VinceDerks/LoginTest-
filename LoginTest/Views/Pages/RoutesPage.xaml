@@ -5,7 +5,9 @@
              xmlns:lang="clr-namespace:LoginTest.Resources.Languages"
              xmlns:controls="clr-namespace:Microsoft.Maui.Controls;assembly=Microsoft.Maui.Controls"
              x:Class="LoginTest.RoutesPage"
-             NavigationPage.HasNavigationBar="True">
+             NavigationPage.HasNavigationBar="True"
+             Title="Route"
+             >
     <ContentPage.Content>
         <ScrollView >
             <StackLayout Padding="10" >
@@ -21,9 +23,14 @@
                                     <StackLayout.GestureRecognizers>
                                         <TapGestureRecognizer Tapped="OnRouteTapped" />
                                     </StackLayout.GestureRecognizers>
+                                    <Label Text="{Binding CompanyName}"
+                                       FontSize="16"
+                                       TextColor="Black"
+                                       HorizontalOptions="CenterAndExpand"
+                                       VerticalOptions="CenterAndExpand" />
                                     <Label Text="{Binding Adress}"
-                                           FontSize="16"
-                                           TextColor="Black"
+                                           FontSize="14"
+                                           TextColor="#999999"
                                            HorizontalOptions="CenterAndExpand"
                                            VerticalOptions="CenterAndExpand" />
 

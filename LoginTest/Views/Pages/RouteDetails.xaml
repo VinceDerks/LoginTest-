@@ -2,7 +2,8 @@
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:lang="clr-namespace:LoginTest.Resources.Languages"
-             x:Class="LoginTest.RouteDetails">
+             x:Class="LoginTest.RouteDetails"
+             Title="Levering">
     <ContentPage.Resources>
         <ResourceDictionary>
             <Style x:Key="LabelStyle" TargetType="Label">
@@ -29,77 +30,56 @@
     </ContentPage.Resources>
     <ScrollView>
         <StackLayout>
-            <Frame Style="{StaticResource FrameBoxStyle}">
-                <StackLayout>
-                    <Label Text="{x:Static lang:AppResources.ID}"
-                           Style="{StaticResource BoldLabelStyle}"
-                           HorizontalOptions="Center"
-                           VerticalOptions="Center"/>
-                    <Label Text="{Binding SelectedRoute.ID}" 
+            <StackLayout Padding="10" HorizontalOptions="CenterAndExpand" Orientation="Horizontal">
+                <Label FontAttributes="Bold" Text="Ordernummer #" FontSize="20"/>
+                <Label FontAttributes="Bold" Text="{Binding SelectedRoute.orderid}"
+            FontSize="20"
+            TextColor="Black"
+            VerticalOptions="StartAndExpand" />
+            </StackLayout>
+
+
+            <StackLayout>
+                <Label Text="{Binding SelectedRoute.Adress}" 
                            HorizontalOptions="Center"
                            VerticalOptions="Center"
                            Style="{StaticResource LabelStyle}" />
-                </StackLayout>
-            </Frame>
+            </StackLayout>
+            <StackLayout>
+                <Label Text="{Binding SelectedRoute.Contact}" 
+               HorizontalOptions="Center"
+               VerticalOptions="Center"
+               Style="{StaticResource LabelStyle}" />
+            </StackLayout>
+            <StackLayout>
+                <Label Text="{Binding SelectedRoute.ContactPhone}" 
+                   HorizontalOptions="Center"
+                   VerticalOptions="Center"
+                   Style="{StaticResource LabelStyle}" />
+            </StackLayout>
 
-
-            <Frame Style="{StaticResource FrameBoxStyle}">
-                <StackLayout>
-                    <Label Text="{x:Static lang:AppResources.Adress}"  
-                           Style="{StaticResource BoldLabelStyle}"
-                           HorizontalOptions="Center"
-                           VerticalOptions="Center"/>
-                    <Label Text="{Binding SelectedRoute.Adress}" 
+            <StackLayout Orientation="Horizontal" HorizontalOptions="CenterAndExpand">
+                <Label Text="{Binding SelectedRoute.TimeArrive}"
                            HorizontalOptions="Center"
                            VerticalOptions="Center"
                            Style="{StaticResource LabelStyle}" />
-                </StackLayout>
-            </Frame>
-
-            <Frame Style="{StaticResource FrameBoxStyle}">
-                <StackLayout>
-                    <Label Text="{x:Static lang:AppResources.Arrival}" 
-                           Style="{StaticResource BoldLabelStyle}"
-                           HorizontalOptions="Center"
-                           VerticalOptions="Center"/>
-                    <Label Text="{Binding SelectedRoute.TimeArrive}"
+                <Label Text="{Binding SelectedRoute.TimeDepart}"
                            HorizontalOptions="Center"
                            VerticalOptions="Center"
                            Style="{StaticResource LabelStyle}" />
-                </StackLayout>
-            </Frame>
-
-            <Frame Style="{StaticResource FrameBoxStyle}">
-                <StackLayout>
-                    <Label Text="{x:Static lang:AppResources.Departure}" 
-                           Style="{StaticResource BoldLabelStyle}"
-                           HorizontalOptions="Center"
-                           VerticalOptions="Center"               />
-                    <Label Text="{Binding SelectedRoute.TimeDepart}"
+            </StackLayout>
+            <StackLayout>
+                <Label Text="{Binding SelectedRoute.TypeOf}"
                            HorizontalOptions="Center"
                            VerticalOptions="Center"
                            Style="{StaticResource LabelStyle}" />
-                </StackLayout>
-            </Frame>
-
-            <Frame Style="{StaticResource FrameBoxStyle}">
-                <StackLayout>
-                    <Label Text="{x:Static lang:AppResources.Type}" 
-                           Style="{StaticResource BoldLabelStyle}"
-                           HorizontalOptions="Center"
-                           VerticalOptions="Center"/>
-                    <Label Text="{Binding SelectedRoute.TypeOf}"
-                           HorizontalOptions="Center"
-                           VerticalOptions="Center"
-                           Style="{StaticResource LabelStyle}" />
-                </StackLayout>
-            </Frame>
+            </StackLayout>
 
             <StackLayout HorizontalOptions="Center" VerticalOptions="EndAndExpand">
                 <Image Source="{Binding SelectedRoute.Image}" />
             </StackLayout>
 
-            <Button Clicked="Arrived" Text="{x:Static lang:AppResources.Arrived}" 
+            <Button Clicked="Arrived" Text="Gearriveerd" 
                     Style="{StaticResource ButtonStyle}" />
         </StackLayout>
     </ScrollView>

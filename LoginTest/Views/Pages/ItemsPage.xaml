@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="LoginTest.ItemsPage"
+             Title="ItemsPage">
+    <StackLayout Padding="10" >
+        <Label x:Name="Errorlbl" FontSize="16" TextColor="Black"/>
+        <CollectionView x:Name="lblOrders" BackgroundColor="White">
+            <CollectionView.ItemTemplate >
+                <DataTemplate>
+                    <StackLayout Padding="10" HorizontalOptions="CenterAndExpand" Orientation="Horizontal">
+                        <Label Text="Ordernummer #" FontSize="20"/>
+                        <Label Text="{Binding SelectedRoute.orderid}"
+                           FontSize="20"
+                           TextColor="Black"
+
+                           VerticalOptions="StartAndExpand" />
+                    </StackLayout>
+                </DataTemplate>
+            </CollectionView.ItemTemplate>
+        </CollectionView>
+    </StackLayout>
+</ContentPage>

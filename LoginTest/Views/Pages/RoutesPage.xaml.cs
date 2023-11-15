@@ -32,41 +32,53 @@ namespace LoginTest
         {
             ""ID"": ""1"",
             ""Date"": ""2023-11-10"",
+            ""CompanyName"": ""RentBuddy"",
+            ""Contact"": ""Janssen"",
+            ""ContactPhone"": ""06128816192"",
             ""Adress"": ""Distelweg 52 5345KD Oss"",
             ""TimeArrive"": ""10:00 PM"",
             ""TimeDepart"": ""18:00 PM"",
             ""TypeOf"": ""Delivery"",
             ""Status"": ""Not completed"",
+             ""orderid"": 258,
+            ""Orders"": [
+                {
+                    ""orderid"": 258,
+                    ""ID"": 1
+                },
+            ]
         },
         {
             ""ID"": ""1"",
             ""Date"": ""2023-11-10"",
+            ""CompanyName"": ""RentBuddy"",
             ""City"": ""Varik"",
             ""Adress"": ""De Geus bv"",
             ""TimeArrive"": ""17:00 PM"",
             ""TimeDepart"": ""18:00 PM"",
             ""TypeOf"": ""Pickup"",
             ""Status"": ""Not completed"",
+            ""Orders"": []
         },
         {
             ""ID"": ""1"",
             ""Date"": ""2023-11-10"",
+            ""CompanyName"": ""RentBuddy"",
             ""City"": ""Tilburg"",
             ""Adress"": ""Oaksoft"",
             ""TimeArrive"": ""17:00 PM"",
             ""TimeDepart"": ""18:00 PM"",
             ""TypeOf"": ""Delivery"",
             ""Status"": ""Not completed"",
-
+            ""Orders"": []
         }
     ]";
-            
+
             List<Destination> destinations = JsonConvert.DeserializeObject<List<Destination>>(jsonData);
-            
+
             List<Destination> filteredDestinations = destinations.Where(d => d.ID == routeId).ToList();
 
             return filteredDestinations;
-            
         }
 
         private void DisplayDestinations(int routeId)

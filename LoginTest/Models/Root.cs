@@ -9,7 +9,6 @@ namespace LoginTest.Model
     public class Destination
     {
         public int ID { get; set; }
-
         public string CompanyName { get; set; }
         public DateTime Date { get; set; }
         public string Adress { get; set; }
@@ -20,6 +19,8 @@ namespace LoginTest.Model
         public string TypeOf { get; set; }
         public byte[] Image { get; set; }
         public string Status { get; set; }
+        public List<Order> Orders { get; set; }
+        public int orderid { get; set; }
     }
 
     public class Route
@@ -32,5 +33,12 @@ namespace LoginTest.Model
         public int LadingGewicht { get; set; }
         public int LadingVolume { get; set; }
 
+    }
+
+    public class Order
+    {
+        public int orderid { get; set; }
+        public int ID { get; set; }
+        
     }
 }

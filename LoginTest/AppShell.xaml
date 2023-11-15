@@ -17,12 +17,12 @@
                       ContentTemplate="{DataTemplate local:RouteDirections}" />
     </TabBar>
 
-    <FlyoutItem Title="Directions">
+    <FlyoutItem Title="Routes">
         <FlyoutItem.Icon>
             <FileImageSource File="altroute.png" />
         </FlyoutItem.Icon>
         <ShellContent Route="RoutesDirection"
-                      Title="Directions"
+                      Title="Routes"
                       ContentTemplate="{DataTemplate local:RouteDirections}" />
     </FlyoutItem>
 
