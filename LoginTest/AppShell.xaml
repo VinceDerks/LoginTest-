@@ -14,7 +14,7 @@
     <TabBar>
         <ShellContent Route="routes"
                       Title="Routes"
-                      ContentTemplate="{DataTemplate local:RoutesPage}" />
+                      ContentTemplate="{DataTemplate local:RouteDirections}" />
     </TabBar>
 
     <FlyoutItem Title="Directions">
@@ -34,12 +34,7 @@
                       Title="Settings"
                       ContentTemplate="{DataTemplate local:SettingsPage}" />
     </FlyoutItem>
-    <FlyoutItem Title="Routes">
-        <ShellContent Route="routes"
-                  FlyoutIcon="home.svg"
-                  Title="Routes"
-                  ContentTemplate="{DataTemplate local:RoutesPage}" />
-    </FlyoutItem>
+   
 
     <Shell.FlyoutFooter>
         <StackLayout Orientation="Vertical" VerticalOptions="Center">

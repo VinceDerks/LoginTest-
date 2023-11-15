@@ -11,18 +11,40 @@ namespace LoginTest;
 public partial class RouteDirections : ContentPage
 {
     private DateTime currentDate;
+    private DateTime selectedDate;
     public RouteDirections()
     {
         InitializeComponent();
-        UpdateRoutes();
+        currentDate = DateTime.Today;
+        selectedDate = currentDate;
+        UpdateRoutes();        
         DisplayRoutes(currentDate);
+
+        CurrentDate.DateSelected += DatePicker_DateSelected;
     }
+
+    private void DatePicker_DateSelected(object sender, DateChangedEventArgs e)
+    {
+        selectedDate = e.NewDate;
+        DisplayRoutes(selectedDate);
+    }
+
+    private void OnPreviousClicked(object sender, EventArgs e)
+    {
+        selectedDate = selectedDate.AddDays(-1);
+        DisplayRoutes(selectedDate);
+    }
+
+    private void OnNextClicked(object sender, EventArgs e)
+    {
+        selectedDate = selectedDate.AddDays(1);
+        DisplayRoutes(selectedDate);
+    }  
     private void UpdateRoutes()
     {
         var routes = FetchRoutesForDate(currentDate);
         lblRoutes.ItemsSource = routes;
     }
-
     private List<Route> FetchRoutesForDate(DateTime date)
     { 
         var settings = new JsonSerializerSettings
@@ -31,35 +53,38 @@ public partial class RouteDirections : ContentPage
         };
         string jsonData = @"[
                         {
-                            ""Name"": ""DENBOSCH"",
+                            ""Name"": ""Den Bosch"",
                             ""ID"": ""2"",
-                            ""Date"": ""14-11-2023"",
+                            ""Date"": ""2023-11-14"",
                             ""TimeStart"": ""10:00 AM"",
                             ""TimeEnd"": ""1:00 PM"",
-                            ""LadingGewicht"": ""45 kg"",
-                            ""LadingVolume"": ""4 m3""
+                            ""LadingGewicht"": ""45"",
+                            ""LadingVolume"": ""4""
                           }, 
                         {
-                            ""Name"": ""DENBOSCH"",
+                            ""Name"": ""Den Bosch"",
                             ""ID"": ""1"",
-                            ""Date"": ""13-11-2023"",
+                            ""Date"": ""2023-11-13"",
                             ""TimeStart"": ""10:00 AM"",
                             ""TimeEnd"": ""1:00 PM"",
                             ""LadingGewicht"": ""45"",
                             ""LadingVolume"": ""4""
                           }
                         ]";
-        List<Route> routes = JsonConvert.DeserializeObject<List<Route>>(jsonData, settings);
+        List<Route> routes = JsonConvert.DeserializeObject<List<Route>>(jsonData);
 
-        List<Route> sortedRoutes = routes.OrderBy(r => r.Date).ToList();
+        List<Route> filteredRoutes = routes.FindAll(r => r.Date.Date == date.Date);
 
-        return sortedRoutes;
+        return filteredRoutes;
     }
     private void DisplayRoutes(DateTime date)
     {
         List<Route> routes = FetchRoutesForDate(date);
         lblRoutes.ItemsSource = routes;
-    }
+
+        CurrentDate.Date = selectedDate;
+    }   
+
     private void OnRouteTapped(object sender, EventArgs e)
     {
         var selectedRoute = ((sender as StackLayout)?.BindingContext as Route);

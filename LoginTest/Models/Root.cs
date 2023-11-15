@@ -29,8 +29,8 @@ namespace LoginTest.Model
         public DateTime Date { get; set; }
         public string TimeStart { get; set; }
         public string TimeEnd { get; set; }
-        public string LadingGewicht { get; set; }
-        public string LadingVolume { get; set; }
+        public int LadingGewicht { get; set; }
+        public int LadingVolume { get; set; }
 
     }
 }

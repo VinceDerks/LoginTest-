@@ -1,9 +1,34 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:controls="clr-namespace:Microsoft.Maui.Controls;assembly=Microsoft.Maui.Controls"
              x:Class="LoginTest.RouteDirections"
              Title="Routes">
-    <CollectionView x:Name="lblRoutes" BackgroundColor="White">
+    <ContentPage.Resources>
+        <ResourceDictionary>
+            <Style TargetType="controls:DatePicker">
+                <Setter Property="TextColor" Value="Black" />
+
+            </Style>
+        </ResourceDictionary>
+    </ContentPage.Resources>
+    <StackLayout>
+        <Grid>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="Auto" />
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="Auto" />
+            </Grid.ColumnDefinitions>
+
+            <ImageButton Source="backarrow.svg" Clicked="OnPreviousClicked" Grid.Column="0" />
+
+            <DatePicker x:Name="CurrentDate" 
+                            Date="{Binding selectedDate, Mode=TwoWay}" 
+                            HorizontalOptions="Center" Grid.Column="1" />
+
+            <ImageButton Source="forwardarrow.svg" Clicked="OnNextClicked" Grid.Column="2" />
+        </Grid>
+        <CollectionView x:Name="lblRoutes" BackgroundColor="White">
         <CollectionView.ItemTemplate>
             <DataTemplate>
                 <Frame HasShadow="True"
@@ -15,21 +40,15 @@
                             <TapGestureRecognizer Tapped="OnRouteTapped" />
                         </StackLayout.GestureRecognizers>
                         <Label Text="{Binding Name}"
-                           FontSize="18"
+                           FontSize="14"
                            TextColor="Black"
                            HorizontalOptions="CenterAndExpand"
                            VerticalOptions="CenterAndExpand" />
-
-                        <Label Text="{Binding Date}"
-                           FontSize="16"
-                           TextColor="Black"
-                           HorizontalOptions="CenterAndExpand"
-                           VerticalOptions="CenterAndExpand" />
-
+                        
                         <StackLayout Orientation="Horizontal">
                             <Label Text="{Binding TimeStart}"
                                FontSize="14"
-                               TextColor="#999999"
+                               TextColor="black"
                                HorizontalOptions="EndAndExpand" />
                             <Label/>
                             
@@ -40,16 +59,18 @@
                             
                             <Label Text="{Binding TimeEnd}"
                                FontSize="14"
-                               TextColor="#999999"
+                               TextColor="black"
                                HorizontalOptions="StartAndExpand" />
                         </StackLayout>
-                        
+                        <StackLayout>
+                            <Label/>
+                            <Label Text="--------------------------- Lading ---------------------------" HorizontalOptions="Center" TextColor="Green"/>
+                        </StackLayout>
                         <StackLayout Orientation="Horizontal">
                             
                             <Label Text="Gewicht in kg"
-                               FontSize="12"
-                               FontAttributes="Bold"
-                               TextColor="Black"
+                               FontSize="13"
+                               TextColor="#999999"
                                HorizontalOptions="EndAndExpand" />
                             
                             <Label Text="            "
@@ -57,15 +78,14 @@
                                HorizontalOptions="Center" />
                             
                             <Label Text="Volume in m3"
-                               FontSize="12"
-                               FontAttributes="Bold"
-                               TextColor="Black"
+                               FontSize="13"                            
+                               TextColor="#999999"
                                HorizontalOptions="StartAndExpand" />
                         </StackLayout>
                         <StackLayout Orientation="Horizontal">
                             <Label Text="{Binding LadingGewicht}"
                            FontSize="14"
-                           TextColor="Green"
+                           TextColor="Black"
                            HorizontalOptions="EndAndExpand" />
 
                         <Label/>
@@ -76,12 +96,13 @@
                             FontAttributes="Bold"/>
                             <Label Text="{Binding LadingVolume}"
                            FontSize="14"
-                           TextColor="Green"
-                           HorizontalOptions="StartAndExpand" />        
+                           TextColor="black"
+                           HorizontalOptions="StartAndExpand" />
                         </StackLayout>
                     </StackLayout>
                 </Frame>
             </DataTemplate>
         </CollectionView.ItemTemplate>
     </CollectionView>
+</StackLayout>
 </ContentPage>

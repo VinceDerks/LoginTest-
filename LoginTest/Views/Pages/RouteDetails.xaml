@@ -18,6 +18,7 @@
                 <Setter Property="Margin" Value="10" />
                 <Setter Property="BackgroundColor" Value="Green" />
                 <Setter Property="TextColor" Value="White" />
+                <Setter Property="HeightRequest" Value="70" />
             </Style>
             <Style x:Key="FrameBoxStyle" TargetType="Frame">
                 <Setter Property="BorderColor" Value="Black" />
@@ -41,18 +42,6 @@
                 </StackLayout>
             </Frame>
 
-            <Frame Style="{StaticResource FrameBoxStyle}">
-                <StackLayout>
-                    <Label Text="{x:Static lang:AppResources.Place}" 
-                           Style="{StaticResource BoldLabelStyle}"
-                           HorizontalOptions="Center"
-                           VerticalOptions="Center" />
-                    <Label Text="{Binding SelectedRoute.City}" 
-                           HorizontalOptions="Center"
-                           VerticalOptions="Center"
-                           Style="{StaticResource LabelStyle}" />
-                </StackLayout>
-            </Frame>
 
             <Frame Style="{StaticResource FrameBoxStyle}">
                 <StackLayout>
@@ -106,7 +95,7 @@
                 </StackLayout>
             </Frame>
 
-            <StackLayout HorizontalOptions="Center" VerticalOptions="Center">
+            <StackLayout HorizontalOptions="Center" VerticalOptions="EndAndExpand">
                 <Image Source="{Binding SelectedRoute.Image}" />
             </StackLayout>
 
