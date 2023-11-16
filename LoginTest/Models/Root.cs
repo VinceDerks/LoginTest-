@@ -19,8 +19,9 @@ namespace LoginTest.Model
         public string TypeOf { get; set; }
         public byte[] Image { get; set; }
         public string Status { get; set; }
-        public List<Order> Orders { get; set; }
-        public int orderid { get; set; }
+        public List<Order> Order { get; set; }
+        public int orderId { get; set; }
+        public List<OrderItem> Products { get; set; } 
     }
 
     public class Route
@@ -37,8 +38,18 @@ namespace LoginTest.Model
 
     public class Order
     {
-        public int orderid { get; set; }
+        public int orderId { get; set; }
         public int ID { get; set; }
-        
+        public List<OrderItem> OrderItems { get; set; }
+
+    }
+
+    public class OrderItem
+    {
+        public int orderid { get; set; }
+        public int ProductCode { get; set; }
+        public string ProductName { get; set; }
+        public int Quantity { get; set; }
+
     }
 }

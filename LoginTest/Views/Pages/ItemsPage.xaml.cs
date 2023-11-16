@@ -10,25 +10,31 @@ namespace LoginTest
 {
     public partial class ItemsPage : ContentPage
     {
-        private Destination selectedDestination;
-
+        private Destination SelectedRoute;
+        private List<OrderItem> Products;
+        
         public ItemsPage(Destination destination)
         {
             InitializeComponent();
-            selectedDestination = destination;
-
-            DisplayOrders(selectedDestination.Orders);
+            SelectedRoute = destination;
+            BindingContext = this;
+            Products = SelectedRoute.Products;
+            DisplayOrders();
+            lblOrder.ItemsSource = SelectedRoute.Order;
         }
 
-        private void DisplayOrders(List<Order> orders)
-        {
-            if (orders != null && orders.Count > 0)
-            {
-                lblOrders.ItemsSource = orders;
+        private void DisplayOrders()
+        {            
+            if (Products != null && Products.Count > 0)
+            {                
+                lblOrders.ItemsSource = Products;               
+                Errorlbl.IsVisible = false; // Clear the error message
             }
             else
             {
-                Errorlbl.Text = "No orders found";
+                lblOrders.ItemsSource = null; // Clear the items source
+                Errorlbl.IsVisible = true;
+                Errorlbl.Text = "No orders found"; // Display the error message
             }
         }
     }

@@ -21,8 +21,8 @@ namespace LoginTest
 
         private void Arrived(object sender, EventArgs e)
         {
-            ordersPage = new ItemsPage(SelectedRoute);
-            Navigation.PushAsync(ordersPage);
+           
+            Navigation.PushAsync(new ItemsPage(SelectedRoute));
         }
 
 

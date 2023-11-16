@@ -4,18 +4,53 @@
              x:Class="LoginTest.ItemsPage"
              Title="ItemsPage">
     <StackLayout Padding="10" >
-        <Label x:Name="Errorlbl" FontSize="16" TextColor="Black"/>
-        <CollectionView x:Name="lblOrders" BackgroundColor="White">
-            <CollectionView.ItemTemplate >
+        <CollectionView x:Name="lblOrder">
+            <CollectionView.ItemTemplate>
                 <DataTemplate>
                     <StackLayout Padding="10" HorizontalOptions="CenterAndExpand" Orientation="Horizontal">
-                        <Label Text="Ordernummer #" FontSize="20"/>
-                        <Label Text="{Binding SelectedRoute.orderid}"
+                        <Label FontAttributes="Bold" Text="Ordernummer #" FontSize="20" TextColor="black"/>
+                        <Label FontAttributes="Bold" Text="{Binding orderId}"
                            FontSize="20"
                            TextColor="Black"
-
                            VerticalOptions="StartAndExpand" />
                     </StackLayout>
+                </DataTemplate>
+            </CollectionView.ItemTemplate>
+        </CollectionView>
+        <StackLayout>
+            <Frame BorderColor="LightGray">
+                <SearchBar  Placeholder="Zoek een product"/>
+            </Frame>
+        </StackLayout>
+        <Label x:Name="Errorlbl" FontSize="16" TextColor="Black"/>
+        <CollectionView x:Name="lblOrders" >
+            <CollectionView.ItemTemplate >
+                <DataTemplate>
+                    <Frame HasShadow="True"
+                       BorderColor="LightGray"
+                       CornerRadius="5"
+                       Margin="5">      
+                        <StackLayout>
+                            <StackLayout>
+                                <Label FontAttributes="Bold" Text="{Binding ProductCode}"
+                               FontSize="20"
+                               TextColor="Black"
+                               VerticalOptions="StartAndExpand" />
+                            </StackLayout>
+                            <StackLayout>
+                            <Label Text="{Binding ProductName}"
+                                FontSize="14"
+                                TextColor="Black"
+                                VerticalOptions="StartAndExpand" />
+                            </StackLayout>
+                            <StackLayout Orientation="Horizontal">
+                                <Label Text="Aantal : " FontSize="14"  TextColor="#999"/>
+                                <Label Text="{Binding Quantity}"
+                                 FontSize="14"
+                                 TextColor="#999"/>
+                            </StackLayout>
+                        </StackLayout>
+                    </Frame>
                 </DataTemplate>
             </CollectionView.ItemTemplate>
         </CollectionView>

@@ -41,9 +41,18 @@ namespace LoginTest
             ""TypeOf"": ""Delivery"",
             ""Status"": ""Not completed"",
              ""orderid"": 258,
-            ""Orders"": [
+            ""Products"": [
                 {
                     ""orderid"": 258,
+                    ""ProductName"": ""Kabel"",
+                    ""ProductCode"": 258258,
+                    ""Quantity"": 5,
+                    
+                },
+            ],
+            ""Order"": [
+                {
+                    ""orderId"": 258,
                     ""ID"": 1
                 },
             ]
@@ -52,25 +61,55 @@ namespace LoginTest
             ""ID"": ""1"",
             ""Date"": ""2023-11-10"",
             ""CompanyName"": ""RentBuddy"",
+            ""Contact"": ""Janssen"",
+            ""ContactPhone"": ""06128816192"",
             ""City"": ""Varik"",
             ""Adress"": ""De Geus bv"",
             ""TimeArrive"": ""17:00 PM"",
             ""TimeDepart"": ""18:00 PM"",
             ""TypeOf"": ""Pickup"",
             ""Status"": ""Not completed"",
-            ""Orders"": []
+            ""orderid"": 259,
+            ""Products"": [
+                {
+                    ""orderid"": 259,
+                    ""ProductName"": ""Alien Onesie"",
+                    ""ProductCode"": 6060606,
+                    
+                }],
+            ""Order"": [
+                {
+                    ""orderid"": 259,
+                    ""ID"": 1
+                },
+            ]
         },
         {
             ""ID"": ""1"",
             ""Date"": ""2023-11-10"",
             ""CompanyName"": ""RentBuddy"",
+            ""Contact"": ""Janssen"",
+            ""ContactPhone"": ""06128816192"",
             ""City"": ""Tilburg"",
             ""Adress"": ""Oaksoft"",
             ""TimeArrive"": ""17:00 PM"",
             ""TimeDepart"": ""18:00 PM"",
             ""TypeOf"": ""Delivery"",
             ""Status"": ""Not completed"",
-            ""Orders"": []
+           ""orderid"": 258,
+             ""Products"": [
+                {
+                    ""orderid"": 258,
+                    ""ProductName"": ""Kabel"",
+                    ""ProductCode"": 258258,
+                    
+                }],
+            ""Order"": [
+                {
+                    ""orderid"": 258,
+                    ""ID"": 1
+                },
+            ]
         }
     ]";
 
@@ -96,8 +135,8 @@ namespace LoginTest
 
         private void OnRouteTapped(object sender, EventArgs e)
         {
-            var selectedRoute = ((sender as StackLayout)?.BindingContext as Destination);
-            Navigation.PushAsync(new RouteDetails(selectedRoute));
+            var selectedDestination = ((sender as StackLayout)?.BindingContext as Destination);
+            Navigation.PushAsync(new RouteDetails(selectedDestination)); 
         }
     }
 }

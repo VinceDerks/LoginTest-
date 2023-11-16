@@ -9,8 +9,6 @@
             <Style TargetType="controls:DatePicker">
                 <Setter Property="TextColor" Value="Black" />
                 <Setter Property="FontSize" Value="18" />
-
-
             </Style>
         </ResourceDictionary>
     </ContentPage.Resources>
@@ -84,7 +82,11 @@
                                FontSize="13"                            
                                TextColor="#999999"
                                HorizontalOptions="StartAndExpand" />
-                        </StackLayout>
+                                <Label Text="Aantal punten"
+                                   FontSize="13"                            
+                                   TextColor="#999999"
+                                   HorizontalOptions="StartAndExpand" />    
+                            </StackLayout>
                         <StackLayout Orientation="Horizontal">
                             <Label Text="{Binding LadingGewicht}"
                            FontSize="14"
@@ -97,11 +99,24 @@
                            TextColor="#999999"
                            HorizontalOptions="Center"
                             FontAttributes="Bold"/>
+                            
                             <Label Text="{Binding LadingVolume}"
                            FontSize="14"
                            TextColor="black"
                            HorizontalOptions="StartAndExpand" />
-                        </StackLayout>
+                            
+                            <Label Text="                             "
+                                FontSize="14"
+                                TextColor="#999999"
+                                HorizontalOptions="Center"
+                                    FontAttributes="Bold"/>
+
+                                <Label x:Name="lblAantal"
+                                   FontSize="14"
+                                   TextColor="black"
+                                   HorizontalOptions="StartAndExpand" />
+
+                            </StackLayout>
                     </StackLayout>
                 </Frame>
             </DataTemplate>

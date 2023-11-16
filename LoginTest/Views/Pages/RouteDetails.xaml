@@ -20,6 +20,7 @@
                 <Setter Property="BackgroundColor" Value="Green" />
                 <Setter Property="TextColor" Value="White" />
                 <Setter Property="HeightRequest" Value="70" />
+                <Setter Property="VerticalOptions" Value="EndAndExpand" />
             </Style>
             <Style x:Key="FrameBoxStyle" TargetType="Frame">
                 <Setter Property="BorderColor" Value="Black" />
@@ -28,16 +29,20 @@
             </Style>
         </ResourceDictionary>
     </ContentPage.Resources>
-    <ScrollView>
+    <VerticalStackLayout>
+    <Frame  HasShadow="True"
+       BorderColor="LightGray"
+       CornerRadius="5"
+       Margin="5"
+           >
         <StackLayout Margin="20">
             <StackLayout Padding="3" Orientation="Horizontal">
                 <Label FontAttributes="Bold" Text="Ordernummer #" FontSize="20"/>
-                <Label FontAttributes="Bold" Text="{Binding SelectedRoute.orderid}"
+                <Label FontAttributes="Bold" Text="{Binding SelectedRoute.orderId}"
             FontSize="20"
             TextColor="Black"
             VerticalOptions="StartAndExpand" />
             </StackLayout>
-
             <StackLayout Orientation="Horizontal" >
                 <Image Source="person.png" />
                 <Label Text="{Binding SelectedRoute.Contact}" 
@@ -77,7 +82,7 @@
             <StackLayout Orientation="Horizontal">
                 <Image Source="truck.png" />
 
-                
+
                 <Label Text="{Binding SelectedRoute.TypeOf}"
                            HorizontalOptions="Center"
                            VerticalOptions="Center"
@@ -88,8 +93,12 @@
                 <Image Source="{Binding SelectedRoute.Image}" />
             </StackLayout>
 
-            <Button Clicked="Arrived" Text="Gearriveerd" 
-                    Style="{StaticResource ButtonStyle}" />
+            
         </StackLayout>
-    </ScrollView>
+    </Frame>
+    <StackLayout>
+        <Button Clicked="Arrived" Text="Gearriveerd" VerticalOptions="EndAndExpand" 
+                    Style="{StaticResource ButtonStyle}" />
+    </StackLayout>
+</VerticalStackLayout>
 </ContentPage>
