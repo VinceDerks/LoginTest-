@@ -25,7 +25,7 @@
                                     </StackLayout.GestureRecognizers>
                                     <Label Text="{Binding CompanyName}"
                                        FontSize="16"
-                                       TextColor="Black"
+                                       TextColor="#48494B"
                                        HorizontalOptions="CenterAndExpand"
                                        VerticalOptions="CenterAndExpand" />
                                     <Label Text="{Binding Adress}"
@@ -53,7 +53,7 @@
 
                                     <Label Text="{Binding TypeOf}"
                                            FontSize="14"
-                                           TextColor="#999999"
+                                           TextColor="#006FB4"
                                            HorizontalOptions="CenterAndExpand"
                                            VerticalOptions="CenterAndExpand" />
                                 </StackLayout>

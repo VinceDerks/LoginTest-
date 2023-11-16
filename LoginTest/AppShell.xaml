@@ -43,8 +43,5 @@
         </StackLayout>
     </Shell.FlyoutFooter>
 
-    <Shell.ToolbarItems>
-        <ToolbarItem IconImageSource="home.svg" Command="{Binding GoToRoutesCommandPage}" />
-    </Shell.ToolbarItems>
-
+    
 </Shell>

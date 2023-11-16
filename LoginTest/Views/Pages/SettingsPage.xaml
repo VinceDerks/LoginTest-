@@ -16,8 +16,10 @@
             </Style>
 
             <Style TargetType="Button">
-                <Setter Property="BackgroundColor" Value="#007AFF" />
-                <Setter Property="TextColor" Value="White" />
+                <Setter Property="BackgroundColor" Value="White" />
+                <Setter Property="TextColor" Value="red" />
+                <Setter Property="BorderColor" Value="red" />
+                <Setter Property="BorderWidth" Value="2" />
                 <Setter Property="CornerRadius" Value="10" />
                 <Setter Property="FontSize" Value="18" />
             </Style>
@@ -65,6 +67,6 @@
         <Button Text="{x:Static lang:AppResources.Logoutbutton}"
                 Clicked="LogoutButton_Clicked"
                 HorizontalOptions="Fill"
-                VerticalOptions="Center" />
+                VerticalOptions="EndAndExpand" />
     </StackLayout>
 </ContentPage>

@@ -29,8 +29,8 @@
         </ResourceDictionary>
     </ContentPage.Resources>
     <ScrollView>
-        <StackLayout>
-            <StackLayout Padding="10" HorizontalOptions="CenterAndExpand" Orientation="Horizontal">
+        <StackLayout Margin="20">
+            <StackLayout Padding="3" Orientation="Horizontal">
                 <Label FontAttributes="Bold" Text="Ordernummer #" FontSize="20"/>
                 <Label FontAttributes="Bold" Text="{Binding SelectedRoute.orderid}"
             FontSize="20"
@@ -38,27 +38,33 @@
             VerticalOptions="StartAndExpand" />
             </StackLayout>
 
-
-            <StackLayout>
-                <Label Text="{Binding SelectedRoute.Adress}" 
-                           HorizontalOptions="Center"
-                           VerticalOptions="Center"
-                           Style="{StaticResource LabelStyle}" />
-            </StackLayout>
-            <StackLayout>
+            <StackLayout Orientation="Horizontal" >
+                <Image Source="person.png" />
                 <Label Text="{Binding SelectedRoute.Contact}" 
                HorizontalOptions="Center"
                VerticalOptions="Center"
                Style="{StaticResource LabelStyle}" />
             </StackLayout>
-            <StackLayout>
+            <StackLayout Orientation="Horizontal">
+                <Image Source="location.png" />
+
+                <Label Text="{Binding SelectedRoute.Adress}" 
+                           HorizontalOptions="Center"
+                           VerticalOptions="Center"
+                           Style="{StaticResource LabelStyle}" />
+            </StackLayout>
+
+            <StackLayout Orientation="Horizontal">
+                <Image Source="phone.png" />
                 <Label Text="{Binding SelectedRoute.ContactPhone}" 
                    HorizontalOptions="Center"
                    VerticalOptions="Center"
                    Style="{StaticResource LabelStyle}" />
             </StackLayout>
 
-            <StackLayout Orientation="Horizontal" HorizontalOptions="CenterAndExpand">
+            <StackLayout Orientation="Horizontal">
+                <Image Source="hollowclock.png" />
+
                 <Label Text="{Binding SelectedRoute.TimeArrive}"
                            HorizontalOptions="Center"
                            VerticalOptions="Center"
@@ -68,7 +74,10 @@
                            VerticalOptions="Center"
                            Style="{StaticResource LabelStyle}" />
             </StackLayout>
-            <StackLayout>
+            <StackLayout Orientation="Horizontal">
+                <Image Source="truck.png" />
+
+                
                 <Label Text="{Binding SelectedRoute.TypeOf}"
                            HorizontalOptions="Center"
                            VerticalOptions="Center"
