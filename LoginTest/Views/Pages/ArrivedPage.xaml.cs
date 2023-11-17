@@ -6,7 +6,6 @@ using System;
 using System.Collections.Generic;
 using CommunityToolkit.Maui.Core.Views;
 using LoginTest.Model;
-using LoginTest.Views.Pages;
 
 namespace LoginTest
 {
@@ -36,12 +35,5 @@ namespace LoginTest
         {
             SignatureEntry.Clear();
         }
-
-        private async void NavigateToNotArrived(object sender, EventArgs e)
-        {
-
-            await Navigation.PushAsync(new NotArrivedPage());
-        }
-
     }
 }

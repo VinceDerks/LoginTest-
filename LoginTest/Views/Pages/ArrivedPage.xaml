@@ -28,6 +28,5 @@
         />
         <Button BackgroundColor="Black" Clicked="ClearButton_Clicked" Text="{x:Static lang:AppResources.NewSig}" />
         <Button BackgroundColor="Black" Clicked="SaveButton_Clicked" Text="{x:Static lang:AppResources.Save}" />
-        <Button BackgroundColor="Red" Clicked="NavigateToNotArrived" Text="{x:Static lang:AppResources.NotDel}" />
     </StackLayout>
 </ContentPage>

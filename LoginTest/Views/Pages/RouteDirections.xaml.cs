@@ -82,7 +82,6 @@ public partial class RouteDirections : ContentPage
         List<Route> routes = FetchRoutesForDate(date);
         if (routes.Count > 0)
         {
-            lblAantal = routes.Count.ToString();
             lblRoutes.ItemsSource = routes;
             Errorlbl.IsVisible=false; // Clear the error message
         }

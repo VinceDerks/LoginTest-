@@ -37,5 +37,16 @@ namespace LoginTest
                 Errorlbl.Text = "No orders found"; // Display the error message
             }
         }
+
+        private void NavigateToArrivedPage(object sender, EventArgs e)
+        {          
+            Navigation.PushAsync(new ArrivedPage(SelectedRoute));
+        }
+
+        private void NavigateToNotArrivedPage(object sender, EventArgs e)
+        {
+            Navigation.PushAsync(new NotArrivedPage(SelectedRoute));
+        }
+
     }
 }

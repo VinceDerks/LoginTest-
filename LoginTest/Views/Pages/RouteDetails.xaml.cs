@@ -2,7 +2,6 @@ using LoginTest;
 using Microsoft.Maui.Controls;
 using LoginTest.Model;
 using LoginTest.Resources.Languages;
-using LoginTest.Views.Pages;
 
 namespace LoginTest
 {
