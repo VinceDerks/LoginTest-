@@ -31,9 +31,11 @@ namespace LoginTest
                     byte[] bytes = new byte[stream2.Length];
                     stream2.Read(bytes, 0, bytes.Length);
                     selectedRoute.Image = bytes;
+                    errorlbl.Text = "Handtekening opgeslagen";
                 }
                 else
                 {
+                    errorlbl.Text = "Het veld is leeg";
                     selectedRoute.Image = null;
                 }
             }
@@ -46,7 +48,13 @@ namespace LoginTest
         [Obsolete]
         private void ClearButton_Clicked(object sender, EventArgs e)
         {
+            errorlbl.Text = "Handtekening gewist";
             SignatureEntry.Clear();
+        }
+
+        private void DrawingLineCompleted(object sender, DrawingLineCompletedEventArgs e)
+        {
+            errorlbl.Text = "";
         }
     }
 }

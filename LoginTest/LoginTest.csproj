@@ -152,6 +152,8 @@
 
 	<ItemGroup>
 	  <MauiImage Include="Resources\Splash\splashlogo.png" />
+		<MauiImage Include="Resources\Images\reset.svg" TintColor="#FFFFFF" />
+		<MauiImage Include="Resources\Images\approve.svg" TintColor="#FFFFFF" />
 	</ItemGroup>
 
 	<ProjectExtensions><VisualStudio><UserProperties XamarinHotReloadDebuggerTimeoutExceptionLoginTestHideInfoBar="True" /></VisualStudio></ProjectExtensions>

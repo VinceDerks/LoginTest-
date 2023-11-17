@@ -59,8 +59,8 @@
             </StackLayout>
         </VerticalStackLayout>
         <HorizontalStackLayout Grid.Row="1" HorizontalOptions="CenterAndExpand">
-        <Button Clicked="NavigateToArrivedPage" CornerRadius="0" WidthRequest="200" HeightRequest="50" Text="Afgeleverd" BackgroundColor="Green" />
-        <Button Clicked="NavigateToNotArrivedPage" CornerRadius="0" WidthRequest="200" HeightRequest="50" Text="Niet afgeleverd" BackgroundColor="Red" />
+        <Button Clicked="NavigateToArrivedPage" CornerRadius="0" WidthRequest="200" HeightRequest="50" Text="Afgeleverd" FontSize="20" BackgroundColor="Green" />
+            <Button Clicked="NavigateToNotArrivedPage" CornerRadius="0" WidthRequest="200" HeightRequest="50" FontSize="20" Text="Niet afgeleverd" BackgroundColor="Red" />
     </HorizontalStackLayout>
 </Grid> 
 </ContentPage>
