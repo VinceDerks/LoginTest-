@@ -22,12 +22,25 @@ namespace LoginTest
 
         private async void SaveButton_Clicked(object sender, EventArgs e)
         {
-            var stream2 = await SignatureEntry.GetImageStream(200, 200);
+            if (SignatureEntry.Lines != null)
+            {
+                var stream2 = await SignatureEntry.GetImageStream(200, 200);
 
-            byte[] bytes = new byte[stream2.Length];
-            stream2.Read(bytes, 0, bytes.Length);
-            
-            selectedRoute.Image = bytes;
+                if (stream2 != null)
+                {
+                    byte[] bytes = new byte[stream2.Length];
+                    stream2.Read(bytes, 0, bytes.Length);
+                    selectedRoute.Image = bytes;
+                }
+                else
+                {
+                    selectedRoute.Image = null;
+                }
+            }
+            else
+            {
+                selectedRoute.Image = null;
+            }
         }
 
         [Obsolete]

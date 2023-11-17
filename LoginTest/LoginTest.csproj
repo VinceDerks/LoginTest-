@@ -56,6 +56,7 @@
 	  <None Remove="Resources\AppIcon\appicon2fg.png" />
 	  <None Remove="Resources\AppIcon\appiconfg.png" />
 	  <None Remove="Resources\Fonts\Roboto-Italic.ttf" />
+	  <None Remove="Resources\Images\approve.svg" />
 	  <None Remove="Resources\Images\backarrow.svg" />
 	  <None Remove="Resources\Images\box.svg" />
 	  <None Remove="Resources\Images\clock.svg" />
@@ -68,6 +69,7 @@
 	  <None Remove="Resources\Images\Person.svg" />
 	  <None Remove="Resources\Images\phone.svg" />
 	  <None Remove="Resources\Images\rentbuddylogo.png" />
+	  <None Remove="Resources\Images\reset.svg" />
 	  <None Remove="Resources\Images\route.svg" />
 	  <None Remove="Resources\Images\truck.svg" />
 	</ItemGroup>

@@ -6,17 +6,9 @@
              xmlns:lang="clr-namespace:LoginTest.Resources.Languages"
              x:Class="LoginTest.ArrivedPage"
              Title="{x:Static lang:AppResources.ArrivedPage}">
-    <ContentPage.Resources>
-        <ResourceDictionary>
-            <Style TargetType="Button">
-                <Setter Property="FontSize" Value="18" />
-                <Setter Property="Margin" Value="5" />
-                <Setter Property="TextColor" Value="White" />
-                <Setter Property="CornerRadius" Value="10" />
-            </Style>
-        </ResourceDictionary>
-    </ContentPage.Resources>
-    <StackLayout>
+    <Grid RowDefinitions="*,Auto">
+        <VerticalStackLayout Grid.Row="0">
+            <StackLayout Padding="10">
         <mct:DrawingView
             x:Name="SignatureEntry"
             BackgroundColor="LightGray"
@@ -26,7 +18,13 @@
             LineColor="Black"
             LineWidth="5"
         />
-        <Button BackgroundColor="Black" Clicked="ClearButton_Clicked" Text="{x:Static lang:AppResources.NewSig}" />
-        <Button BackgroundColor="Black" Clicked="SaveButton_Clicked" Text="{x:Static lang:AppResources.Save}" />
+        
     </StackLayout>
+            
+    </VerticalStackLayout>
+        <HorizontalStackLayout Grid.Row="1" HorizontalOptions="CenterAndExpand">
+            <Button ImageSource="reset.svg" WidthRequest="200" HeightRequest="50" BackgroundColor="red" Clicked="ClearButton_Clicked" CornerRadius="0" />
+            <Button WidthRequest="200" HeightRequest="50" ImageSource="approve.svg" BackgroundColor="Green" Clicked="SaveButton_Clicked" CornerRadius="0" />
+    </HorizontalStackLayout>
+</Grid>
 </ContentPage>
