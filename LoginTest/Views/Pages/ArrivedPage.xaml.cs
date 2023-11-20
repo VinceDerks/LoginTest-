@@ -32,6 +32,7 @@ namespace LoginTest
                     stream2.Read(bytes, 0, bytes.Length);
                     selectedRoute.Image = bytes;
                     errorlbl.Text = "Handtekening opgeslagen";
+                    selectedRoute.Status = "Completed";
                 }
                 else
                 {

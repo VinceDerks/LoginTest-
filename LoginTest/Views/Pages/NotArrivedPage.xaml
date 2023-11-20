@@ -64,6 +64,6 @@
         <Label Text="Toelichting:" FontAttributes="Bold" TextColor="Black" />
         <Entry MaxLength="255"
        MinimumWidthRequest="500" x:Name="explanationTextField" Placeholder="Voer een toelichting in" TextColor="Black"  BackgroundColor="LightGray" PlaceholderColor="Black"/>
-        <Button Text="Versturen"  />
+        <Button Text="Versturen"/>
     </VerticalStackLayout>
 </ContentPage>
