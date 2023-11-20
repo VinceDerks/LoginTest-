@@ -20,7 +20,7 @@
                     </CollectionView.ItemTemplate>
                 </CollectionView>
                 <StackLayout>
-                    <Frame BorderColor="LightGray">
+                    <Frame BorderColor="DarkGray">
                         <SearchBar x:Name="searchBar" Placeholder="Zoek een product"/>
                     </Frame>
                 </StackLayout>
@@ -29,7 +29,7 @@
                     <CollectionView.ItemTemplate >
                         <DataTemplate>
                             <Frame HasShadow="True"
-                       BorderColor="LightGray"
+                      BorderColor="DarkGray"
                        CornerRadius="5"
                        Margin="5">
                                 <StackLayout>
@@ -58,9 +58,13 @@
                 </CollectionView>
             </StackLayout>
         </VerticalStackLayout>
-        <HorizontalStackLayout Grid.Row="1" HorizontalOptions="CenterAndExpand">
-            <Button Clicked="NavigateToArrivedPage" CornerRadius="0" WidthRequest="200" HeightRequest="50" Text="Afgeleverd" FontSize="20" BackgroundColor="Green" />
-            <Button Clicked="NavigateToNotArrivedPage" CornerRadius="0" WidthRequest="200" HeightRequest="50" FontSize="20" Text="Niet afgeleverd" BackgroundColor="Red" />
-        </HorizontalStackLayout>
+        <Grid Grid.Row="1">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+            <Button Clicked="NavigateToArrivedPage" Grid.Column="0" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" CornerRadius="0" WidthRequest="200" HeightRequest="50" Text="Afgeleverd" FontSize="20" BackgroundColor="Green" />
+            <Button Clicked="NavigateToNotArrivedPage" Grid.Column="1" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" CornerRadius="0" WidthRequest="200" HeightRequest="50" FontSize="20" Text="Niet afgeleverd" BackgroundColor="Red" />
+        </Grid>
     </Grid>
 </ContentPage>

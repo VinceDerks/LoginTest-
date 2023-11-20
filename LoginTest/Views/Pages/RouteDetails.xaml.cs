@@ -16,7 +16,6 @@ namespace LoginTest
             BindingContext = this;
         }
 
-        private ItemsPage ordersPage;
 
         private void Arrived(object sender, EventArgs e)
         {

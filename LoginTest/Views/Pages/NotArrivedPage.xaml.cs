@@ -86,7 +86,7 @@ namespace LoginTest
 
         public bool HasPhoto => photo != null;
 
-        private async void RemovePhotoButtonClicked(object sender, EventArgs e)
+        private void RemovePhotoButtonClicked(object sender, EventArgs e)
         {
             photo = null; // Clear the photo variable
             OnPropertyChanged(nameof(PhotoSource)); // Notify the UI about the change

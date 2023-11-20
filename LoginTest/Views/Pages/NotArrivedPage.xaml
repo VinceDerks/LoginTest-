@@ -23,16 +23,23 @@
             AbsoluteLayout.LayoutFlags="PositionProportional"
             AbsoluteLayout.LayoutBounds="0.36, 0, 60, 30"/>
         </AbsoluteLayout>
-        <HorizontalStackLayout Grid.Row="2">
-            <ImageButton Clicked="AttachPictureClicked" Source="attachfile.svg"  Background="#0073BA" HeightRequest="50" WidthRequest="400" VerticalOptions="EndAndExpand">
+        <Grid Grid.Row="2">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+            <ImageButton Clicked="AttachPictureClicked" Grid.Column="0" Source="attachfile.svg"  Background="#0073BA" HorizontalOptions="FillAndExpand" HeightRequest="50" VerticalOptions="FillAndExpand">
                 <ImageButton.Behaviors>
                     <toolkit:IconTintColorBehavior TintColor="White"/>
                 </ImageButton.Behaviors>
             </ImageButton>
-        </HorizontalStackLayout>
-        <HorizontalStackLayout Grid.Row="3">
-            <Button Clicked="SaveButtonClicked" FontSize="20" WidthRequest="200" HeightRequest="50" CornerRadius="0" Grid.Row="1" VerticalOptions="EndAndExpand" BackgroundColor="Green" Text="Versturen"/>
-            <Button Clicked="CancelButtonClicked" FontSize="20" WidthRequest="200" HeightRequest="50" CornerRadius="0" Grid.Row="1" VerticalOptions="EndAndExpand" BackgroundColor="Red" Text="Annuleren"/>
-        </HorizontalStackLayout>
+        </Grid>
+        <Grid Grid.Row="3" Padding="0" ColumnSpacing="0">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+            <Button Clicked="SaveButtonClicked" FontSize="20" Grid.Column="0" HorizontalOptions="FillAndExpand" HeightRequest="50"  CornerRadius="0" Grid.Row="1" VerticalOptions="FillAndExpand" BackgroundColor="Green" Text="Versturen"/>
+            <Button Clicked="CancelButtonClicked" FontSize="20" Grid.Column="1" HorizontalOptions="FillAndExpand" HeightRequest="50" CornerRadius="0" Grid.Row="1" VerticalOptions="FillAndExpand" BackgroundColor="Red" Text="Annuleren"/>
+        </Grid>
     </Grid>
 </ContentPage>

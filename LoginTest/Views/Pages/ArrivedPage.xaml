@@ -12,12 +12,12 @@
     <Grid RowDefinitions="*,Auto">
         <VerticalStackLayout Grid.Row="0">
             <StackLayout Padding="1">
-                <Frame WidthRequest="355"  HeightRequest="501" BorderColor="Black">
+                <Frame WidthRequest="355"  HeightRequest="256" BorderColor="Black">
                     <mct:DrawingView
             x:Name="SignatureEntry"
             BackgroundColor="LightGray"
             WidthRequest="350"
-            HeightRequest="500"
+            HeightRequest="250"
             IsMultiLineModeEnabled="True"
             LineColor="Black"
             LineWidth="5"
@@ -29,20 +29,24 @@
             <Frame BorderColor="Gray" CornerRadius="20" WidthRequest="355">
                 <material:EditorField x:Name="RemarkField" Title="Toelichting" TitleColor="Black" AccentColor="White" BorderColor="White" />
             </Frame>
-            <Label x:Name="errorlbl" FontSize="25" HorizontalTextAlignment="Center"/>
+            <Label x:Name="errorlbl" FontSize="25" HorizontalOptions="CenterAndExpand" HorizontalTextAlignment="Center"/>
         </VerticalStackLayout>
-        <HorizontalStackLayout Grid.Row="1" HorizontalOptions="CenterAndExpand">
-            <ImageButton IsVisible="False" x:Name="ClearButton" Source="reset.svg" WidthRequest="200" HeightRequest="50" BackgroundColor="red" Clicked="ClearButton_Clicked" CornerRadius="0">
+        <Grid Grid.Row="1" Padding="0" ColumnSpacing="0">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+            <ImageButton Grid.Column="0" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" IsVisible="False" x:Name="ClearButton" Source="reset.svg" WidthRequest="200" HeightRequest="50" BackgroundColor="red" Clicked="ClearButton_Clicked" CornerRadius="0">
                 <ImageButton.Behaviors>
                     <toolkit:IconTintColorBehavior TintColor="White"/>
                 </ImageButton.Behaviors>
             </ImageButton>
-            <ImageButton IsVisible="False" x:Name="SaveButton" WidthRequest="200" HeightRequest="50" Source="approve.svg" BackgroundColor="Green" Clicked="SaveButton_Clicked" CornerRadius="0">
+            <ImageButton Grid.Column="1" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" IsVisible="False" x:Name="SaveButton" WidthRequest="200" HeightRequest="50" Source="approve.svg" BackgroundColor="Green" Clicked="SaveButton_Clicked" CornerRadius="0">
                 <ImageButton.Behaviors>
                     <toolkit:IconTintColorBehavior TintColor="White"/>
                 </ImageButton.Behaviors>
             </ImageButton>
 
-        </HorizontalStackLayout>
+        </Grid>
     </Grid>
 </ContentPage>
