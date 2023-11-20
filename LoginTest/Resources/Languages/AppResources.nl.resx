@@ -174,4 +174,25 @@
   <data name="ArrivedPage" xml:space="preserve">
     <value>Bestemming</value>
   </data>
+  <data name="Load" xml:space="preserve">
+    <value>--------------------------- Lading ---------------------------</value>
+  </data>
+  <data name="Loadkg" xml:space="preserve">
+    <value>Lading in KG</value>
+  </data>
+  <data name="Volume" xml:space="preserve">
+    <value>Volume in m3</value>
+  </data>
+  <data name="Amount" xml:space="preserve">
+    <value>Aantal</value>
+  </data>
+  <data name="DelButton" xml:space="preserve">
+    <value>Afgeleverd</value>
+  </data>
+  <data name="NonDelButton" xml:space="preserve">
+    <value>Niet afgeleverd</value>
+  </data>
+  <data name="Product" xml:space="preserve">
+    <value>Zoek Product</value>
+  </data>
 </root>

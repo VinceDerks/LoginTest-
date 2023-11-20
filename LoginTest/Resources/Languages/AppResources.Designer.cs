@@ -70,6 +70,15 @@ namespace LoginTest.Resources.Languages {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Amount.
+        /// </summary>
+        internal static string Amount {
+            get {
+                return ResourceManager.GetString("Amount", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Arrival.
         /// </summary>
         internal static string Arrival {
@@ -97,6 +106,15 @@ namespace LoginTest.Resources.Languages {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Delivered.
+        /// </summary>
+        internal static string DelButton {
+            get {
+                return ResourceManager.GetString("DelButton", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Departure.
         /// </summary>
         internal static string Departure {
@@ -111,6 +129,24 @@ namespace LoginTest.Resources.Languages {
         internal static string ID {
             get {
                 return ResourceManager.GetString("ID", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to ---------------------------- Load ----------------------------.
+        /// </summary>
+        internal static string Load {
+            get {
+                return ResourceManager.GetString("Load", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Load in KG.
+        /// </summary>
+        internal static string Loadkg {
+            get {
+                return ResourceManager.GetString("Loadkg", resourceCulture);
             }
         }
         
@@ -142,6 +178,15 @@ namespace LoginTest.Resources.Languages {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Not Delivered.
+        /// </summary>
+        internal static string NonDelButton {
+            get {
+                return ResourceManager.GetString("NonDelButton", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Not Delivered/Picked up.
         /// </summary>
         internal static string NotDel {
@@ -165,6 +210,15 @@ namespace LoginTest.Resources.Languages {
         internal static string Place {
             get {
                 return ResourceManager.GetString("Place", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Search Product.
+        /// </summary>
+        internal static string Product {
+            get {
+                return ResourceManager.GetString("Product", resourceCulture);
             }
         }
         
@@ -228,6 +282,15 @@ namespace LoginTest.Resources.Languages {
         internal static string User {
             get {
                 return ResourceManager.GetString("User", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Volume in m3.
+        /// </summary>
+        internal static string Volume {
+            get {
+                return ResourceManager.GetString("Volume", resourceCulture);
             }
         }
     }
