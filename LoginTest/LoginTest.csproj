@@ -57,6 +57,7 @@
 	  <None Remove="Resources\AppIcon\appiconfg.png" />
 	  <None Remove="Resources\Fonts\Roboto-Italic.ttf" />
 	  <None Remove="Resources\Images\approve.svg" />
+	  <None Remove="Resources\Images\attachfile.svg" />
 	  <None Remove="Resources\Images\backarrow.svg" />
 	  <None Remove="Resources\Images\box.svg" />
 	  <None Remove="Resources\Images\clock.svg" />

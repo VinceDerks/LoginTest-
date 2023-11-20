@@ -4,39 +4,15 @@
              xmlns:lang="clr-namespace:LoginTest.Resources.Languages"
              x:Class="LoginTest.RouteDetails"
              Title="Levering">
-    <ContentPage.Resources>
-        <ResourceDictionary>
-            <Style x:Key="LabelStyle" TargetType="Label">
-                <Setter Property="FontSize" Value="16" />
-                <Setter Property="Margin" Value="5" />
-                <Setter Property="TextColor" Value="Black" />
-            </Style>
-            <Style x:Key="BoldLabelStyle" TargetType="Label">
-                <Setter Property="FontAttributes" Value="Bold" />
-            </Style>
-            <Style x:Key="ButtonStyle" TargetType="Button">
-                <Setter Property="FontSize" Value="20" />
-                <Setter Property="Margin" Value="10" />
-                <Setter Property="BackgroundColor" Value="Green" />
-                <Setter Property="TextColor" Value="White" />
-                <Setter Property="HeightRequest" Value="70" />
-                <Setter Property="VerticalOptions" Value="EndAndExpand" />
-            </Style>
-            <Style x:Key="FrameBoxStyle" TargetType="Frame">
-                <Setter Property="BorderColor" Value="Black" />
-                <Setter Property="CornerRadius" Value="10" />
-                <Setter Property="Margin" Value="10" />
-            </Style>
-        </ResourceDictionary>
-    </ContentPage.Resources>
-    <VerticalStackLayout>
+    <Grid RowDefinitions="*,Auto">
+    <VerticalStackLayout Grid.Row="0">
     <Frame  HasShadow="True"
        BorderColor="LightGray"
        CornerRadius="5"
        Margin="5"
            >
         <StackLayout Margin="20">
-            <StackLayout Padding="3" Orientation="Horizontal">
+            <StackLayout Orientation="Horizontal">
                 <Label FontAttributes="Bold" Text="Ordernummer #" FontSize="20"/>
                 <Label FontAttributes="Bold" Text="{Binding SelectedRoute.orderId}"
             FontSize="20"
@@ -47,24 +23,21 @@
                 <Image Source="person.png" />
                 <Label Text="{Binding SelectedRoute.Contact}" 
                HorizontalOptions="Center"
-               VerticalOptions="Center"
-               Style="{StaticResource LabelStyle}" />
+               VerticalOptions="Center"/>
             </StackLayout>
             <StackLayout Orientation="Horizontal">
                 <Image Source="location.png" />
 
                 <Label Text="{Binding SelectedRoute.Adress}" 
                            HorizontalOptions="Center"
-                           VerticalOptions="Center"
-                           Style="{StaticResource LabelStyle}" />
+                           VerticalOptions="Center" />
             </StackLayout>
 
             <StackLayout Orientation="Horizontal">
                 <Image Source="phone.png" />
                 <Label Text="{Binding SelectedRoute.ContactPhone}" 
                    HorizontalOptions="Center"
-                   VerticalOptions="Center"
-                   Style="{StaticResource LabelStyle}" />
+                   VerticalOptions="Center" />
             </StackLayout>
 
             <StackLayout Orientation="Horizontal">
@@ -72,12 +45,10 @@
 
                 <Label Text="{Binding SelectedRoute.TimeArrive}"
                            HorizontalOptions="Center"
-                           VerticalOptions="Center"
-                           Style="{StaticResource LabelStyle}" />
+                           VerticalOptions="Center"/>
                 <Label Text="{Binding SelectedRoute.TimeDepart}"
                            HorizontalOptions="Center"
-                           VerticalOptions="Center"
-                           Style="{StaticResource LabelStyle}" />
+                           VerticalOptions="Center"/>
             </StackLayout>
             <StackLayout Orientation="Horizontal">
                 <Image Source="truck.png" />
@@ -85,8 +56,7 @@
 
                 <Label Text="{Binding SelectedRoute.TypeOf}"
                            HorizontalOptions="Center"
-                           VerticalOptions="Center"
-                           Style="{StaticResource LabelStyle}" />
+                           VerticalOptions="Center"/>
             </StackLayout>
 
             <StackLayout HorizontalOptions="Center" VerticalOptions="EndAndExpand">
@@ -97,8 +67,9 @@
         </StackLayout>
     </Frame>
     <StackLayout>
-        <Button Clicked="Arrived" Text="Gearriveerd" VerticalOptions="EndAndExpand" 
-                    Style="{StaticResource ButtonStyle}" />
+        
     </StackLayout>
-</VerticalStackLayout>
+        </VerticalStackLayout>
+        <Button BackgroundColor="Green" WidthRequest="400" HeightRequest="50" FontSize="20" Grid.Row="1" Clicked="Arrived" Text="Gearriveerd" CornerRadius="0"  VerticalOptions="EndAndExpand" />
+</Grid>
 </ContentPage>

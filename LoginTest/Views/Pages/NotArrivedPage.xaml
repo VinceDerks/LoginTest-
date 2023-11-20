@@ -1,69 +1,33 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:uranium="http://schemas.enisn-projects.io/dotnet/maui/uraniumui"
+             xmlns:material="http://schemas.enisn-projects.io/dotnet/maui/uraniumui/material"
+             xmlns:toolkit="http://schemas.microsoft.com/dotnet/2022/maui/toolkit"
+             xmlns:mct="clr-namespace:CommunityToolkit.Maui.Views;assembly=CommunityToolkit.Maui"
+             xmlns:m="clr-namespace:UraniumUI.Icons.MaterialIcons;assembly=UraniumUI.Icons.MaterialIcons"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="LoginTest.NotArrivedPage"
              Title="NotArrivedPage">
-    <ContentPage.Resources>
-        <ResourceDictionary>
-            <Color x:Key="PrimaryColor">#0073BA</Color>
-            <Color x:Key="SecondaryColor">#6D7272</Color>
-            <Style TargetType="Label">
-                <Setter Property="TextColor" Value="{StaticResource SecondaryColor}" />
-                <Setter Property="FontSize" Value="20" />
-                <Setter Property="FontFamily" Value="OpenSansRegular" />
-            </Style>
-            <Style TargetType="Button">
-                <Setter Property="BackgroundColor" Value="{StaticResource PrimaryColor}" />
-                <Setter Property="TextColor" Value="White" />
-                <Setter Property="FontSize" Value="20" />
-                <Setter Property="FontFamily" Value="OpenSansBold" />
-                <Setter Property="CornerRadius" Value="5" />
-                <Setter Property="Padding" Value="10" />
-            </Style>
-            <Style TargetType="Frame">
-                <Setter Property="Opacity" Value="0.3" />
-                <Setter Property="BackgroundColor" Value="White" />
-                <Setter Property="CornerRadius" Value="5" />
-                <Setter Property="Padding" Value="10" />
-                <Setter Property="Margin" Value="10" />
-                <Setter Property="HasShadow" Value="True" />
-            </Style>
-            <Style TargetType="Picker">
-                <Setter Property="TitleColor" Value="{StaticResource SecondaryColor}" />
-                <Setter Property="FontSize" Value="20" />
-                <Setter Property="Margin" Value="0,10" />
-                <Setter Property="HeightRequest" Value="50" />
-                <Setter Property="BackgroundColor" Value="#F5F5F5" />
-                <Setter Property="TextColor" Value="{StaticResource SecondaryColor}" />
-                <Setter Property="FontFamily" Value="OpenSansRegular" />
-            </Style>
-            <Style TargetType="Entry">
-                <Setter Property="Margin" Value="0,10" />
-                <Setter Property="HeightRequest" Value="50" />
-                <Setter Property="BackgroundColor" Value="#F5F5F5" />
-                <Setter Property="TextColor" Value="{StaticResource SecondaryColor}" />
-                <Setter Property="FontFamily" Value="OpenSansRegular" />
-            </Style>
-        </ResourceDictionary>
-    </ContentPage.Resources>
-    <VerticalStackLayout Margin="20">
-        <Label Text="Reden:" FontAttributes="Bold"  TextColor="Black"/>
-        <Picker x:Name="picker" Title="Selecteer een reden"  >
-            <Picker.ItemsSource>
-                <x:Array Type="{x:Type x:String}">
-                    <x:String>Niemand aanwezig</x:String>
-                    <x:String>Locatie niet gevonden</x:String>
-                    <x:String>Documentatie of papierwerk fout</x:String>
-                    <x:String>Beveiligingsprobleem</x:String>
-                    <x:String>Voertuigfout</x:String>
-                    <x:String>Weerproblemen</x:String>
-                    <x:String>Ander</x:String>
-                </x:Array>
-            </Picker.ItemsSource>
-        </Picker>
-        <Label Text="Toelichting:" FontAttributes="Bold" TextColor="Black" />
-        <Entry MaxLength="255"
-       MinimumWidthRequest="500" x:Name="explanationTextField" Placeholder="Voer een toelichting in" TextColor="Black"  BackgroundColor="LightGray" PlaceholderColor="Black"/>
-        <Button Text="Versturen"/>
-    </VerticalStackLayout>
+    <Grid RowDefinitions="*,Auto">
+        <VerticalStackLayout Margin="20" Grid.Row="0">
+            <Frame BorderColor="Gray" CornerRadius="20" WidthRequest="380">
+            <material:EditorField Title="Toelichting" TitleColor="Black" AccentColor="White" BorderColor="White"
+           x:Name="UsernameEntry"   />
+            </Frame>
+        
+        </VerticalStackLayout>
+        <HorizontalStackLayout>
+        <Button HeightRequest="50" WidthRequest="310" FontSize="20" CornerRadius="0" Grid.Row="0" VerticalOptions="EndAndExpand" Text="Foto maken"/>
+            <ImageButton Source="attachfile.svg"  Background="#0073BA" HeightRequest="50" WidthRequest="90" VerticalOptions="EndAndExpand">
+                <ImageButton.Behaviors>
+                    <toolkit:IconTintColorBehavior TintColor="White"/>
+                </ImageButton.Behaviors>
+            </ImageButton>
+        </HorizontalStackLayout>
+        <HorizontalStackLayout Grid.Row="1">
+            
+            <Button FontSize="20" WidthRequest="200" HeightRequest="50" CornerRadius="0" Grid.Row="1" VerticalOptions="EndAndExpand" BackgroundColor="Green" Text="Versturen"/>
+            <Button FontSize="20" WidthRequest="200" HeightRequest="50" CornerRadius="0" Grid.Row="1" VerticalOptions="EndAndExpand" BackgroundColor="Red" Text="Annuleren"/>
+        </HorizontalStackLayout>
+    </Grid>
 </ContentPage>

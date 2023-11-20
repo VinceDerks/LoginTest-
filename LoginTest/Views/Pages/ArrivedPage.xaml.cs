@@ -33,6 +33,7 @@ namespace LoginTest
                     selectedRoute.Image = bytes;
                     errorlbl.Text = "Handtekening opgeslagen";
                     selectedRoute.Status = "Completed";
+                   
                 }
                 else
                 {
@@ -51,11 +52,15 @@ namespace LoginTest
         {
             errorlbl.Text = "Handtekening gewist";
             SignatureEntry.Clear();
+            SaveButton.IsVisible = false;
+            ClearButton.IsVisible = false;
         }
 
         private void DrawingLineCompleted(object sender, DrawingLineCompletedEventArgs e)
         {
             errorlbl.Text = "";
+            SaveButton.IsVisible = true;
+            ClearButton.IsVisible = true;
         }
     }
 }

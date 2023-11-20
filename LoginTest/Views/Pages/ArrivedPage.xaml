@@ -19,18 +19,19 @@
             LineColor="Black"
             LineWidth="5"
             DrawingLineCompleted="DrawingLineCompleted"
+           
         /></Frame>
                 <Label x:Name="errorlbl" FontSize="25" HorizontalTextAlignment="Center"/>
             </StackLayout>
             
     </VerticalStackLayout>
         <HorizontalStackLayout Grid.Row="1" HorizontalOptions="CenterAndExpand">
-            <ImageButton Source="reset.svg" WidthRequest="200" HeightRequest="50" BackgroundColor="red" Clicked="ClearButton_Clicked" CornerRadius="0">
+            <ImageButton IsVisible="False" x:Name="ClearButton" Source="reset.svg" WidthRequest="200" HeightRequest="50" BackgroundColor="red" Clicked="ClearButton_Clicked" CornerRadius="0">
                 <ImageButton.Behaviors>
                     <toolkit:IconTintColorBehavior TintColor="White"/>
                 </ImageButton.Behaviors>
             </ImageButton>
-            <ImageButton WidthRequest="200" HeightRequest="50" Source="approve.svg" BackgroundColor="Green" Clicked="SaveButton_Clicked" CornerRadius="0">
+            <ImageButton IsVisible="False" x:Name="SaveButton" WidthRequest="200" HeightRequest="50" Source="approve.svg" BackgroundColor="Green" Clicked="SaveButton_Clicked" CornerRadius="0">
                 <ImageButton.Behaviors>
                     <toolkit:IconTintColorBehavior TintColor="White"/>
                 </ImageButton.Behaviors>
