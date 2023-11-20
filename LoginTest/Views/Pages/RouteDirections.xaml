@@ -30,7 +30,7 @@
                 <ImageButton Source="forwardarrow.svg" Clicked="OnNextClicked" Grid.Column="2" />
             </Grid>
             <Label VerticalOptions="CenterAndExpand"  HorizontalOptions="Center" FontSize="22" x:Name="Errorlbl" TextColor="Black"/>
-            <CollectionView x:Name="lblRoutes" BackgroundColor="White">
+            <CollectionView x:Name="lblRoutes">
                 <CollectionView.ItemTemplate>
                     <DataTemplate>
                         <Frame HasShadow="True"

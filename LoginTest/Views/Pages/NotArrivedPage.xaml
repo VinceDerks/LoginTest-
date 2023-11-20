@@ -24,8 +24,7 @@
             AbsoluteLayout.LayoutBounds="0.36, 0, 60, 30"/>
         </AbsoluteLayout>
         <HorizontalStackLayout Grid.Row="2">
-            <Button Clicked="TakePictureClicked" HeightRequest="50" WidthRequest="310" FontSize="20" CornerRadius="0" VerticalOptions="EndAndExpand" Text="Foto maken"/>
-            <ImageButton Clicked="AttachPictureClicked" Source="attachfile.svg"  Background="#0073BA" HeightRequest="50" WidthRequest="90" VerticalOptions="EndAndExpand">
+            <ImageButton Clicked="AttachPictureClicked" Source="attachfile.svg"  Background="#0073BA" HeightRequest="50" WidthRequest="400" VerticalOptions="EndAndExpand">
                 <ImageButton.Behaviors>
                     <toolkit:IconTintColorBehavior TintColor="White"/>
                 </ImageButton.Behaviors>
