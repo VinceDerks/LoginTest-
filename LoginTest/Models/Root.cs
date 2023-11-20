@@ -19,6 +19,7 @@ namespace LoginTest.Model
         public string TypeOf { get; set; }
         public byte[] Image { get; set; }
         public string Status { get; set; }
+        public string Remark { get; set; }
         public List<Order> Order { get; set; }
         public int orderId { get; set; }
         public List<OrderItem> Products { get; set; } 
