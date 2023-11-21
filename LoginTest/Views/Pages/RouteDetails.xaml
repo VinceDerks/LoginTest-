@@ -2,9 +2,10 @@
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:lang="clr-namespace:LoginTest.Resources.Languages"
+             xmlns:toolkit="http://schemas.microsoft.com/dotnet/2022/maui/toolkit"
              x:Class="LoginTest.RouteDetails"
              Title="Levering">
-    <Grid RowDefinitions="*,Auto">
+    <Grid RowDefinitions="*,Auto, Auto">
     <VerticalStackLayout Grid.Row="0">
     <Frame  HasShadow="True"
        BorderColor="LightGray"
@@ -12,49 +13,57 @@
        Margin="5"
            >
         <StackLayout Margin="20">
-            <StackLayout Orientation="Horizontal">
+                    <StackLayout Orientation="Horizontal" Padding="1">
                 <Label FontAttributes="Bold" Text="Ordernummer #" FontSize="20"/>
                 <Label FontAttributes="Bold" Text="{Binding SelectedRoute.orderId}"
             FontSize="20"
             TextColor="Black"
             VerticalOptions="StartAndExpand" />
             </StackLayout>
-            <StackLayout Orientation="Horizontal" >
-                <Image Source="person.png" />
-                <Label Text="{Binding SelectedRoute.Contact}" 
+                    <StackLayout Orientation="Horizontal" Margin="0,0,0,10">
+                        <Image Source="person.png" />
+                        <Label Text="  "/>
+                        <Label Text="{Binding SelectedRoute.Contact}" 
                HorizontalOptions="Center"
                VerticalOptions="Center"/>
             </StackLayout>
-            <StackLayout Orientation="Horizontal">
+                    <StackLayout Orientation="Horizontal" Margin="0,0,0,0" >
                 <Image Source="location.png" />
-
-                <Label Text="{Binding SelectedRoute.Adress}" 
+                        <Label Text="  "/>
+                        <Label Text="{Binding SelectedRoute.Adress}" 
                            HorizontalOptions="Center"
                            VerticalOptions="Center" />
             </StackLayout>
 
             <StackLayout Orientation="Horizontal">
                 <Image Source="phone.png" />
-                <Label Text="{Binding SelectedRoute.ContactPhone}" 
-                   HorizontalOptions="Center"
-                   VerticalOptions="Center" />
+                        <Label Text="  "/>
+                        <Label Text="{Binding SelectedRoute.ContactPhone}" 
+                           HorizontalOptions="Center"
+                           VerticalOptions="Center"
+                        TextColor="Black"
+                        BackgroundColor="White"
+                        Padding="0"/>
             </StackLayout>
 
-            <StackLayout Orientation="Horizontal">
+                    <StackLayout Orientation="Horizontal" Padding="1" Margin="0,0,0,5">
                 <Image Source="hollowclock.png" />
-
-                <Label Text="{Binding SelectedRoute.TimeArrive}"
+                        <Label Text="  "/>
+                        <Label Text="{Binding SelectedRoute.TimeArrive}"
                            HorizontalOptions="Center"
                            VerticalOptions="Center"/>
-                <Label Text="{Binding SelectedRoute.TimeDepart}"
+                        <Label Text=" - "
+           HorizontalOptions="Center"
+           VerticalOptions="Center"/>
+                        <Label Text="{Binding SelectedRoute.TimeDepart}"
                            HorizontalOptions="Center"
                            VerticalOptions="Center"/>
             </StackLayout>
-            <StackLayout Orientation="Horizontal">
+                    <StackLayout Orientation="Horizontal" Padding="1" Margin="0,0,0,0">
                 <Image Source="truck.png" />
 
-
-                <Label Text="{Binding SelectedRoute.TypeOf}"
+                        <Label Text="  "/>
+                        <Label Text="{Binding SelectedRoute.TypeOf}"
                            HorizontalOptions="Center"
                            VerticalOptions="Center"/>
             </StackLayout>
@@ -66,10 +75,24 @@
             
         </StackLayout>
     </Frame>
-    <StackLayout>
+    </VerticalStackLayout>
+      <Grid Grid.Row="1" HeightRequest="50" Padding="0" ColumnSpacing="0">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+                <ImageButton Grid.Column="0" Source="phone.svg" BackgroundColor="#006FB4" Clicked="CallNumber">
+                    <ImageButton.Behaviors>
+                        <toolkit:IconTintColorBehavior TintColor="White"/>
+                    </ImageButton.Behaviors>
+                </ImageButton>
+            <ImageButton Grid.Column="1" Source="location.svg" BackgroundColor="#006FB4" Clicked="OpenMaps">
+                <ImageButton.Behaviors>
+                    <toolkit:IconTintColorBehavior TintColor="White"/>
+                </ImageButton.Behaviors>
+            </ImageButton>
+        </Grid>
         
-    </StackLayout>
-        </VerticalStackLayout>
-        <Button BackgroundColor="Green" WidthRequest="400" HeightRequest="50" FontSize="20" Grid.Row="1" Clicked="Arrived" Text="Gearriveerd" CornerRadius="0"  VerticalOptions="EndAndExpand" />
+        <Button BackgroundColor="Green" WidthRequest="400" HeightRequest="50" FontSize="20" Grid.Row="3" Clicked="Arrived" Text="Gearriveerd" CornerRadius="0"  VerticalOptions="EndAndExpand" />
 </Grid>
 </ContentPage>

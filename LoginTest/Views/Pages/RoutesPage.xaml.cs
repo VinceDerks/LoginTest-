@@ -30,14 +30,108 @@ namespace LoginTest
         {
             string jsonData = @"[
         {
-            ""ID"": ""1"",
+            ""ID"": ""2"",
+            ""Date"": ""2023-11-21"",
+            ""CompanyName"": ""RentBuddy"",
+            ""Contact"": ""Janssen"",
+            ""ContactPhone"": ""06128816192"",
+            ""Adress"": ""Van der Goesstraat 61 6921 MK"",
+            ""TimeArrive"": ""8:00"",
+            ""TimeDepart"": ""10:00"",
+            ""TypeOf"": ""Delivery"",
+            ""Status"": ""Not completed"",
+             ""orderid"": 260,
+            ""Products"": [
+                {
+                    ""orderid"": 260,
+                    ""ProductName"": ""Kabel"",
+                    ""ProductCode"": 258258,
+                    ""Quantity"": 5,
+                    
+                },
+                {
+                    ""orderid"": 260,
+                    ""ProductName"": ""Support plaat"",
+                    ""ProductCode"": 258268,
+                    ""Quantity"": 2,
+                    
+                },
+            ],
+            ""Order"": [
+                {
+                    ""orderId"": 260,
+                    ""ID"": 1
+                },
+            ]
+        },
+        {
+            ""ID"": ""2"",
+            ""Date"": ""2023-11-10"",
+            ""CompanyName"": ""RentBuddy"",
+            ""Contact"": ""Janssen"",
+            ""ContactPhone"": ""06128816192"",
+            ""City"": ""Varik"",
+            ""Adress"": ""De Geus bv"",
+            ""TimeArrive"": ""17:00"",
+            ""TimeDepart"": ""18:00"",
+            ""TypeOf"": ""Pickup"",
+            ""Status"": ""Not completed"",
+            ""orderid"": 259,
+            ""Products"": [
+                {
+                    ""orderid"": 258,
+                    ""ProductName"": ""Kabel"",
+                    ""ProductCode"": 258258,
+                    ""Quantity"": 5,
+                    
+                },
+                {
+                    ""orderid"": 258,
+                    ""ProductName"": ""Support plaat"",
+                    ""ProductCode"": 258268,
+                    ""Quantity"": 2,
+                    
+                },
+            ],
+        },
+        {
+            ""ID"": ""2"",
+            ""Date"": ""2023-11-10"",
+            ""CompanyName"": ""RentBuddy"",
+            ""Contact"": ""Janssen"",
+            ""ContactPhone"": ""06128816192"",
+            ""City"": ""Tilburg"",
+            ""Adress"": ""Oaksoft"",
+            ""TimeArrive"": ""17:00"",
+            ""TimeDepart"": ""18:00"",
+            ""TypeOf"": ""Delivery"",
+            ""Status"": ""Not completed"",
+           ""orderid"": 258,
+             ""Products"": [
+                {
+                    ""orderid"": 258,
+                    ""ProductName"": ""Kabel"",
+                    ""ProductCode"": 258258,
+                    ""Quantity"": 5,
+                    
+                },
+                {
+                    ""orderid"": 258,
+                    ""ProductName"": ""Support plaat"",
+                    ""ProductCode"": 258268,
+                    ""Quantity"": 2,
+                    
+                },
+            ],
+            
+        ""ID"": ""2"",
             ""Date"": ""2023-11-10"",
             ""CompanyName"": ""RentBuddy"",
             ""Contact"": ""Janssen"",
             ""ContactPhone"": ""06128816192"",
             ""Adress"": ""Distelweg 52 5345KD Oss"",
-            ""TimeArrive"": ""10:00 PM"",
-            ""TimeDepart"": ""18:00 PM"",
+            ""TimeArrive"": ""10:00"",
+            ""TimeDepart"": ""18:00"",
             ""TypeOf"": ""Delivery"",
             ""Status"": ""Not completed"",
              ""orderid"": 258,
@@ -49,6 +143,13 @@ namespace LoginTest
                     ""Quantity"": 5,
                     
                 },
+                {
+                    ""orderid"": 258,
+                    ""ProductName"": ""Support plaat"",
+                    ""ProductCode"": 258268,
+                    ""Quantity"": 2,
+                    
+                },
             ],
             ""Order"": [
                 {
@@ -58,31 +159,34 @@ namespace LoginTest
             ]
         },
         {
-            ""ID"": ""1"",
+            ""ID"": ""6"",
             ""Date"": ""2023-11-10"",
             ""CompanyName"": ""RentBuddy"",
             ""Contact"": ""Janssen"",
             ""ContactPhone"": ""06128816192"",
             ""City"": ""Varik"",
             ""Adress"": ""De Geus bv"",
-            ""TimeArrive"": ""17:00 PM"",
-            ""TimeDepart"": ""18:00 PM"",
+            ""TimeArrive"": ""17:00""
+            ""TimeDepart"": ""18:00"",
             ""TypeOf"": ""Pickup"",
             ""Status"": ""Not completed"",
             ""orderid"": 259,
             ""Products"": [
                 {
-                    ""orderid"": 259,
-                    ""ProductName"": ""Alien Onesie"",
-                    ""ProductCode"": 6060606,
+                    ""orderid"": 258,
+                    ""ProductName"": ""Kabel"",
+                    ""ProductCode"": 258258,
+                    ""Quantity"": 5,
                     
-                }],
-            ""Order"": [
-                {
-                    ""orderid"": 259,
-                    ""ID"": 1
                 },
-            ]
+                {
+                    ""orderid"": 258,
+                    ""ProductName"": ""Support plaat"",
+                    ""ProductCode"": 258268,
+                    ""Quantity"": 2,
+                    
+                },
+            ],
         },
         {
             ""ID"": ""1"",
@@ -92,8 +196,8 @@ namespace LoginTest
             ""ContactPhone"": ""06128816192"",
             ""City"": ""Tilburg"",
             ""Adress"": ""Oaksoft"",
-            ""TimeArrive"": ""17:00 PM"",
-            ""TimeDepart"": ""18:00 PM"",
+            ""TimeArrive"": ""17:00"",
+            ""TimeDepart"": ""18:00"",
             ""TypeOf"": ""Delivery"",
             ""Status"": ""Not completed"",
            ""orderid"": 258,
@@ -102,14 +206,204 @@ namespace LoginTest
                     ""orderid"": 258,
                     ""ProductName"": ""Kabel"",
                     ""ProductCode"": 258258,
+                    ""Quantity"": 5,
                     
-                }],
-            ""Order"": [
+                },
                 {
                     ""orderid"": 258,
+                    ""ProductName"": ""Support plaat"",
+                    ""ProductCode"": 258268,
+                    ""Quantity"": 2,
+                    
+                },
+            ], 
+        ""ID"": ""2"",
+            ""Date"": ""2023-11-10"",
+            ""CompanyName"": ""RentBuddy"",
+            ""Contact"": ""Janssen"",
+            ""ContactPhone"": ""06128816192"",
+            ""Adress"": ""Distelweg 52 5345KD Oss"",
+            ""TimeArrive"": ""10:00"",
+            ""TimeDepart"": ""18:00"",
+            ""TypeOf"": ""Delivery"",
+            ""Status"": ""Not completed"",
+             ""orderid"": 258,
+            ""Products"": [
+                {
+                    ""orderid"": 258,
+                    ""ProductName"": ""Kabel"",
+                    ""ProductCode"": 258258,
+                    ""Quantity"": 5,
+                    
+                },
+                {
+                    ""orderid"": 258,
+                    ""ProductName"": ""Support plaat"",
+                    ""ProductCode"": 258268,
+                    ""Quantity"": 2,
+                    
+                },
+            ],
+            ""Order"": [
+                {
+                    ""orderId"": 258,
                     ""ID"": 1
                 },
             ]
+        },
+        {
+            ""ID"": ""3"",
+            ""Date"": ""2023-11-10"",
+            ""CompanyName"": ""RentBuddy"",
+            ""Contact"": ""Janssen"",
+            ""ContactPhone"": ""06128816192"",
+            ""City"": ""Varik"",
+            ""Adress"": ""De Geus bv"",
+            ""TimeArrive"": ""17:00"",
+            ""TimeDepart"": ""18:00"",
+            ""TypeOf"": ""Pickup"",
+            ""Status"": ""Not completed"",
+            ""orderid"": 259,
+            ""Products"": [
+                {
+                    ""orderid"": 258,
+                    ""ProductName"": ""Kabel"",
+                    ""ProductCode"": 258258,
+                    ""Quantity"": 5,
+                    
+                },
+                {
+                    ""orderid"": 258,
+                    ""ProductName"": ""Support plaat"",
+                    ""ProductCode"": 258268,
+                    ""Quantity"": 2,
+                    
+                },
+            ],
+        },
+        {
+            ""ID"": ""4"",
+            ""Date"": ""2023-11-10"",
+            ""CompanyName"": ""RentBuddy"",
+            ""Contact"": ""Janssen"",
+            ""ContactPhone"": ""06128816192"",
+            ""City"": ""Tilburg"",
+            ""Adress"": ""Oaksoft"",
+            ""TimeArrive"": ""17:00"",
+            ""TimeDepart"": ""18:00"",
+            ""TypeOf"": ""Delivery"",
+            ""Status"": ""Not completed"",
+           ""orderid"": 258,
+             ""Products"": [
+                {
+                    ""orderid"": 258,
+                    ""ProductName"": ""Kabel"",
+                    ""ProductCode"": 258258,
+                    ""Quantity"": 5,
+                    
+                },
+                {
+                    ""orderid"": 258,
+                    ""ProductName"": ""Support plaat"",
+                    ""ProductCode"": 258268,
+                    ""Quantity"": 2,
+                    
+                },
+            ],
+            
+        ""ID"": ""5"",
+            ""Date"": ""2023-11-10"",
+            ""CompanyName"": ""RentBuddy"",
+            ""Contact"": ""Janssen"",
+            ""ContactPhone"": ""06128816192"",
+            ""Adress"": ""Distelweg 52 5345KD Oss"",
+            ""TimeArrive"": ""10:00"",
+            ""TimeDepart"": ""18:00"",
+            ""TypeOf"": ""Delivery"",
+            ""Status"": ""Not completed"",
+             ""orderid"": 258,
+            ""Products"": [
+                {
+                    ""orderid"": 258,
+                    ""ProductName"": ""Kabel"",
+                    ""ProductCode"": 258258,
+                    ""Quantity"": 5,
+                    
+                },
+                {
+                    ""orderid"": 258,
+                    ""ProductName"": ""Support plaat"",
+                    ""ProductCode"": 258268,
+                    ""Quantity"": 2,
+                    
+                },
+            ],
+            ""Order"": [
+                {
+                    ""orderId"": 258,
+                    ""ID"": 1
+                },
+            ]
+        },
+        {
+            ""ID"": ""6"",
+            ""Date"": ""2023-11-10"",
+            ""CompanyName"": ""RentBuddy"",
+            ""Contact"": ""Janssen"",
+            ""ContactPhone"": ""06128816192"",
+            ""City"": ""Varik"",
+            ""Adress"": ""De Geus bv"",
+            ""TimeArrive"": ""17:00"",
+            ""TimeDepart"": ""18:00"",
+            ""TypeOf"": ""Pickup"",
+            ""Status"": ""Not completed"",
+            ""orderid"": 259,
+            ""Products"": [
+                {
+                    ""orderid"": 258,
+                    ""ProductName"": ""Kabel"",
+                    ""ProductCode"": 258258,
+                    ""Quantity"": 5,
+                    
+                },
+                {
+                    ""orderid"": 258,
+                    ""ProductName"": ""Support plaat"",
+                    ""ProductCode"": 258268,
+                    ""Quantity"": 2,
+                    
+                },
+            ],
+        },
+        {
+            ""ID"": ""1"",
+            ""Date"": ""2023-11-10"",
+            ""CompanyName"": ""RentBuddy"",
+            ""Contact"": ""Janssen"",
+            ""ContactPhone"": ""06128816192"",
+            ""City"": ""Tilburg"",
+            ""Adress"": ""Oaksoft"",
+            ""TimeArrive"": ""17:00"",
+            ""TimeDepart"": ""18:00"",
+            ""TypeOf"": ""Delivery"",
+            ""Status"": ""Not completed"",
+           ""orderid"": 258,
+             ""Products"": [
+                {
+                    ""orderid"": 258,
+                    ""ProductName"": ""Kabel"",
+                    ""ProductCode"": 258258,
+                    ""Quantity"": 5,
+                    
+                },
+                {
+                    ""orderid"": 258,
+                    ""ProductName"": ""Support plaat"",
+                    ""ProductCode"": 258268,
+                    ""Quantity"": 2,
+                    
+                },
+            ],    
         }
     ]";
 

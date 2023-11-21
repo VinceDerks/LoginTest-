@@ -9,7 +9,7 @@
              Title="Niet afgeleverd">
     <Grid RowDefinitions="*, 200, Auto, Auto">
         <VerticalStackLayout Margin="20" Grid.Row="0">
-            <Frame BorderColor="Gray" CornerRadius="20" WidthRequest="380">
+            <Frame BorderColor="Gray" CornerRadius="20" WidthRequest="350">
                 <material:EditorField x:Name="RemarkField" Title="Toelichting" TitleColor="Black" AccentColor="White" BorderColor="White" />
             </Frame>
             <Label x:Name="ErrorLbl"/>

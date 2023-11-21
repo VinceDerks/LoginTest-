@@ -34,8 +34,10 @@ namespace LoginTest
                     errorlbl.Text = "Handtekening opgeslagen";
                     selectedRoute.Status = "Completed";
                     selectedRoute.Remark = RemarkField.Text;
-                    await Navigation.PushAsync(new ItemsPage(selectedRoute));
-
+                    
+                    await Navigation.PopAsync();
+                    await Navigation.PopAsync();
+                    
 
                 }
                 else

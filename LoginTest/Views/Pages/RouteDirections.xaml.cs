@@ -55,21 +55,121 @@ public partial class RouteDirections : ContentPage
                         {
                             ""Name"": ""Den Bosch"",
                             ""ID"": ""2"",
-                            ""Date"": ""2023-11-14"",
-                            ""TimeStart"": ""10:00 AM"",
-                            ""TimeEnd"": ""1:00 PM"",
+                            ""Date"": ""2023-11-21"",
+                            ""TimeStart"": ""10:00"",
+                            ""TimeEnd"": ""13:00"",
                             ""LadingGewicht"": ""45"",
                             ""LadingVolume"": ""4""
                           }, 
                         {
                             ""Name"": ""Den Bosch"",
                             ""ID"": ""1"",
-                            ""Date"": ""2023-11-13"",
-                            ""TimeStart"": ""10:00 AM"",
-                            ""TimeEnd"": ""1:00 PM"",
+                            ""Date"": ""2023-11-22"",
+                            ""TimeStart"": ""10:00"",
+                            ""TimeEnd"": ""13:00"",
                             ""LadingGewicht"": ""45"",
                             ""LadingVolume"": ""4""
-                          }
+                          },
+                          {
+                            ""Name"": ""Den Bosch"",
+                            ""ID"": ""3"",
+                            ""Date"": ""2023-11-20"",
+                            ""TimeStart"": ""10:00"",
+                            ""TimeEnd"": ""13:00"",
+                            ""LadingGewicht"": ""45"",
+                            ""LadingVolume"": ""4""
+                          }, 
+                         {
+                            ""Name"": ""Den Bosch"",
+                            ""ID"": ""4"",
+                            ""Date"": ""2023-11-21"",
+                            ""TimeStart"": ""10:00"",
+                            ""TimeEnd"": ""13:00"",
+                            ""LadingGewicht"": ""45"",
+                            ""LadingVolume"": ""4""
+                          }, 
+                        {
+                            ""Name"": ""Den Bosch"",
+                            ""ID"": ""5"",
+                            ""Date"": ""2023-11-22"",
+                            ""TimeStart"": ""10:00"",
+                            ""TimeEnd"": ""13:00"",
+                            ""LadingGewicht"": ""45"",
+                            ""LadingVolume"": ""4""
+                          },
+                          {
+                            ""Name"": ""Den Bosch"",
+                            ""ID"": ""6"",
+                            ""Date"": ""2023-11-20"",
+                            ""TimeStart"": ""10:00"",
+                            ""TimeEnd"": ""13:00"",
+                            ""LadingGewicht"": ""45"",
+                            ""LadingVolume"": ""4""
+                          },
+                          {
+                            ""Name"": ""Den Bosch"",
+                            ""ID"": ""2"",
+                            ""Date"": ""2023-11-21"",
+                            ""TimeStart"": ""13:00"",
+                            ""TimeEnd"": ""15:00"",
+                            ""LadingGewicht"": ""45"",
+                            ""LadingVolume"": ""4""
+                          }, 
+                        {
+                            ""Name"": ""Den Bosch"",
+                            ""ID"": ""1"",
+                            ""Date"": ""2023-11-22"",
+                            ""TimeStart"": ""13:00"",
+                            ""TimeEnd"": ""15:00 PM"",
+                            ""LadingGewicht"": ""45"",
+                            ""LadingVolume"": ""4""
+                          },
+                          {
+                            ""Name"": ""Den Bosch"",
+                            ""ID"": ""3"",
+                            ""Date"": ""2023-11-20"",
+                            ""TimeStart"": ""13:00"",
+                            ""TimeEnd"": ""15:00"",
+                            ""LadingGewicht"": ""45"",
+                            ""LadingVolume"": ""4""
+                          }, 
+                         {
+                            ""Name"": ""Den Bosch"",
+                            ""ID"": ""4"",
+                            ""Date"": ""2023-11-21"",
+                            ""TimeStart"": ""13:00"",
+                            ""TimeEnd"": ""15:00"",
+                            ""LadingGewicht"": ""45"",
+                            ""LadingVolume"": ""4""
+                          }, 
+                        {
+                            ""Name"": ""Den Bosch"",
+                            ""ID"": ""5"",
+                            ""Date"": ""2023-11-22"",
+                            ""TimeStart"": ""13:00"",
+                            ""TimeEnd"": ""15:00"",
+                            ""LadingGewicht"": ""45"",
+                            ""LadingVolume"": ""4""
+                          },
+                          {
+                            ""Name"": ""Den Bosch"",
+                            ""ID"": ""6"",
+                            ""Date"": ""2023-11-20"",
+                            ""TimeStart"": ""13:00"",
+                            ""TimeEnd"": ""15:00"",
+                            ""LadingGewicht"": ""45"",
+                            ""LadingVolume"": ""4""
+                          }, 
+
+                            {
+                            ""Name"": ""Den Bosch"",
+                            ""ID"": ""4"",
+                            ""Date"": ""2023-11-21"",
+                            ""TimeStart"": ""13:00"",
+                            ""TimeEnd"": ""15:00"",
+                            ""LadingGewicht"": ""45"",
+                            ""LadingVolume"": ""4""
+                          }, 
                         ]";
         List<Route> routes = JsonConvert.DeserializeObject<List<Route>>(jsonData);
 

@@ -38,16 +38,6 @@
     </ContentPage.Resources>
 
     <StackLayout>
-
-        <Label Text="{x:Static lang:AppResources.Theme}" 
-               HorizontalOptions="Center" 
-               VerticalOptions="Center" />
-
-        <Switch x:Name="DarkModeSwitch"
-                IsToggled="{Binding DarkMode}"
-                HorizontalOptions="Center"
-                VerticalOptions="Center" />
-
         <StackLayout>
             <Label Text="{x:Static lang:AppResources.SelLang}" 
                    HorizontalOptions="Center" 

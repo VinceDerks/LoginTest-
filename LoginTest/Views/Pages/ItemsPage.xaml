@@ -3,6 +3,7 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="LoginTest.ItemsPage"
              Title="Bestelling">
+    <ScrollView>
     <Grid RowDefinitions="*,Auto">
         <VerticalStackLayout Grid.Row="0">
             <StackLayout Padding="10" >
@@ -21,8 +22,8 @@
                 </CollectionView>
                 <StackLayout>
                     <Frame BorderColor="DarkGray">
-                        <SearchBar x:Name="searchBar" Placeholder="Zoek een product"/>
-                    </Frame>
+                            <SearchBar x:Name="searchBar" Placeholder="Zoek een product" TextChanged="OnSearchTextChanged" />
+                        </Frame>
                 </StackLayout>
                 <Label x:Name="Errorlbl" FontSize="16" TextColor="Black"/>
                 <CollectionView x:Name="lblOrders" >
@@ -66,5 +67,5 @@
             <Button Clicked="NavigateToArrivedPage" Grid.Column="0" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" CornerRadius="0" WidthRequest="200" HeightRequest="50" Text="Afgeleverd" FontSize="20" BackgroundColor="Green" />
             <Button Clicked="NavigateToNotArrivedPage" Grid.Column="1" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" CornerRadius="0" WidthRequest="200" HeightRequest="50" FontSize="20" Text="Niet afgeleverd" BackgroundColor="Red" />
         </Grid>
-    </Grid>
+    </Grid></ScrollView>
 </ContentPage>

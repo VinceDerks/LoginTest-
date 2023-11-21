@@ -35,17 +35,18 @@
             <Grid.ColumnDefinitions>
                 <ColumnDefinition Width="*"/>
                 <ColumnDefinition Width="*"/>
-            </Grid.ColumnDefinitions>
-            <ImageButton Grid.Column="0" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" IsVisible="False" x:Name="ClearButton" Source="reset.svg" WidthRequest="200" HeightRequest="50" BackgroundColor="red" Clicked="ClearButton_Clicked" CornerRadius="0">
+            </Grid.ColumnDefinitions> 
+            <ImageButton Grid.Column="0" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" IsVisible="False" x:Name="SaveButton" WidthRequest="200" HeightRequest="50" Source="approve.svg" BackgroundColor="Green" Clicked="SaveButton_Clicked" CornerRadius="0">
                 <ImageButton.Behaviors>
                     <toolkit:IconTintColorBehavior TintColor="White"/>
                 </ImageButton.Behaviors>
             </ImageButton>
-            <ImageButton Grid.Column="1" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" IsVisible="False" x:Name="SaveButton" WidthRequest="200" HeightRequest="50" Source="approve.svg" BackgroundColor="Green" Clicked="SaveButton_Clicked" CornerRadius="0">
+            <ImageButton Grid.Column="1" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" IsVisible="False" x:Name="ClearButton" Source="reset.svg" WidthRequest="200" HeightRequest="50" BackgroundColor="red" Clicked="ClearButton_Clicked" CornerRadius="0">
                 <ImageButton.Behaviors>
                     <toolkit:IconTintColorBehavior TintColor="White"/>
                 </ImageButton.Behaviors>
             </ImageButton>
+           
 
         </Grid>
     </Grid>

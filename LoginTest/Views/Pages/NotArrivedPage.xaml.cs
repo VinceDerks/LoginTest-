@@ -46,14 +46,24 @@ namespace LoginTest
 
         private async void SaveButtonClicked(object sender, EventArgs e)
         {
-            SelectedRoute.Remark = RemarkField.Text;
-            SelectedRoute.Image = await ConvertToByteArray(photo);
-            await Navigation.PushAsync(new ItemsPage(SelectedRoute));
+            if (photo != null)
+            {
+                SelectedRoute.Image = await ConvertToByteArray(photo);
+            }
+
+            if (!string.IsNullOrEmpty(RemarkField.Text))
+            {
+                SelectedRoute.Remark = RemarkField.Text;
+            }
+
+            await Navigation.PopAsync();
+            await Navigation.PopAsync();
         }
 
-        private void CancelButtonClicked(object sender, EventArgs e)
+        private async void CancelButtonClicked(object sender, EventArgs e)
         {
-            Navigation.PushAsync(new ItemsPage(SelectedRoute));
+            await Navigation.PopAsync();
+            await Navigation.PopAsync();
         }
         private async void TakePictureClicked(object sender, EventArgs e)
         {

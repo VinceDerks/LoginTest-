@@ -13,7 +13,8 @@
             </Style>
         </ResourceDictionary>
     </ContentPage.Resources>
-    <StackLayout>
+    <ScrollView>
+    <StackLayout VerticalOptions="FillAndExpand">
             <Grid>
                 <Grid.ColumnDefinitions>
                     <ColumnDefinition Width="Auto" />
@@ -29,7 +30,8 @@
 
                 <ImageButton Source="forwardarrow.svg" Clicked="OnNextClicked" Grid.Column="2" />
             </Grid>
-        <Label VerticalOptions="CenterAndExpand" Style="{StaticResource Label}"  HorizontalOptions="Center" FontSize="15" x:Name="Errorlbl" TextColor="Black"/>
+        <Label VerticalOptions="CenterAndExpand"   HorizontalOptions="Center" FontSize="15" x:Name="Errorlbl" TextColor="Black"/>
+        
             <CollectionView x:Name="lblRoutes">
                 <CollectionView.ItemTemplate>
                     <DataTemplate>
@@ -66,7 +68,7 @@
                                 </StackLayout>
                                 <StackLayout>
                                     <Label/>
-                                <Label Text="{x:Static lang:AppResources.Load}" HorizontalOptions="Center" TextColor="Green"/>
+                                <Label Text="{x:Static lang:AppResources.Load}" HorizontalOptions="Center" FontSize="12" TextColor="Green"/>
                                 </StackLayout>
                                 <StackLayout Orientation="Horizontal">
 
@@ -108,5 +110,7 @@
                     </DataTemplate>
                 </CollectionView.ItemTemplate>
             </CollectionView>
-        </StackLayout>
+        </StackLayout> 
+    </ScrollView>
+        
 </ContentPage>

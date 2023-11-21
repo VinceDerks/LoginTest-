@@ -37,7 +37,23 @@ namespace LoginTest
                 Errorlbl.Text = "No orders found"; // Display the error message
             }
         }
+        private void OnSearchTextChanged(object sender, TextChangedEventArgs e)
+        {
+            string searchText = e.NewTextValue.ToLower();
 
+            if (string.IsNullOrWhiteSpace(searchText))
+            {
+                // If the search text is empty, display all items
+                lblOrders.ItemsSource = Products;
+            }
+            else
+            {
+                // Filter the items based on the search text
+                lblOrders.ItemsSource = Products.Where(p =>
+                    p.ProductName.ToLower().Contains(searchText) ||
+                    p.ProductCode.ToString().Contains(searchText));
+            }
+        }
         private void NavigateToArrivedPage(object sender, EventArgs e)
         {          
             Navigation.PushAsync(new ArrivedPage(SelectedRoute));
