@@ -5,7 +5,7 @@
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml">
 
     <Color x:Key="PrimaryColor">#3E94FF</Color>
-    <Color x:Key="PrimaryDarkColor">#2A89FF</Color>
+    <Color x:Key="PrimaryDarkColor">white</Color>
     <Color x:Key="PrimaryDarkenColor">#0B78FF</Color>
     <Color x:Key="PrimaryLighterColor">#71B0FF</Color>
     <Color x:Key="PrimaryGradient">#3E65FF</Color>
@@ -93,8 +93,8 @@
     <Color x:Key="DisabledColor">#BBBBBB</Color>
 
     <!--  BUTTONS & ENTRY COLORS  -->
-    <Color x:Key="PrimaryActionButtonStartColor">#39CFE2</Color>
-    <Color x:Key="PrimaryActionButtonEndColor">#1646AA</Color>
+    <Color x:Key="PrimaryActionButtonStartColor">white</Color>
+    <Color x:Key="PrimaryActionButtonEndColor">white</Color>
 
     <Color x:Key="SaveButtonColor">#22C064</Color>
     <Color x:Key="DeleteButtonColor">#EB505C</Color>

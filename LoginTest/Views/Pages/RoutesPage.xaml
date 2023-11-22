@@ -12,7 +12,7 @@
         <ScrollView >
             <StackLayout Padding="10" >
                 <Label x:Name="Errorlbl" FontSize="16" TextColor="Black"/>
-                <CollectionView x:Name="lblDestinations" BackgroundColor="White">
+                <CollectionView x:Name="lblDestinations">
                     <CollectionView.ItemTemplate >
                         <DataTemplate>
                             <Frame HasShadow="True"
@@ -30,24 +30,24 @@
                                        VerticalOptions="CenterAndExpand" />
                                     <Label Text="{Binding Adress}"
                                            FontSize="14"
-                                           TextColor="#999999"
+
                                            HorizontalOptions="CenterAndExpand"
                                            VerticalOptions="CenterAndExpand" />
 
                                     <StackLayout Orientation="Horizontal">
                                         <Label Text="{Binding TimeArrive}"
                                                FontSize="14"
-                                               TextColor="#999999"
+
                                                HorizontalOptions="EndAndExpand" />
 
                                         <Label/>
                                         <Label Text="-"
                                                FontSize="14"
-                                               TextColor="#999999"
+
                                                HorizontalOptions="Center" />
                                         <Label Text="{Binding TimeDepart}"
                                                FontSize="14"
-                                               TextColor="#999999"
+
                                                HorizontalOptions="StartAndExpand" />
                                     </StackLayout>
 

@@ -5,7 +5,7 @@
        x:Class="LoginTest.AppShell"
        BindingContext="{x:Static local:App.ViewModel}"
        FlyoutBehavior="Flyout"
-       FlyoutBackground="lightgray">
+       FlyoutBackgroundColor="LightGray">
 
     <Shell.FlyoutHeader>
         <Image Source="rentbuddylogo.png" Aspect="AspectFit" />
