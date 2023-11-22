@@ -43,11 +43,11 @@
                        FontAttributes="Bold"
                        Text="{x:Static lang:AppResources.RentIntro}"
          />
-                <material:TextField Icon="{FontImageSource FontFamily=MaterialRegular, Glyph={x:Static m:MaterialRegular.Person}}" AllowClear="True" AccentColor="#0073BA" BorderColor="#6D7272" TitleColor="#6D7272" Title="{x:Static lang:AppResources.User}"
+                <material:TextField Icon="{FontImageSource FontFamily=MaterialRegular, Glyph={x:Static m:MaterialRegular.Person}}" AllowClear="True" AccentColor="#0073BA" BorderColor="#6D7272" TitleColor="#6D7272" TextColor="Black" Title="{x:Static lang:AppResources.User}"
                            x:Name="UsernameEntry"
                            />
 
-                <material:TextField Icon="{FontImageSource FontFamily=MaterialRegular, Glyph={x:Static m:MaterialRegular.Lock}}" AccentColor="#0073BA" BorderColor="#6D7272" TitleColor="#6D7272"  Title="{x:Static lang:AppResources.Pass}"
+                <material:TextField Icon="{FontImageSource FontFamily=MaterialRegular, Glyph={x:Static m:MaterialRegular.Lock}}" AccentColor="#0073BA" BorderColor="#6D7272" TitleColor="#6D7272" TextColor="Black" Title="{x:Static lang:AppResources.Pass}"
                            x:Name="PasswordEntry"
                            IsPassword="True">
                     <material:TextField.Attachments>

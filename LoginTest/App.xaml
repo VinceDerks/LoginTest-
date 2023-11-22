@@ -11,8 +11,8 @@
                 <ResourceDictionary x:Name="appColors" Source="Resources/Styles/Colors.xaml" />
                 <ResourceDictionary x:Name="appStyles" Source="Resources/Styles/Styles.xaml" />
             </ResourceDictionary.MergedDictionaries>
-        </ResourceDictionary>
 
+        </ResourceDictionary>
     </Application.Resources>
     <Application.MainPage>
         <NavigationPage>

@@ -14,5 +14,6 @@ namespace LoginTest
         {
             await ViewModels.AuthenticationService.CheckLoginStatus();
         }
+
     }
 }

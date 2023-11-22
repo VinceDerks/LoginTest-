@@ -8,11 +8,33 @@ namespace LoginTest
     public partial class SettingsPage : ContentPage
     {
 
+        private bool darkMode = false;
+
+        public bool DarkMode
+        {
+            get { return darkMode; }
+            set
+            {
+                darkMode = value;
+                Application.Current.UserAppTheme = darkMode ? AppTheme.Dark : AppTheme.Light;
+            }
+        }
 
         public SettingsPage()
         {
             InitializeComponent();
+
+            darkMode = Application.Current.RequestedTheme == AppTheme.Dark;
+            DarkModeSwitch.IsToggled = darkMode;
+
+            DarkModeSwitch.Toggled += DarkModeSwitch_Toggled;
+
             LanguagePicker.SelectedIndexChanged += LanguagePicker_SelectedIndexChanged;
+        }
+
+        private void DarkModeSwitch_Toggled(object sender, ToggledEventArgs e)
+        {
+            DarkMode = e.Value;
         }
 
 
