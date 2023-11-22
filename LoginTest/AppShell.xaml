@@ -6,7 +6,7 @@
        BindingContext="{x:Static local:App.ViewModel}"
        FlyoutBehavior="Flyout"
        FlyoutBackgroundColor="LightGray">
-
+  
     <Shell.FlyoutHeader>
         <Image Source="rentbuddylogo.png" Aspect="AspectFit" />
     </Shell.FlyoutHeader>

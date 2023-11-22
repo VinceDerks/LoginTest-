@@ -5,14 +5,6 @@
              xmlns:lang="clr-namespace:LoginTest.Resources.Languages"
              x:Class="LoginTest.RouteDirections"
              Title="Routes">
-    <ContentPage.Resources>
-        <ResourceDictionary>
-            <Style TargetType="controls:DatePicker">
-                <Setter Property="TextColor" Value="Black" />
-                <Setter Property="FontSize" Value="18" />
-            </Style>
-        </ResourceDictionary>
-    </ContentPage.Resources>
     <ScrollView>
     <StackLayout VerticalOptions="FillAndExpand">
             <Grid>
@@ -26,7 +18,8 @@
 
                 <DatePicker x:Name="CurrentDate" 
                             Date="{Binding selectedDate, Mode=TwoWay}" 
-                            HorizontalOptions="Center" Grid.Column="1" />
+                            HorizontalOptions="Center" Grid.Column="1"
+                            />
 
                 <ImageButton Source="forwardarrow.svg" Clicked="OnNextClicked" Grid.Column="2" />
             </Grid>
