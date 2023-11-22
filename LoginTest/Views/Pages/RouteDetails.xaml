@@ -4,7 +4,7 @@
              xmlns:lang="clr-namespace:LoginTest.Resources.Languages"
              xmlns:toolkit="http://schemas.microsoft.com/dotnet/2022/maui/toolkit"
              x:Class="LoginTest.RouteDetails"
-             Title="Levering">
+             Title="{x:Static lang:AppResources.Delivery}">
     <Grid RowDefinitions="*,Auto, Auto">
     <VerticalStackLayout Grid.Row="0">
     <Frame  HasShadow="True"
@@ -93,6 +93,6 @@
             </ImageButton>
         </Grid>
         
-        <Button BackgroundColor="Green" WidthRequest="400" HeightRequest="50" FontSize="20" Grid.Row="3" Clicked="Arrived" Text="Gearriveerd" CornerRadius="0"  VerticalOptions="EndAndExpand" />
+        <Button BackgroundColor="Green" WidthRequest="400" HeightRequest="50" FontSize="20" Grid.Row="3" Clicked="Arrived" Text="{x:Static lang:AppResources.Arrived}" CornerRadius="0"  VerticalOptions="EndAndExpand" />
 </Grid>
 </ContentPage>

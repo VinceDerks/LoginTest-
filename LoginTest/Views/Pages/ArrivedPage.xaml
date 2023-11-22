@@ -8,26 +8,25 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:lang="clr-namespace:LoginTest.Resources.Languages"
              x:Class="LoginTest.ArrivedPage"
-             Title="Aftekenen">
+             Title="{x:Static lang:AppResources.SignOff}">
     <Grid RowDefinitions="*,Auto">
         <VerticalStackLayout Grid.Row="0">
             <StackLayout Padding="1">
                 <Frame WidthRequest="355"  HeightRequest="256" BorderColor="Black">
                     <mct:DrawingView
-            x:Name="SignatureEntry"
-            BackgroundColor="LightGray"
-            WidthRequest="350"
-            HeightRequest="250"
-            IsMultiLineModeEnabled="True"
-            LineColor="Black"
-            LineWidth="5"
-            DrawingLineCompleted="DrawingLineCompleted"
-        />
+                        x:Name="SignatureEntry"
+                        BackgroundColor="LightGray"
+                        WidthRequest="350"
+                        HeightRequest="250"
+                        IsMultiLineModeEnabled="True"
+                        LineColor="Black"
+                        LineWidth="5"
+                        DrawingLineCompleted="DrawingLineCompleted"/>
                 </Frame>
                 
             </StackLayout>
             <Frame BorderColor="Gray" CornerRadius="20" WidthRequest="355">
-                <material:EditorField x:Name="RemarkField" Title="Toelichting" TitleColor="Black" AccentColor="White" BorderColor="White" />
+                <material:EditorField x:Name="RemarkField" Title="{x:Static lang:AppResources.Explain}" TitleColor="Black" AccentColor="White" BorderColor="White" />
             </Frame>
             <Label x:Name="errorlbl" FontSize="25" HorizontalOptions="CenterAndExpand" HorizontalTextAlignment="Center"/>
         </VerticalStackLayout>

@@ -106,6 +106,15 @@ namespace LoginTest.Resources.Languages {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Cancel.
+        /// </summary>
+        internal static string Cancel {
+            get {
+                return ResourceManager.GetString("Cancel", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Delivered.
         /// </summary>
         internal static string DelButton {
@@ -115,11 +124,29 @@ namespace LoginTest.Resources.Languages {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Delivery.
+        /// </summary>
+        internal static string Delivery {
+            get {
+                return ResourceManager.GetString("Delivery", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Departure.
         /// </summary>
         internal static string Departure {
             get {
                 return ResourceManager.GetString("Departure", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Explanation.
+        /// </summary>
+        internal static string Explain {
+            get {
+                return ResourceManager.GetString("Explain", resourceCulture);
             }
         }
         
@@ -196,6 +223,15 @@ namespace LoginTest.Resources.Languages {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Order.
+        /// </summary>
+        internal static string Order {
+            get {
+                return ResourceManager.GetString("Order", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Password.
         /// </summary>
         internal static string Pass {
@@ -241,6 +277,15 @@ namespace LoginTest.Resources.Languages {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Search for a product.
+        /// </summary>
+        internal static string Search {
+            get {
+                return ResourceManager.GetString("Search", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Select Language.
         /// </summary>
         internal static string SelLang {
@@ -250,11 +295,29 @@ namespace LoginTest.Resources.Languages {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Send.
+        /// </summary>
+        internal static string Send {
+            get {
+                return ResourceManager.GetString("Send", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Settings.
         /// </summary>
         internal static string Settings {
             get {
                 return ResourceManager.GetString("Settings", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Signing off.
+        /// </summary>
+        internal static string SignOff {
+            get {
+                return ResourceManager.GetString("SignOff", resourceCulture);
             }
         }
         

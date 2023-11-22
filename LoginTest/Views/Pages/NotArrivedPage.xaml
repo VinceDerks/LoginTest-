@@ -5,12 +5,13 @@
              xmlns:mct="clr-namespace:CommunityToolkit.Maui.Views;assembly=CommunityToolkit.Maui"
              xmlns:m="clr-namespace:UraniumUI.Icons.MaterialIcons;assembly=UraniumUI.Icons.MaterialIcons"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:lang="clr-namespace:LoginTest.Resources.Languages"
              x:Class="LoginTest.NotArrivedPage"
              Title="Niet afgeleverd">
     <Grid RowDefinitions="*, 200, Auto, Auto">
         <VerticalStackLayout Margin="20" Grid.Row="0">
             <Frame BorderColor="Gray" CornerRadius="20" WidthRequest="345">
-                <material:EditorField x:Name="RemarkField" Title="Toelichting" TitleColor="Black" AccentColor="White" BorderColor="White" />
+                <material:EditorField x:Name="RemarkField" Title="{x:Static lang:AppResources.Explain}" TitleColor="Black" AccentColor="White" BorderColor="White" />
             </Frame>
             <Label x:Name="ErrorLbl"/>
         </VerticalStackLayout>
@@ -18,7 +19,6 @@
             <Image x:Name="PhotoImage" Source="{Binding PhotoSource}" Aspect="AspectFit" HeightRequest="200" WidthRequest="200" IsVisible="{Binding HasPhoto}"
            AbsoluteLayout.LayoutFlags="PositionProportional"
            AbsoluteLayout.LayoutBounds="0, 0, 150, 200" />
-            <!-- Button to remove the picture -->
             <Button x:Name="RemovePhotoButton" Text="X" Clicked="RemovePhotoButtonClicked" WidthRequest="10" IsVisible="{Binding HasPhoto}" BackgroundColor="red" TextColor="White" Padding="0" FontSize="20"
             AbsoluteLayout.LayoutFlags="PositionProportional"
             AbsoluteLayout.LayoutBounds="0.36, 0, 60, 30"/>
@@ -38,8 +38,8 @@
                 <ColumnDefinition Width="*"/>
                 <ColumnDefinition Width="*"/>
             </Grid.ColumnDefinitions>
-            <Button Clicked="SaveButtonClicked" FontSize="20" Grid.Column="0" HorizontalOptions="FillAndExpand" HeightRequest="50"  CornerRadius="0" Grid.Row="1" VerticalOptions="FillAndExpand" BackgroundColor="Green" Text="Versturen"/>
-            <Button Clicked="CancelButtonClicked" FontSize="20" Grid.Column="1" HorizontalOptions="FillAndExpand" HeightRequest="50" CornerRadius="0" Grid.Row="1" VerticalOptions="FillAndExpand" BackgroundColor="Red" Text="Annuleren"/>
+            <Button Clicked="SaveButtonClicked" FontSize="20" Grid.Column="0" HorizontalOptions="FillAndExpand" HeightRequest="50"  CornerRadius="0" Grid.Row="1" VerticalOptions="FillAndExpand" BackgroundColor="Green" Text="{x:Static lang:AppResources.Send}"/>
+            <Button Clicked="CancelButtonClicked" FontSize="20" Grid.Column="1" HorizontalOptions="FillAndExpand" HeightRequest="50" CornerRadius="0" Grid.Row="1" VerticalOptions="FillAndExpand" BackgroundColor="Red" Text="{x:Static lang:AppResources.Cancel}"/>
         </Grid>
     </Grid>
 </ContentPage>

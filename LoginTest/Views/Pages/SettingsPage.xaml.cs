@@ -32,9 +32,25 @@ namespace LoginTest
             LanguagePicker.SelectedIndexChanged += LanguagePicker_SelectedIndexChanged;
         }
 
+        private void LoadPreferences()
+        {
+            
+            darkMode = Preferences.Get("DarkMode", false);
+            DarkModeSwitch.IsToggled = darkMode;
+
+            
+            var selectedLanguage = Preferences.Get("SelectedLanguage", "English");
+            LanguagePicker.SelectedItem = selectedLanguage;
+
+            
+            ChangeAppLanguage(selectedLanguage);
+        }
+
         private void DarkModeSwitch_Toggled(object sender, ToggledEventArgs e)
         {
             DarkMode = e.Value;
+
+            Preferences.Set("DarkMode", darkMode);
         }
 
 
@@ -42,6 +58,7 @@ namespace LoginTest
         {
             var selectedLanguage = LanguagePicker.SelectedItem.ToString();
             ChangeAppLanguage(selectedLanguage);
+            Preferences.Set("SelectedLanguage", selectedLanguage);
         }
 
         private void ChangeAppLanguage(string selectedLanguage)

@@ -195,4 +195,25 @@
   <data name="Product" xml:space="preserve">
     <value>Search Product</value>
   </data>
+  <data name="Cancel" xml:space="preserve">
+    <value>Cancel</value>
+  </data>
+  <data name="Delivery" xml:space="preserve">
+    <value>Delivery</value>
+  </data>
+  <data name="Explain" xml:space="preserve">
+    <value>Explanation</value>
+  </data>
+  <data name="Order" xml:space="preserve">
+    <value>Order</value>
+  </data>
+  <data name="Search" xml:space="preserve">
+    <value>Search for a product</value>
+  </data>
+  <data name="Send" xml:space="preserve">
+    <value>Send</value>
+  </data>
+  <data name="SignOff" xml:space="preserve">
+    <value>Signing off</value>
+  </data>
 </root>

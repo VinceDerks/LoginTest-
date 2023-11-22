@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:lang="clr-namespace:LoginTest.Resources.Languages"
              x:Class="LoginTest.ItemsPage"
-             Title="Bestelling">
+             Title="{x:Static lang:AppResources.Order}">
     <ScrollView>
     <Grid RowDefinitions="*,Auto">
         <VerticalStackLayout Grid.Row="0">
@@ -11,7 +12,7 @@
                     <CollectionView.ItemTemplate>
                         <DataTemplate>
                             <StackLayout Padding="10" HorizontalOptions="CenterAndExpand" Orientation="Horizontal">
-                                <Label FontAttributes="Bold" Text="Ordernummer #" FontSize="20" TextColor="black"/>
+                                    <Label FontAttributes="Bold" Text="{x:Static lang:AppResources.ID}" FontSize="20" TextColor="black"/>
                                 <Label FontAttributes="Bold" Text="{Binding orderId}"
                            FontSize="20"
                            TextColor="Black"
@@ -22,7 +23,7 @@
                 </CollectionView>
                 <StackLayout>
                     <Frame BorderColor="DarkGray">
-                            <SearchBar x:Name="searchBar" Placeholder="Zoek een product" TextChanged="OnSearchTextChanged" />
+                            <SearchBar x:Name="searchBar" Placeholder="{x:Static lang:AppResources.Search}" TextChanged="OnSearchTextChanged" />
                         </Frame>
                 </StackLayout>
                 <Label x:Name="Errorlbl" FontSize="16" TextColor="Black"/>
@@ -47,7 +48,7 @@
                                 VerticalOptions="StartAndExpand" />
                                     </StackLayout>
                                     <StackLayout Orientation="Horizontal">
-                                        <Label Text="Aantal : " FontSize="14"  TextColor="#999"/>
+                                            <Label Text="{x:Static lang:AppResources.Amount}" FontSize="14"  TextColor="#999"/>
                                         <Label Text="{Binding Quantity}"
                                  FontSize="14"
                                  TextColor="#999"/>
@@ -64,8 +65,8 @@
                 <ColumnDefinition Width="*"/>
                 <ColumnDefinition Width="*"/>
             </Grid.ColumnDefinitions>
-            <Button Clicked="NavigateToArrivedPage" Grid.Column="0" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" CornerRadius="0" WidthRequest="200" HeightRequest="50" Text="Afgeleverd" FontSize="20" BackgroundColor="Green" />
-            <Button Clicked="NavigateToNotArrivedPage" Grid.Column="1" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" CornerRadius="0" WidthRequest="200" HeightRequest="50" FontSize="20" Text="Niet afgeleverd" BackgroundColor="Red" />
+                <Button Clicked="NavigateToArrivedPage" Grid.Column="0" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" CornerRadius="0" WidthRequest="200" HeightRequest="50" Text="{x:Static lang:AppResources.DelButton}" FontSize="20" BackgroundColor="Green" />
+                <Button Clicked="NavigateToNotArrivedPage" Grid.Column="1" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" CornerRadius="0" WidthRequest="200" HeightRequest="50" FontSize="20" Text="{x:Static lang:AppResources.NonDelButton}" BackgroundColor="Red" />
         </Grid>
     </Grid></ScrollView>
 </ContentPage>
