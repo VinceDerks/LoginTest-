@@ -41,30 +41,31 @@
         <Frame>
             <StackLayout>
                 <Label Text="{x:Static lang:AppResources.SelLang}" 
-                           HorizontalOptions="Center" 
-                           VerticalOptions="CenterAndExpand" />
+                       HorizontalOptions="Center" 
+                       VerticalOptions="CenterAndExpand" />
 
-                    <Picker x:Name="LanguagePicker" 
-                            Title="{x:Static lang:AppResources.SelLang}" 
-                            TitleColor="#007AFF"
-                            HorizontalTextAlignment="Center ">
-                        <Picker.Items>
-                            <x:String>English</x:String>
-                            <x:String>Nederlands</x:String>
-                        </Picker.Items>
-                    </Picker>
+                <Picker x:Name="LanguagePicker" 
+                        Title="{x:Static lang:AppResources.SelLang}" 
+                        TitleColor="#007AFF"
+                        HorizontalTextAlignment="Center ">
+                    <Picker.Items>
+                        <x:String>English</x:String>
+                        <x:String>Nederlands</x:String>
+                    </Picker.Items>
+                </Picker>
 
                 <Label Text="{x:Static lang:AppResources.Theme}" 
-               HorizontalOptions="Center" 
-               VerticalOptions="Center" />
+                       HorizontalOptions="Center" 
+                       VerticalOptions="Center" />
 
-
-                <Switch x:Name="DarkModeSwitch"
-                IsToggled="{Binding DarkMode}"
-                HorizontalOptions="Center"
-                VerticalOptions="Center" />
-            
-                
+                <StackLayout Orientation="Horizontal" HorizontalOptions="Center" VerticalOptions="Center">
+                    <Label Text="Light" HorizontalOptions="End" VerticalOptions="Center" />
+                    <Switch x:Name="DarkModeSwitch"
+                        IsToggled="{Binding DarkMode}"
+                        HorizontalOptions="Center"
+                        VerticalOptions="Center" /> 
+                    <Label Text="Dark" HorizontalOptions="Start" VerticalOptions="Center" />
+                </StackLayout>
             </StackLayout>
         </Frame>
 
