@@ -30,36 +30,29 @@ namespace LoginTest
         {
             string jsonData = @"[
         {
-            ""ID"": ""2"",
-            ""Date"": ""2023-11-21"",
+             ""ID"": ""2"",
+            ""Date"": ""2023-11-10"",
             ""CompanyName"": ""RentBuddy"",
             ""Contact"": ""Janssen"",
             ""ContactPhone"": ""06128816192"",
-            ""Adress"": ""Van der Goesstraat 61 6921 MK"",
-            ""TimeArrive"": ""8:00"",
-            ""TimeDepart"": ""10:00"",
+            ""Adress"": ""Distelweg 52 5345KD Oss"",
+            ""TimeArrive"": ""10:00 PM"",
+            ""TimeDepart"": ""18:00 PM"",
             ""TypeOf"": ""Delivery"",
             ""Status"": ""Not completed"",
-             ""orderid"": 260,
+             ""orderid"": 258,
             ""Products"": [
                 {
-                    ""orderid"": 260,
+                    ""orderid"": 258,
                     ""ProductName"": ""Kabel"",
                     ""ProductCode"": 258258,
                     ""Quantity"": 5,
                     
                 },
-                {
-                    ""orderid"": 260,
-                    ""ProductName"": ""Support plaat"",
-                    ""ProductCode"": 258268,
-                    ""Quantity"": 2,
-                    
-                },
             ],
             ""Order"": [
                 {
-                    ""orderId"": 260,
+                    ""orderId"": 258,
                     ""ID"": 1
                 },
             ]
@@ -93,6 +86,12 @@ namespace LoginTest
                     
                 },
             ],
+            ""Order"": [
+                {
+                    ""orderId"": 258,
+                    ""ID"": 1
+                },
+            ]       
         },
         {
             ""ID"": ""2"",
@@ -123,7 +122,14 @@ namespace LoginTest
                     
                 },
             ],
-            
+            ""Order"": [
+                {
+                    ""orderId"": 258,
+                    ""ID"": 1
+                },
+            ]
+        },
+        {    
         ""ID"": ""2"",
             ""Date"": ""2023-11-10"",
             ""CompanyName"": ""RentBuddy"",
@@ -157,37 +163,7 @@ namespace LoginTest
                     ""ID"": 1
                 },
             ]
-        },
-        {
-            ""ID"": ""6"",
-            ""Date"": ""2023-11-10"",
-            ""CompanyName"": ""RentBuddy"",
-            ""Contact"": ""Janssen"",
-            ""ContactPhone"": ""06128816192"",
-            ""City"": ""Varik"",
-            ""Adress"": ""De Geus bv"",
-            ""TimeArrive"": ""17:00""
-            ""TimeDepart"": ""18:00"",
-            ""TypeOf"": ""Pickup"",
-            ""Status"": ""Not completed"",
-            ""orderid"": 259,
-            ""Products"": [
-                {
-                    ""orderid"": 258,
-                    ""ProductName"": ""Kabel"",
-                    ""ProductCode"": 258258,
-                    ""Quantity"": 5,
-                    
-                },
-                {
-                    ""orderid"": 258,
-                    ""ProductName"": ""Support plaat"",
-                    ""ProductCode"": 258268,
-                    ""Quantity"": 2,
-                    
-                },
-            ],
-        },
+        },       
         {
             ""ID"": ""1"",
             ""Date"": ""2023-11-10"",
@@ -216,8 +192,16 @@ namespace LoginTest
                     ""Quantity"": 2,
                     
                 },
-            ], 
-        ""ID"": ""2"",
+            ],
+            ""Order"": [
+                {
+                    ""orderId"": 258,
+                    ""ID"": 1
+                },
+            ]    
+         },
+         {   
+            ""ID"": ""2"",
             ""Date"": ""2023-11-10"",
             ""CompanyName"": ""RentBuddy"",
             ""Contact"": ""Janssen"",
@@ -280,6 +264,12 @@ namespace LoginTest
                     
                 },
             ],
+            ""Order"": [
+                {
+                    ""orderId"": 258,
+                    ""ID"": 1
+                },
+            ]
         },
         {
             ""ID"": ""4"",
@@ -310,7 +300,14 @@ namespace LoginTest
                     
                 },
             ],
-            
+            ""Order"": [
+                {
+                    ""orderId"": 258,
+                    ""ID"": 1
+                },
+            ]    
+        },
+        {
         ""ID"": ""5"",
             ""Date"": ""2023-11-10"",
             ""CompanyName"": ""RentBuddy"",
@@ -374,6 +371,12 @@ namespace LoginTest
                     
                 },
             ],
+            ""Order"": [
+                {
+                    ""orderId"": 258,
+                    ""ID"": 1
+                },
+            ]
         },
         {
             ""ID"": ""1"",
@@ -403,7 +406,13 @@ namespace LoginTest
                     ""Quantity"": 2,
                     
                 },
-            ],    
+            ],  
+            ""Order"": [
+                {
+                    ""orderId"": 258,
+                    ""ID"": 1
+                },
+            ]
         }
     ]";
 
