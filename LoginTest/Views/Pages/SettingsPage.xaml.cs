@@ -2,12 +2,10 @@ using LoginTest.Resources.Languages;
 using Microsoft.Maui.ApplicationModel;
 using Microsoft.Maui.Controls;
 using System;
-
 namespace LoginTest
 {
     public partial class SettingsPage : ContentPage
     {
-
         private bool darkMode = false;
 
         public bool DarkMode
@@ -23,6 +21,7 @@ namespace LoginTest
         public SettingsPage()
         {
             InitializeComponent();
+            
 
             darkMode = Application.Current.RequestedTheme == AppTheme.Dark;
             DarkModeSwitch.IsToggled = darkMode;
@@ -34,15 +33,15 @@ namespace LoginTest
 
         private void LoadPreferences()
         {
-            
+
             darkMode = Preferences.Get("DarkMode", false);
             DarkModeSwitch.IsToggled = darkMode;
 
-            
+
             var selectedLanguage = Preferences.Get("SelectedLanguage", "English");
             LanguagePicker.SelectedItem = selectedLanguage;
 
-            
+
             ChangeAppLanguage(selectedLanguage);
         }
 
@@ -50,7 +49,8 @@ namespace LoginTest
         {
             DarkMode = e.Value;
 
-            Preferences.Set("DarkMode", darkMode);
+            Preferences.Set("DarkMode", darkMode.ToString());
+
         }
 
 
@@ -58,7 +58,7 @@ namespace LoginTest
         {
             var selectedLanguage = LanguagePicker.SelectedItem.ToString();
             ChangeAppLanguage(selectedLanguage);
-            Preferences.Set("SelectedLanguage", selectedLanguage);
+         
         }
 
         private void ChangeAppLanguage(string selectedLanguage)
@@ -72,7 +72,7 @@ namespace LoginTest
                 AppResources.Culture = new System.Globalization.CultureInfo("nl-NL");
             }
 
-            SecureStorage.SetAsync("SelectedLanguage", selectedLanguage);
+            Preferences.Set("SelectedLanguage", selectedLanguage);
 
             ReloadApp();
 

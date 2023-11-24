@@ -322,7 +322,7 @@ namespace LoginTest.Resources.Languages {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Theme.
+        ///   Looks up a localized string similar to Dark mode on/off.
         /// </summary>
         internal static string Theme {
             get {

@@ -160,7 +160,7 @@
     <value>Select Language</value>
   </data>
   <data name="Theme" xml:space="preserve">
-    <value>Theme</value>
+    <value>Dark mode on/off</value>
   </data>
   <data name="NewSig" xml:space="preserve">
     <value>New Signature</value>
