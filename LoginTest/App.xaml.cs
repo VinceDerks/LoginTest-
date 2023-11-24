@@ -30,12 +30,7 @@ namespace LoginTest
                 }
             }
 
-
-
-
-
-
-            
+       
 
             // Retrieve the darkMode value
             string darkModeString = Preferences.Get("DarkMode", "fotnite");

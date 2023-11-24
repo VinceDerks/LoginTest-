@@ -130,7 +130,7 @@
     <value>Vertrek</value>
   </data>
   <data name="ID" xml:space="preserve">
-    <value>Ordernummer</value>
+    <value>Ordernummer #</value>
   </data>
   <data name="Loginbutton" xml:space="preserve">
     <value>Aanmelden</value>

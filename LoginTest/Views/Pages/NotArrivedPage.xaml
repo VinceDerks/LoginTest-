@@ -11,7 +11,7 @@
     <Grid RowDefinitions="*, 200, Auto, Auto">
         <VerticalStackLayout Margin="20" Grid.Row="0">
             <Frame BorderColor="Gray" CornerRadius="20" WidthRequest="345">
-                <material:EditorField x:Name="RemarkField" Title="{x:Static lang:AppResources.Explain}" TitleColor="Black" AccentColor="White" BorderColor="White" />
+                <material:EditorField x:Name="RemarkField" Title="{x:Static lang:AppResources.Explain}" TitleColor="Black" AccentColor="Transparent" BorderColor="Transparent" />
             </Frame>
             <Label x:Name="ErrorLbl"/>
         </VerticalStackLayout>

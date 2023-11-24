@@ -26,7 +26,7 @@
                 
             </StackLayout>
             <Frame BorderColor="Gray" CornerRadius="20" WidthRequest="355">
-                <material:EditorField x:Name="RemarkField" Title="{x:Static lang:AppResources.Explain}" TitleColor="Black" AccentColor="White" BorderColor="White" />
+                <material:EditorField x:Name="RemarkField" Title="{x:Static lang:AppResources.Explain}" TitleColor="Black" AccentColor="Transparent" BorderColor="Transparent" />
             </Frame>
             <Label x:Name="errorlbl" FontSize="25" HorizontalOptions="CenterAndExpand" HorizontalTextAlignment="Center"/>
         </VerticalStackLayout>
