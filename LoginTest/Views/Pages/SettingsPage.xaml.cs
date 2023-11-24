@@ -23,7 +23,6 @@ namespace LoginTest
             InitializeComponent();
             
 
-            darkMode = Application.Current.RequestedTheme == AppTheme.Dark;
             DarkModeSwitch.IsToggled = darkMode;
 
             DarkModeSwitch.Toggled += DarkModeSwitch_Toggled;
