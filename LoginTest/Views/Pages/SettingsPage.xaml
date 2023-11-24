@@ -59,12 +59,12 @@
                        VerticalOptions="Center" />
 
                 <StackLayout Orientation="Horizontal" HorizontalOptions="Center" VerticalOptions="Center">
-                    <Label Text="Light" HorizontalOptions="End" VerticalOptions="Center" />
+                    <Label Text="{x:Static lang:AppResources.Light}" HorizontalOptions="End" VerticalOptions="Center" />
                     <Switch x:Name="DarkModeSwitch"
                         IsToggled="{Binding DarkMode}"
                         HorizontalOptions="Center"
-                        VerticalOptions="Center" /> 
-                    <Label Text="Dark" HorizontalOptions="Start" VerticalOptions="Center" />
+                        VerticalOptions="Center" />
+                    <Label Text="{x:Static lang:AppResources.Dark}" HorizontalOptions="Start" VerticalOptions="Center" />
                 </StackLayout>
             </StackLayout>
         </Frame>
