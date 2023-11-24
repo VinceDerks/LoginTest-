@@ -151,6 +151,15 @@ namespace LoginTest.Resources.Languages {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to No routes found for this date.
+        /// </summary>
+        internal static string Errorlbl {
+            get {
+                return ResourceManager.GetString("Errorlbl", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Explanation.
         /// </summary>
         internal static string Explain {

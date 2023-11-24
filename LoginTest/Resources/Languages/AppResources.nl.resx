@@ -222,4 +222,7 @@
   <data name="Light" xml:space="preserve">
     <value>Licht</value>
   </data>
+  <data name="Errorlbl" xml:space="preserve">
+    <value>Geen routes gevonden voor deze datum</value>
+  </data>
 </root>

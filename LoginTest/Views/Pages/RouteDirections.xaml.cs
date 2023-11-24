@@ -188,8 +188,7 @@ public partial class RouteDirections : ContentPage
         else
         {
             lblRoutes.ItemsSource = null; // Clear the items source
-            Errorlbl.IsVisible = true;
-            Errorlbl.Text = "Geen routes gevonden voor deze dag"; // Display the error message
+            Errorlbl.IsVisible = true;// Display the error message
         }
 
         CurrentDate.Date = selectedDate;

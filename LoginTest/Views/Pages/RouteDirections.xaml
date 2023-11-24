@@ -23,7 +23,7 @@
 
                 <ImageButton Source="forwardarrow.svg" Clicked="OnNextClicked" Grid.Column="2" />
             </Grid>
-        <Label VerticalOptions="CenterAndExpand" t   HorizontalOptions="Center" FontSize="15" x:Name="Errorlbl" TextColor="Black"/>
+            <Label VerticalOptions="CenterAndExpand" Text="{x:Static lang:AppResources.Errorlbl}" IsVisible="false"  HorizontalOptions="Center" FontSize="15" x:Name="Errorlbl" TextColor="Black"/>
         
             <CollectionView x:Name="lblRoutes">
                 <CollectionView.ItemTemplate>
